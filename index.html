@@ -5,64 +5,125 @@
   <title>Market Monitoring — Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      --bg: #f8fafc; --panel:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
+    :root{
+      --bg:#f8fafc; --panel:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
       --brand:#4f46e5; --brand-2:#4338ca;
-      --radius: 14px;
+      --radius:14px;
+      --sidebar-wide: 320px;
+      --sidebar-compact: 64px;
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, sans-serif; background: var(--bg); color: var(--text); }
-    .app { display:flex; height:100vh; width:100vw; overflow:hidden; }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+
+    /* App layout */
+    .app{ display:flex; height:100svh; width:100vw; overflow:hidden; }
+
     /* Sidebar */
-    .sidebar { background: var(--panel); border-right:1px solid var(--line); box-shadow: 0 1px 6px rgba(0,0,0,.04); transition: width .25s ease; width: 320px; position:relative; }
-    .sidebar.compact { width: 64px; }
-    .sidebar.compact #homeBtn { display: none; }
-    .s-top { display:flex; align-items:center; justify-content:space-between; padding:10px; border-bottom:1px solid var(--line);}
-    .btn { font-size:14px; padding:8px 12px; border:0; border-radius:12px; background:#f3f4f6; cursor:pointer; }
-    .btn:hover { background:#e5e7eb; }
-    .btn-ghost { background:#f3f4f6; }
-    .btn-link { padding:0; background:transparent; color:var(--muted); border-radius:8px; }
-    .btn { white-space: nowrap; }
-    #openBtn { min-width: 110px; }
-    .notes { height: calc(100% - 52px); overflow:auto; padding:8px; }
-    .item { position:relative; display:flex; gap:8px; align-items:center; padding:10px 12px; border-radius:12px; cursor:pointer; }
-    .item:hover { background:#f3f4f6; }
-    .item.active { background:#eef2ff; outline:1px solid #c7d2fe; }
-    .title { font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1; }
-    .more { opacity:0; transition:opacity .15s; color:#6b7280; font-weight:700; padding:0 6px; }
-    .item:hover .more { opacity:1; }
-    .menu { position:absolute; right:8px; top:38px; width:140px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.08); overflow:hidden; z-index:3; }
-    .menu button { width:100%; text-align:left; padding:10px 12px; background:#fff; border:0; font-size:14px; cursor:pointer; }
-    .menu button:hover { background:#f3f4f6; }
+    .sidebar{
+      background:var(--panel); border-right:1px solid var(--line);
+      box-shadow:0 1px 6px rgba(0,0,0,.04); transition:width .25s ease;
+      width: var(--sidebar-wide);
+      position:relative; display:flex; flex-direction:column;
+    }
+    .sidebar.compact{ width: var(--sidebar-compact); }
+    .s-top{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:8px; padding:10px; border-bottom:1px solid var(--line);
+    }
+    .notes{ flex:1; overflow:auto; padding:8px; }
+
+    /* Buttons */
+    .btn{
+      font-size:14px; padding:8px 12px; border:0; border-radius:12px; background:#f3f4f6; cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{ background:#e5e7eb; }
+    .btn-link{ padding:0; background:transparent; color:var(--muted); border-radius:8px; }
+    .btn[aria-expanded="true"]{ background:#e5e7eb; }
+
+    /* Items */
+    .item{
+      position:relative; display:flex; gap:8px; align-items:center;
+      padding:10px 12px; border-radius:12px; cursor:pointer; width:100%;
+      background:transparent; border:0; text-align:left;
+    }
+    .item:hover{ background:#f3f4f6; }
+    .item.active{ background:#eef2ff; outline:1px solid #c7d2fe; }
+    .title{
+      font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;
+    }
+    .more{
+      opacity:0; transition:opacity .15s; color:#6b7280; font-weight:700; padding:0 6px;
+    }
+    .item:hover .more{ opacity:1; }
+
+    /* Context menu */
+    .menu{
+      position:absolute; right:8px; top:38px; width:180px; background:#fff;
+      border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.08);
+      overflow:hidden; z-index:3; padding:6px;
+    }
+    .menu [role="menuitem"]{
+      width:100%; text-align:left; padding:10px 12px; background:#fff; border:0; font-size:14px; cursor:pointer; border-radius:8px;
+    }
+    .menu [role="menuitem"]:hover, .menu [role="menuitem"]:focus-visible{ background:#f3f4f6; outline:none; }
+
     /* Main */
-    .main { flex:1; display:flex; flex-direction:column; }
-    .m-top { height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; border-bottom:1px solid var(--line); background:#fff; }
-    .heading { font-weight:700; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .editor { flex:1; }
-    .editor textarea { width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none; }
-    .badge { display:inline-block; background:#eef2ff; color:#3730a3; padding:4px 8px; border-radius: 999px; font-size:12px; }
-    .toast { position:fixed; right:24px; bottom:24px; padding:10px 14px; background:#111827; color:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); font-size:13px; }
-    /* Hide label text when compact */
-    .compact .hide-when-compact { display:none; }
+    .main{ flex:1; display:flex; flex-direction:column; }
+    .m-top{
+      height:56px; display:flex; align-items:center; justify-content:space-between;
+      padding:0 16px; border-bottom:1px solid var(--line); background:#fff;
+    }
+    .heading{ font-weight:700; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .editor{ flex:1; }
+    .editor textarea{
+      width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none;
+    }
+
+    /* Toast */
+    .toast{
+      position:fixed; right:24px; bottom:24px; padding:10px 14px; background:#111827; color:#fff;
+      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); font-size:13px;
+    }
+
+    /* Compact rules (single source of truth) */
+    .sidebar.compact .hide-when-compact{ display:none !important; } /* hide label-only bits */
+    .sidebar.compact .hide-control-when-compact{ display:none !important; } /* home button entire */
+
+    /* Focus visibility */
+    :focus-visible{
+      outline:2px solid #6366f1;
+      outline-offset:2px;
+      border-radius:10px;
+    }
+
+    /* Responsive widths refinement */
+    @media (max-width: 480px){
+      :root{ --sidebar-wide: 280px; --sidebar-compact: 56px; }
+    }
   </style>
 </head>
 <body>
   <div id="app" class="app">
-    <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar" aria-label="노트 사이드바">
       <div class="s-top">
-        <button class="btn" id="homeBtn" title="홈"><span class="hide-when-compact">홈</span></button>
-        <button class="btn" id="toggleBtn" title="사이드바 열기/닫기">닫기</button>
+        <!-- 완전 숨김(컴팩트 모드에서) -->
+        <button type="button" class="btn hide-control-when-compact" id="homeBtn" title="홈" aria-label="홈으로 이동">홈</button>
+        <button type="button" class="btn" id="toggleBtn" title="사이드바 열기/닫기" aria-controls="sidebar" aria-expanded="true">닫기</button>
       </div>
-      <div id="notesList" class="notes"></div>
+      <div id="notesList" class="notes" role="list"></div>
     </aside>
 
     <section class="main">
       <div class="m-top">
         <div class="heading" id="heading">홈</div>
-        <button class="btn" id="openBtn" style="display:none">사이드바 열기</button>
+        <button type="button" class="btn" id="openBtn" aria-controls="sidebar" aria-expanded="false" hidden>사이드바 열기</button>
       </div>
-      <div id="editor" class="editor">
+      <div id="editor" class="editor" aria-live="polite">
         <div style="height:100%;display:grid;place-items:center;color:#6b7280">
           좌측에서 노트를 선택하세요.
         </div>
@@ -71,281 +132,99 @@
   </div>
 
   <script>
-    // ======= Data layer (LocalStorage) =======
+    // ======= Utilities =======
     const LS_KEY = 'daily_notes_v1_html_only';
+    const $sidebar  = document.getElementById('sidebar');
+    const $notesList= document.getElementById('notesList');
+    const $heading  = document.getElementById('heading');
+    const $editor   = document.getElementById('editor');
+    const $toggleBtn= document.getElementById('toggleBtn');
+    const $openBtn  = document.getElementById('openBtn');
+    const $homeBtn  = document.getElementById('homeBtn');
 
-    /**
-     * NOTE SHAPE:
-     * { id: string, title: string, content: string, date: 'YYYY-MM-DD' }
-     * - date는 정렬 전용(표시 안 함, 수정 이력 아님)
-     */
-    function fmt(date) {
+    const uid = () => (crypto.randomUUID ? crypto.randomUUID() : (Math.random().toString(36).slice(2)+Date.now().toString(36)));
+    const fmt = (date) => {
       const d = new Date(date);
       const y = d.getFullYear();
       const m = String(d.getMonth()+1).padStart(2,'0');
-      const dd = String(d.getDate()).padStart(2,'0');
+      const dd= String(d.getDate()).padStart(2,'0');
       return `${y}-${m}-${dd}`;
+    };
+
+    function debounce(fn, ms){
+      let t; return function(...args){
+        clearTimeout(t); t = setTimeout(() => fn.apply(this,args), ms);
+      };
     }
-    function uid() {
-      return Math.random().toString(36).slice(2,10)+Date.now().toString(36);
-    }
-    function seed() {
+
+    // ======= Seed =======
+    function seed(){
       const t = new Date();
       const d1 = new Date(t);
       const d0 = new Date(t); d0.setDate(d0.getDate()-1);
       return [
-        { id: uid(), title: `2025-10-16 Euro Area Industrial Production}`, content: "# ALERT — Daily macro releases
+        {
+          id: uid(),
+          title: `2025-10-16 Euro Area Industrial Production`,
+          content: `# ALERT — Daily macro releases
 
 **Trigger status:**  
 (a) **FIRED** — official release(s) within the past 24h. (b) **NOT FIRED** — no verified ≥1σ consensus surprise detected.
 
 1. **When (KST):**  
-    • **2025‑10‑15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
+    • **2025-10-15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**.
     
 2. **What moved:**  
-    • **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.** First estimate from Eurostat. Coverage from major outlets frames this as a renewed monthly decline after July’s +0.5% (rev). Consensus indications from reputable press suggest a modest miss/near‑consensus outcome rather than a shock. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
+    • **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.** First estimate from Eurostat. Coverage from major outlets frames this as a renewed monthly decline after July’s +0.5% (rev). Consensus indications from reputable press suggest a modest miss/near-consensus outcome rather than a shock.
     
 3. **Why it matters (policy/market):**  
-    • IP is a key high‑frequency input for euro area GDP nowcasts; a broad m/m drop led by **capital goods (−2.2%)** points to softer investment momentum and adds mild **dovish** bias at the margin for the **ECB** if weakness persists. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
-    
-4. **Immediate actions (tactical):**  
-    • **Rates (EUR):** Slight **long duration** bias in Bunds; prefer **5–7y** over ultra‑long.  
-    • **Curve:** Look for **modest bull‑flattening**; receive front‑end EUR rates selectively.  
-    • **Credit/Equities:** Tilt away from **euro cyclicals/capex‑sensitive** names; keep **defensives** marginally overweight near‑term.  
-    • **FX:** Light **EUR‑beta** exposure; bias **EURUSD lower on rallies**; reduce **EURJPY** risk into data‑light hours.  
-    • **Risk/liq:** Keep **position sizing ≤0.5–0.75×** usual until U.S. data later this week clarifies global growth impulse.
-    
-5. **Sources:**  
-    • **Official release (Eurostat):** Euro area industrial production, Aug 2025 (first estimate). ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))  
-    • **Reputable coverage/consensus source:** _Wall Street Journal_ coverage of today’s release context. ([The Wall Street Journal](https://www.wsj.com/economy/eurozone-industrial-production-swings-back-to-decline-118e6c4d?gaa_at=eafs&gaa_n=AWEtsqdkS4QixS_L1KzG-NjK7jAld97sZmvgckN798a-5Z8wd1fyA2ISM2Tw&gaa_sig=IAxG_amxS-vCM5Q-t6tmScuLFkiuhgi8EG1SPJz_icVPDE8v-Ft9S1p-9eCogg2JBi5DhfbdxLwLPSfycTn1Aw%3D%3D&gaa_ts=68f03a61&utm_source=chatgpt.com "Eurozone Industrial Production Swings Back to Decline"))
-    
-
----
-
-**Other official items in window (informational, lower market impact):**  
-• **Bank of Japan:** “Bank of Japan Accounts (Oct 10)” statistical update posted **2025‑10‑15**. ([Bank of Japan](https://www.boj.or.jp/en/statistics/boj/other/acmai/release/2025/ac251010.htm?utm_source=chatgpt.com "Bank of Japan Accounts (October 10, 2025)"))
-
+    • IP is a key high-frequency input for euro area GDP nowcasts; a broad m/m drop led by **capital goods (−2.2%)** points to softer investment momentum and adds mild **dovish** bias at the margin for the **ECB** if weakness persists.
 
 # Immediate Actions
-## • 금리/듀레이션 (EUR)
-
-**A. 독일국채 듀레이션 롱 (5–7년 선호)**
-
-- **티켓:** EUREX Bobl(FGBM) 롱 1단, Bund(FGBL) 롱 1단 → 총 듀레이션을 5–7년 구간으로 정렬. 초장기물(30Y) 비중은 최소화.
-    
-- **사이징:** 평시 금리북 DV01의 **0.50–0.75×** 범위 내에서 진입.
-    
-- **리스크 한도:** 포트폴리오 총 DV01이 평시 한도의 0.75×를 **초과 금지**. 개별 티켓은 각 **일일 VaR의 10%** 이내.
-    
-- **손절/이익실현(상대지표 기반):**
-    
-    - 손절: 진입 후 5–7Y 구간 수익률이 **+6~8bp** 역행 시 전량 청산.
-        
-    - 이익: **−12~15bp** 하락(금리 하락) 또는 **5일 ATR의 1.2×** 달성 시 절반 축소, 잔여는 트레일링.
-        
-
-**B. 프런트엔드 ‘수취’(Receive) 포지션**
-
-- **티켓(택1 또는 병행):**
-    
-    1. **€STR/€OIS 2Y** 리시버(IRS 2Y Receive)
-        
-    2. **3M Euribor 선물**(예: 최근월+차근월) **롱**
-        
-- **논리:** **Bull-flattening** 가정. 프런트엔드 금리 하락 수혜.
-    
-- **사이징:** 파생 DV01 기준 **0.25–0.35×**(듀레이션 롱과 합산하여 총 0.50–0.75× 준수).
-    
-- **리스크:** 2Y 전면부 금리 **+7bp** 역행 시 축소/청산.
-    
-
-## • 커브 전개
-
-**C. 2s10s(€) 플래트너(완만)**
-
-- **티켓:** 2Y 수취(Receive) ↔ 10Y 소액 페이(Pay) 혹은 **Bobl 롱 / Buxl 숏** 비율 트레이드.
-    
-- **비율:** DV01 중립에 가깝게(2Y:10Y ≈ 1.7–2.0 : 1 참고), 총 리스크는 위 듀레이션 한도 내 포함.
-    
-- **손절:** 스프레드 반등(가팔라짐) **+6bp** 시 중단.
-    
-
-## • 크레딧/주식
-
-**D. 유로존 경기민감주·설비투자 민감주 비중 축소**
-
-- **실행:** 유럽 산업재·자본재·소재 **언더웨이트**. 방어주(필수소비재·유틸리티·헬스케어) **오버웨이트 소폭**.
-    
-- **구현:** 섹터 스프레드 트레이드(예: 유럽 산업재 **숏** / 유틸리티 **롱** 동가·동가치, 현·선물·ETF 조합).
-    
-- **손절:** 스프레드 역행 **2σ** 시 축소.
-    
-
-**E. 크레딧**
-
-- **IG 스프레드 듀레이션 단축:** 신규 발행 저가 매수는 보류. **하이일드 신규 익스포저 동결.**
-    
-- **CDS 헷지:** iTraxx Main **소액 매수**(헷지 용도), HY는 이벤트 리스크 없을 때만 제한적.
-    
-
-## • FX
-
-**F. EURUSD ‘랠리-페이드’ 숏**
-
-- **티켓:** EURUSD **숏**, 진입은 **전일 고점 ± intraday ATR(0.5×)** 부근의 리밸류에이션 구간에 한정(추격 금지).
-    
-- **사이징:** FX 리스크 총 한도의 **0.25–0.30×**.
-    
-- **손절/이익:**
-    
-    - 손절: 진입가 대비 **+0.6× ATR(20)**
-        
-    - 이익: **−1.2× ATR(20)** 1차 청산, 잔여 트레일링.
-        
-
-**G. EURJPY 익스포저 감축**
-
-- **실행:** **아시아 장(데이터 공백 시간대)** 에 EURJPY 현·선물 롱/숏 **순노출 0에 근접**하도록 감축.
-    
-- **옵션 대체:** 보유 필요 시 **콜스프레드 폭 축소**(프리미엄 절감), 델타는 0.2 이내 유지.
-    
-
-## • 유동성·사이징·집행
-
-**H. 포지션 크기**
-
-- 모든 신규 포지션의 **총 리스크 노출을 평시의 0.50–0.75×**로 고정. 추가 신호 나오기 전 **증액 금지**.
-    
-
-**I. 집행 규칙**
-
-- **리밋 주문 우선**, 마켓 임팩트 최소화.
-    
-- 선물 롤(근월→차근월)은 당일 스프레드 타이트 구간에서 부분 체결.
-    
-- 옵션은 **스프레드 구조**(데빗/크레딧) 활용, 단일 바닐라 고프리미엄 매수는 지양.
-    
-
-**J. 담보·마진**
-
-- 선물/스왑 마진 여유 **≥ 35%** 확보. 변동성 상승 시 **즉시 45%**로 상향.
-    
-
-## • 리스크 관리 체크리스트
-
-**K. 손실 정지(Line-in-the-sand)**
-
-- 일중 P&L **−0.75× 평시 일간 한도** 도달 시 **신규 집행 중단**, 고정 손실 정지 발동.
-    
-- 누적 손실 **−1.25× 주간 한도** 시 주간 남은 기간 **리스크 50% 감축**.
-    
-
-**L. 상관·바이너리 리스크**
-
-- 동일 테마(유럽 경기 둔화/ECB 완화 베팅)에 묶인 포지션들의 **상관도 모니터** → 듀레이션 롱, EUR 프런트엔드 리시버, EURUSD 숏의 상관 **과중 시 한쪽 축소**.
-    
-
-**M. 이벤트 캘린더(한국시간, 이번 주)**
-
-- **미국 핵심 지표 발표 전까지 포지션 증액 금지.**
-    
-- 발표 2시간 전: 모든 인트라데이 레버리지 **20% 감축**, 헤지(선물/옵션)로 델타 정렬.
-    
-- 발표 30분 전: 신규 체결 **중단**.
-    
-
-## • 모니터링 & 트리거
-
-**N. 즉시 모니터링 항목**
-
-1. **유로존 5–7Y 수익률 변화**: −10bp 달성 시 듀레이션 절반 차익.
-    
-2. **자본재 서브인덱스 헤드라인 대비 언더퍼포먼스** 지속: 섹터 언더웨이트 유지.
-    
-3. **€STR/2Y OIS**: 2Y 전면부 1일 변동 **−6bp** 초과 시 프런트엔드 리시버 일부 차익.
-    
-4. **EURUSD**: 유럽세션 고점 돌파 실패 후 **1시간 봉 하락 전환** → 추가 증액 금지, 보유만.
-    
-
-**O. 리스크 오프 전환 조건(어느 하나라도 충족 시 즉시 실행)**
-
-- 유럽 금리 곡선이 **강세 스티프닝**으로 전환(10Y 하락폭 > 2Y)하여 커브가 **+5bp 이상** 벌어짐.
-    
-- 신뢰도 있는 헤드라인에서 **유로존 경기서프라이즈 인덱스 급반등**(정량 확인 전까지는 금일 증액 금지).
-    
-- ECB 관련 커뮤니케이션에서 **매파 신호**(앞단 금리 **+7bp** 역행) 확인.
-    
-
-## • 헤지
-
-**P. 델타 헤지**
-
-- 금리롱에 대해 **유럽 주가지수 선물(예: Euro Stoxx 50) 소액 숏**(β-헤지 0.2–0.3).
-    
-- EURUSD 숏에 대해 **1주 만기 콜스프레드** 소액 매수(이벤트 리스크 대응).
-    
-
-**Q. 테일 리스크**
-
-- **iTraxx Main 3M** 소액 매수 유지(포트폴리오 스프레드 확대 방지).
-    
-- **Bund 풋 1σ 외가** 소량 보유(급반등·금리상승 리스크).
-    
-
-## • 운영 규율
-
-**R. 일일 점검(한국시간 기준)**
-
-- 10:00: P&L, DV01, 델타, 커브 민감도 리포트 확인 후 리밸런스.
-    
-- 15:30: 유럽 현물 개장 1시간 후 **스프레드·체결 슬리피지** 리뷰.
-    
-- 22:00: 미국 프리마켓·헤드라인 확인, **증액·축소 금지 규칙 재확인**.
-    
-
----
-
-위 항목을 순서대로 집행하면, 이번 **유로존 8월 산업생산(−1.2% m/m, +1.1% y/y)**에 따른 **약한 완화(도비시) 바이어스** 및 **완만한 bull-flattening 가정**을 바탕으로, **듀레이션 롱(5–7Y 중심) + 프런트엔드 수취 + EUR 랠리-페이드**라는 코어 테마를 **0.50–0.75× 리스크**로 구현하고, 미국 지표로 글로벌 성장 신호가 확정되기 전까지 **유동성·사이징**을 엄격히 관리하는 구조가 됩니다.", date: fmt(d1) },
+(요약된 시드 콘텐츠)`,
+          date: fmt(d1)
+        },
         { id: uid(), title: `노트 — ${fmt(d0)}`, content: "???", date: fmt(d0) },
       ];
     }
-    function loadNotes() {
-      try {
+
+    // ======= Storage =======
+    function loadNotes(){
+      try{
         const raw = localStorage.getItem(LS_KEY);
-        if (!raw) return seed();
+        if(!raw) return seed();
         const arr = JSON.parse(raw);
-        if (!Array.isArray(arr)) return seed();
+        if(!Array.isArray(arr)) return seed();
         return arr.map(n => ({ id:n.id, title:n.title||'', content:n.content||'', date:n.date||'1970-01-01' }));
-      } catch { return seed(); }
+      }catch{ return seed(); }
     }
-    function saveNotes(notes) {
-      localStorage.setItem(LS_KEY, JSON.stringify(notes));
-    }
+    const saveNotesImmediate = (notes) => localStorage.setItem(LS_KEY, JSON.stringify(notes));
+    const saveNotes = debounce(saveNotesImmediate, 400);
 
     // ======= State =======
     let notes = loadNotes();
     let selectedId = null;
-    const $sidebar = document.getElementById('sidebar');
-    const $notesList = document.getElementById('notesList');
-    const $heading = document.getElementById('heading');
-    const $editor = document.getElementById('editor');
-    const $toggleBtn = document.getElementById('toggleBtn');
-    const $openBtn = document.getElementById('openBtn');
-    const $homeBtn = document.getElementById('homeBtn');
+    let currentMenuAbort = null;
 
-    // ======= Rendering =======
-    function sortLatest(a, b) {
-      // 최신순(YYYY-MM-DD 문자열 내림차순 → 같으면 id로 안정화)
-      if (a.date === b.date) return b.id.localeCompare(a.id);
+    // ======= Renderers =======
+    function sortLatest(a,b){
+      // 최신순(문자열 비교: YYYY-MM-DD)
+      if(a.date === b.date) return b.id.localeCompare(a.id);
       return b.date.localeCompare(a.date);
     }
 
-    function renderList() {
+    function renderList(){
       notes.sort(sortLatest);
       $notesList.innerHTML = '';
+      $notesList.setAttribute('aria-label','노트 목록');
+
       notes.forEach(n => {
-        const row = document.createElement('div');
-        row.className = 'item' + (selectedId === n.id ? ' active':'');
+        const row = document.createElement('button');
+        row.type = 'button';
+        row.className = 'item' + (selectedId === n.id ? ' active' : '');
+        row.setAttribute('role','listitem');
+        row.setAttribute('aria-pressed', selectedId === n.id ? 'true' : 'false');
+
         row.addEventListener('click', () => selectNote(n.id));
 
         const title = document.createElement('div');
@@ -353,12 +232,15 @@
         title.textContent = n.title || '(제목 없음)';
 
         const more = document.createElement('button');
+        more.type = 'button';
         more.className = 'btn-link more';
         more.textContent = '…';
         more.title = '더보기';
+        more.setAttribute('aria-haspopup','menu');
+        more.setAttribute('aria-expanded','false');
         more.addEventListener('click', (e) => {
           e.stopPropagation();
-          openMenu(row, n);
+          openMenu(row, n, more);
         });
 
         row.appendChild(title);
@@ -367,55 +249,90 @@
       });
     }
 
-    function openMenu(anchorEl, note) {
-      closeMenus();
-      const menu = document.createElement('div');
-      menu.className = 'menu';
-      const shareBtn = document.createElement('button');
-      shareBtn.textContent = '공유하기';
-      shareBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        copyShareLink(note.id);
-        closeMenus();
-      });
-      menu.appendChild(shareBtn);
-      anchorEl.appendChild(menu);
-
-      // 바깥 클릭 닫기
-      setTimeout(() => {
-        const onDoc = (ev) => {
-          if (!menu.contains(ev.target)) {
-            closeMenus(); document.removeEventListener('mousedown', onDoc);
-          }
-        };
-        document.addEventListener('mousedown', onDoc);
-      }, 0);
-    }
-    function closeMenus() {
-      document.querySelectorAll('.menu').forEach(m => m.remove());
-    }
-
-    function renderMain() {
-      if (!selectedId) {
+    function renderMain(){
+      if(!selectedId){
         $heading.textContent = '홈';
         $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#6b7280">좌측에서 노트를 선택하세요.</div>';
         return;
       }
       const note = notes.find(n => n.id === selectedId);
-      if (!note) { $heading.textContent = '홈'; return; }
+      if(!note){
+        $heading.textContent = '홈';
+        $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
+        return;
+      }
       $heading.textContent = note.title || '(제목 없음)';
       $editor.innerHTML = '';
       const ta = document.createElement('textarea');
       ta.value = note.content || '';
       ta.placeholder = '여기에 노트를 작성하세요…';
+
       ta.addEventListener('input', () => {
         note.content = ta.value;
         saveNotes(notes);
       });
+
       $editor.appendChild(ta);
+      ta.focus();
     }
 
-    function selectNote(id) {
+    // ======= Menu =======
+    function openMenu(anchorEl, note, buttonEl){
+      closeMenus();
+      const menu = document.createElement('div');
+      menu.className = 'menu';
+      menu.setAttribute('role','menu');
+      menu.setAttribute('aria-label','노트 메뉴');
+
+      const mkItem = (label, onClick) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        b.setAttribute('role','menuitem');
+        b.addEventListener('click', (e) => { e.stopPropagation(); onClick(); closeMenus(); });
+        b.addEventListener('keydown', (e) => {
+          if(e.key === 'Escape') { e.preventDefault(); closeMenus(true, buttonEl); }
+        });
+        return b;
+      };
+
+      const shareBtn = mkItem('공유 링크 복사', () => copyShareLink(note.id));
+          renderList(); renderMain();
+        }
+      });
+      });
+
+      menu.appendChild(shareBtn);
+      menu.appendChild(renameBtn);
+      menu.appendChild(deleteBtn);
+      anchorEl.appendChild(menu);
+
+      buttonEl.setAttribute('aria-expanded','true');
+
+      // Focus first item for a11y
+      shareBtn.focus();
+
+      // Outside click / ESC close using AbortController
+      currentMenuAbort = new AbortController();
+      const { signal } = currentMenuAbort;
+
+      document.addEventListener('mousedown', (ev) => {
+        if(!menu.contains(ev.target)) { closeMenus(true, buttonEl); }
+      }, { signal });
+
+      document.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Escape') { ev.preventDefault(); closeMenus(true, buttonEl); }
+      }, { signal });
+    }
+
+    function closeMenus(focusBack = false, btn = null){
+      document.querySelectorAll('.menu').forEach(m => m.remove());
+      if(currentMenuAbort){ currentMenuAbort.abort(); currentMenuAbort = null; }
+      if(btn){ btn.setAttribute('aria-expanded','false'); if(focusBack) btn.focus(); }
+    }
+
+    // ======= Routing / Selection =======
+    function selectNote(id){
       selectedId = id;
       const url = new URL(window.location.href);
       url.searchParams.set('note', id);
@@ -423,31 +340,44 @@
       renderList(); renderMain();
     }
 
-    function copyShareLink(id) {
+    // ======= Clipboard =======
+    function copyShareLink(id){
       const url = `${location.origin}${location.pathname}?note=${encodeURIComponent(id)}`;
-      navigator.clipboard.writeText(url).then(() => toast('공유 링크가 복사되었습니다.'));
+      try{
+        navigator.clipboard.writeText(url).then(
+          () => toast('공유 링크가 복사되었습니다.'),
+          ()  => fallbackCopy(url)
+        );
+      }catch{ fallbackCopy(url); }
+    }
+    function fallbackCopy(text){
+      const i = document.createElement('input');
+      i.value = text; document.body.appendChild(i);
+      i.select(); document.execCommand('copy'); i.remove();
+      toast('공유 링크가 복사되었습니다.');
     }
 
-    function toast(msg) {
+    // ======= Toast (single) =======
+    function toast(msg){
+      const prev = document.querySelector('.toast'); if(prev) prev.remove();
       const t = document.createElement('div');
-      t.className = 'toast';
-      t.textContent = msg;
+      t.className = 'toast'; t.textContent = msg;
       document.body.appendChild(t);
       setTimeout(() => t.remove(), 1600);
     }
 
-    // ======= Sidebar toggle =======
-    function setSidebar(open) {
-      if (open) {
+    // ======= Sidebar toggle (state via classes only) =======
+    function setSidebar(open){
+      if(open){
         $sidebar.classList.remove('compact');
-        document.body.classList.remove('compact');
         $toggleBtn.textContent = '닫기';
-        $openBtn.style.display = 'none';
-      } else {
+        $toggleBtn.setAttribute('aria-expanded','true');
+        $openBtn.hidden = true;
+      }else{
         $sidebar.classList.add('compact');
-        document.body.classList.add('compact');
         $toggleBtn.textContent = '열기';
-        $openBtn.style.display = '';
+        $toggleBtn.setAttribute('aria-expanded','false');
+        $openBtn.hidden = false;
       }
     }
     $toggleBtn.addEventListener('click', () => {
@@ -464,13 +394,22 @@
     });
 
     // ======= Deep link via ?note= =======
-    function bootSelectFromQuery() {
+    function bootSelectFromQuery(){
       const q = new URL(location.href).searchParams.get('note');
-      if (q && notes.some(n => n.id === q)) selectedId = q;
+      if(!q) return;
+      if(notes.some(n => n.id === q)){
+        selectedId = q;
+      }else{
+        toast('존재하지 않는 노트 링크입니다.');
+      }
     }
 
+    // ======= Keyboard niceties =======
+    // Close any open menu on window blur (optional hardening)
+    window.addEventListener('blur', () => closeMenus());
+
     // ======= Init =======
-    function init() {
+    function init(){
       bootSelectFromQuery();
       renderList();
       renderMain();
