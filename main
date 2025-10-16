@@ -1,9 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-const LS_KEY = "daily_notes_v1";
+/** =========================
+ *  Constants & Utilities
+ *  ========================= */
+const LS_KEY = "daily_notes_v2"; // bump key to avoid conflicting old shape
 
-const fmtDate = (ts: number) => {
-  const d = new Date(ts);
+const fmtDate = (ts: number | Date) => {
+  const d = ts instanceof Date ? ts : new Date(ts);
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, "0");
   const dd = String(d.getDate()).padStart(2, "0");
@@ -11,263 +14,117 @@ const fmtDate = (ts: number) => {
 };
 
 function uid() {
-  return Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
-}
-
-export type Note = {
-  id: string;
-  title: string;
-  content: string;
-};
-
-function seedNotes(): Note[] {
-  const today = Date.now();
-  const day = 24 * 60 * 60 * 1000;
-  const samples: Note[] = [
-    {
-      id: uid(),
-      title: `노트 — ${fmtDate(today)}`,
-      content: "# ALERT — Daily macro releases
-
-**Trigger status:**  
-(a) **FIRED** — official release(s) within the past 24h. (b) **NOT FIRED** — no verified ≥1σ consensus surprise detected.
-
-1. **When (KST):**  
-    • **2025‑10‑15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
-    
-2. **What moved:**  
-    • **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.** First estimate from Eurostat. Coverage from major outlets frames this as a renewed monthly decline after July’s +0.5% (rev). Consensus indications from reputable press suggest a modest miss/near‑consensus outcome rather than a shock. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
-    
-3. **Why it matters (policy/market):**  
-    • IP is a key high‑frequency input for euro area GDP nowcasts; a broad m/m drop led by **capital goods (−2.2%)** points to softer investment momentum and adds mild **dovish** bias at the margin for the **ECB** if weakness persists. ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))
-    
-4. **Immediate actions (tactical):**  
-    • **Rates (EUR):** Slight **long duration** bias in Bunds; prefer **5–7y** over ultra‑long.  
-    • **Curve:** Look for **modest bull‑flattening**; receive front‑end EUR rates selectively.  
-    • **Credit/Equities:** Tilt away from **euro cyclicals/capex‑sensitive** names; keep **defensives** marginally overweight near‑term.  
-    • **FX:** Light **EUR‑beta** exposure; bias **EURUSD lower on rallies**; reduce **EURJPY** risk into data‑light hours.  
-    • **Risk/liq:** Keep **position sizing ≤0.5–0.75×** usual until U.S. data later this week clarifies global growth impulse.
-    
-5. **Sources:**  
-    • **Official release (Eurostat):** Euro area industrial production, Aug 2025 (first estimate). ([European Commission](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-15102025-ap?utm_source=chatgpt.com "Industrial production down by 1.2% in the euro area and by ..."))  
-    • **Reputable coverage/consensus source:** _Wall Street Journal_ coverage of today’s release context. ([The Wall Street Journal](https://www.wsj.com/economy/eurozone-industrial-production-swings-back-to-decline-118e6c4d?gaa_at=eafs&gaa_n=AWEtsqdkS4QixS_L1KzG-NjK7jAld97sZmvgckN798a-5Z8wd1fyA2ISM2Tw&gaa_sig=IAxG_amxS-vCM5Q-t6tmScuLFkiuhgi8EG1SPJz_icVPDE8v-Ft9S1p-9eCogg2JBi5DhfbdxLwLPSfycTn1Aw%3D%3D&gaa_ts=68f03a61&utm_source=chatgpt.com "Eurozone Industrial Production Swings Back to Decline"))
-    
-
----
-
-**Other official items in window (informational, lower market impact):**  
-• **Bank of Japan:** “Bank of Japan Accounts (Oct 10)” statistical update posted **2025‑10‑15**. ([Bank of Japan](https://www.boj.or.jp/en/statistics/boj/other/acmai/release/2025/ac251010.htm?utm_source=chatgpt.com "Bank of Japan Accounts (October 10, 2025)"))
-
-
-# Immediate Actions
-## • 금리/듀레이션 (EUR)
-
-**A. 독일국채 듀레이션 롱 (5–7년 선호)**
-
-- **티켓:** EUREX Bobl(FGBM) 롱 1단, Bund(FGBL) 롱 1단 → 총 듀레이션을 5–7년 구간으로 정렬. 초장기물(30Y) 비중은 최소화.
-    
-- **사이징:** 평시 금리북 DV01의 **0.50–0.75×** 범위 내에서 진입.
-    
-- **리스크 한도:** 포트폴리오 총 DV01이 평시 한도의 0.75×를 **초과 금지**. 개별 티켓은 각 **일일 VaR의 10%** 이내.
-    
-- **손절/이익실현(상대지표 기반):**
-    
-    - 손절: 진입 후 5–7Y 구간 수익률이 **+6~8bp** 역행 시 전량 청산.
-        
-    - 이익: **−12~15bp** 하락(금리 하락) 또는 **5일 ATR의 1.2×** 달성 시 절반 축소, 잔여는 트레일링.
-        
-
-**B. 프런트엔드 ‘수취’(Receive) 포지션**
-
-- **티켓(택1 또는 병행):**
-    
-    1. **€STR/€OIS 2Y** 리시버(IRS 2Y Receive)
-        
-    2. **3M Euribor 선물**(예: 최근월+차근월) **롱**
-        
-- **논리:** **Bull-flattening** 가정. 프런트엔드 금리 하락 수혜.
-    
-- **사이징:** 파생 DV01 기준 **0.25–0.35×**(듀레이션 롱과 합산하여 총 0.50–0.75× 준수).
-    
-- **리스크:** 2Y 전면부 금리 **+7bp** 역행 시 축소/청산.
-    
-
-## • 커브 전개
-
-**C. 2s10s(€) 플래트너(완만)**
-
-- **티켓:** 2Y 수취(Receive) ↔ 10Y 소액 페이(Pay) 혹은 **Bobl 롱 / Buxl 숏** 비율 트레이드.
-    
-- **비율:** DV01 중립에 가깝게(2Y:10Y ≈ 1.7–2.0 : 1 참고), 총 리스크는 위 듀레이션 한도 내 포함.
-    
-- **손절:** 스프레드 반등(가팔라짐) **+6bp** 시 중단.
-    
-
-## • 크레딧/주식
-
-**D. 유로존 경기민감주·설비투자 민감주 비중 축소**
-
-- **실행:** 유럽 산업재·자본재·소재 **언더웨이트**. 방어주(필수소비재·유틸리티·헬스케어) **오버웨이트 소폭**.
-    
-- **구현:** 섹터 스프레드 트레이드(예: 유럽 산업재 **숏** / 유틸리티 **롱** 동가·동가치, 현·선물·ETF 조합).
-    
-- **손절:** 스프레드 역행 **2σ** 시 축소.
-    
-
-**E. 크레딧**
-
-- **IG 스프레드 듀레이션 단축:** 신규 발행 저가 매수는 보류. **하이일드 신규 익스포저 동결.**
-    
-- **CDS 헷지:** iTraxx Main **소액 매수**(헷지 용도), HY는 이벤트 리스크 없을 때만 제한적.
-    
-
-## • FX
-
-**F. EURUSD ‘랠리-페이드’ 숏**
-
-- **티켓:** EURUSD **숏**, 진입은 **전일 고점 ± intraday ATR(0.5×)** 부근의 리밸류에이션 구간에 한정(추격 금지).
-    
-- **사이징:** FX 리스크 총 한도의 **0.25–0.30×**.
-    
-- **손절/이익:**
-    
-    - 손절: 진입가 대비 **+0.6× ATR(20)**
-        
-    - 이익: **−1.2× ATR(20)** 1차 청산, 잔여 트레일링.
-        
-
-**G. EURJPY 익스포저 감축**
-
-- **실행:** **아시아 장(데이터 공백 시간대)** 에 EURJPY 현·선물 롱/숏 **순노출 0에 근접**하도록 감축.
-    
-- **옵션 대체:** 보유 필요 시 **콜스프레드 폭 축소**(프리미엄 절감), 델타는 0.2 이내 유지.
-    
-
-## • 유동성·사이징·집행
-
-**H. 포지션 크기**
-
-- 모든 신규 포지션의 **총 리스크 노출을 평시의 0.50–0.75×**로 고정. 추가 신호 나오기 전 **증액 금지**.
-    
-
-**I. 집행 규칙**
-
-- **리밋 주문 우선**, 마켓 임팩트 최소화.
-    
-- 선물 롤(근월→차근월)은 당일 스프레드 타이트 구간에서 부분 체결.
-    
-- 옵션은 **스프레드 구조**(데빗/크레딧) 활용, 단일 바닐라 고프리미엄 매수는 지양.
-    
-
-**J. 담보·마진**
-
-- 선물/스왑 마진 여유 **≥ 35%** 확보. 변동성 상승 시 **즉시 45%**로 상향.
-    
-
-## • 리스크 관리 체크리스트
-
-**K. 손실 정지(Line-in-the-sand)**
-
-- 일중 P&L **−0.75× 평시 일간 한도** 도달 시 **신규 집행 중단**, 고정 손실 정지 발동.
-    
-- 누적 손실 **−1.25× 주간 한도** 시 주간 남은 기간 **리스크 50% 감축**.
-    
-
-**L. 상관·바이너리 리스크**
-
-- 동일 테마(유럽 경기 둔화/ECB 완화 베팅)에 묶인 포지션들의 **상관도 모니터** → 듀레이션 롱, EUR 프런트엔드 리시버, EURUSD 숏의 상관 **과중 시 한쪽 축소**.
-    
-
-**M. 이벤트 캘린더(한국시간, 이번 주)**
-
-- **미국 핵심 지표 발표 전까지 포지션 증액 금지.**
-    
-- 발표 2시간 전: 모든 인트라데이 레버리지 **20% 감축**, 헤지(선물/옵션)로 델타 정렬.
-    
-- 발표 30분 전: 신규 체결 **중단**.
-    
-
-## • 모니터링 & 트리거
-
-**N. 즉시 모니터링 항목**
-
-1. **유로존 5–7Y 수익률 변화**: −10bp 달성 시 듀레이션 절반 차익.
-    
-2. **자본재 서브인덱스 헤드라인 대비 언더퍼포먼스** 지속: 섹터 언더웨이트 유지.
-    
-3. **€STR/2Y OIS**: 2Y 전면부 1일 변동 **−6bp** 초과 시 프런트엔드 리시버 일부 차익.
-    
-4. **EURUSD**: 유럽세션 고점 돌파 실패 후 **1시간 봉 하락 전환** → 추가 증액 금지, 보유만.
-    
-
-**O. 리스크 오프 전환 조건(어느 하나라도 충족 시 즉시 실행)**
-
-- 유럽 금리 곡선이 **강세 스티프닝**으로 전환(10Y 하락폭 > 2Y)하여 커브가 **+5bp 이상** 벌어짐.
-    
-- 신뢰도 있는 헤드라인에서 **유로존 경기서프라이즈 인덱스 급반등**(정량 확인 전까지는 금일 증액 금지).
-    
-- ECB 관련 커뮤니케이션에서 **매파 신호**(앞단 금리 **+7bp** 역행) 확인.
-    
-
-## • 헤지
-
-**P. 델타 헤지**
-
-- 금리롱에 대해 **유럽 주가지수 선물(예: Euro Stoxx 50) 소액 숏**(β-헤지 0.2–0.3).
-    
-- EURUSD 숏에 대해 **1주 만기 콜스프레드** 소액 매수(이벤트 리스크 대응).
-    
-
-**Q. 테일 리스크**
-
-- **iTraxx Main 3M** 소액 매수 유지(포트폴리오 스프레드 확대 방지).
-    
-- **Bund 풋 1σ 외가** 소량 보유(급반등·금리상승 리스크).
-    
-
-## • 운영 규율
-
-**R. 일일 점검(한국시간 기준)**
-
-- 10:00: P&L, DV01, 델타, 커브 민감도 리포트 확인 후 리밸런스.
-    
-- 15:30: 유럽 현물 개장 1시간 후 **스프레드·체결 슬리피지** 리뷰.
-    
-- 22:00: 미국 프리마켓·헤드라인 확인, **증액·축소 금지 규칙 재확인**.
-    
-
----
-
-위 항목을 순서대로 집행하면, 이번 **유로존 8월 산업생산(−1.2% m/m, +1.1% y/y)**에 따른 **약한 완화(도비시) 바이어스** 및 **완만한 bull-flattening 가정**을 바탕으로, **듀레이션 롱(5–7Y 중심) + 프런트엔드 수취 + EUR 랠리-페이드**라는 코어 테마를 **0.50–0.75× 리스크**로 구현하고, 미국 지표로 글로벌 성장 신호가 확정되기 전까지 **유동성·사이징**을 엄격히 관리하는 구조가 됩니다.",
-    },
-    {
-      id: uid(),
-      title: `노트 — ${fmtDate(today - day)}`,
-      content: "???",
-    },
-  ];
-  return samples;
-}
-
-function loadNotes(): Note[] {
-  try {
-    const raw = localStorage.getItem(LS_KEY);
-    if (!raw) return seedNotes();
-    const parsed = JSON.parse(raw) as Note[];
-    return parsed;
-  } catch {
-    return seedNotes();
-  }
-}
-
-function saveNotes(notes: Note[]) {
-  localStorage.setItem(LS_KEY, JSON.stringify(notes));
+  // Prefer strong randomness when available
+  // @ts-ignore
+  if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+  return Math.random().toString(36).slice(2) + Date.now().toString(36);
 }
 
 function classNames(...xs: Array<string | false | null | undefined>) {
   return xs.filter(Boolean).join(" ");
 }
 
+/** =========================
+ *  Types
+ *  ========================= */
+export type Note = {
+  id: string;
+  title: string;
+  content: string;
+  /** ISO YYYY-MM-DD for sorting; not an edit history */
+  date: string;
+};
+
+/** =========================
+ *  Seed / Storage
+ *  ========================= */
+function seedNotes(): Note[] {
+  const now = Date.now();
+  const day = 24 * 60 * 60 * 1000;
+  return [
+    {
+      id: uid(),
+      title: `2025-10-16 Euro Area Industrial Production`,
+      content: `# ALERT — Daily macro releases
+
+**Trigger status:**  
+(a) **FIRED** — official release(s) within the past 24h. (b) **NOT FIRED** — no verified ≥1σ consensus surprise detected.
+
+1. **When (KST):**  
+• **2025-10-15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**.
+
+2. **What moved:**  
+• **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.** First estimate from Eurostat. Coverage from major outlets frames this as a renewed monthly decline after July’s +0.5% (rev). Consensus indications suggest a modest miss/near-consensus outcome.
+
+3. **Why it matters (policy/market):**  
+• IP is a key high-frequency input for euro area GDP nowcasts; a broad m/m drop led by **capital goods (−2.2%)** points to softer investment momentum and adds mild **dovish** bias at the margin for the **ECB** if weakness persists.
+
+# Immediate Actions
+(요약된 시드 콘텐츠)`,
+      date: fmtDate(now),
+    },
+    {
+      id: uid(),
+      title: `노트 — ${fmtDate(now - day)}`,
+      content: "???",
+      date: fmtDate(now - day),
+    },
+  ];
+}
+
+function migrateNotes(raw: unknown): Note[] | null {
+  try {
+    const arr = Array.isArray(raw) ? raw : JSON.parse(String(raw));
+    if (!Array.isArray(arr)) return null;
+    // Map possible old shapes to new Note
+    const mapped: Note[] = arr.map((n: any) => ({
+      id: String(n?.id ?? uid()),
+      title: String(n?.title ?? ""),
+      content: String(n?.content ?? ""),
+      date: typeof n?.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(n.date) ? n.date : fmtDate(Date.now()),
+    }));
+    return mapped;
+  } catch {
+    return null;
+  }
+}
+
+function loadNotes(): Note[] {
+  const rawV2 = localStorage.getItem(LS_KEY);
+  if (rawV2) {
+    const migrated = migrateNotes(rawV2);
+    if (migrated) return migrated;
+  }
+
+  // Try legacy key (v1) for migration
+  const rawV1 = localStorage.getItem("daily_notes_v1");
+  if (rawV1) {
+    const migrated = migrateNotes(rawV1);
+    if (migrated) {
+      localStorage.setItem(LS_KEY, JSON.stringify(migrated));
+      return migrated;
+    }
+  }
+
+  const seeded = seedNotes();
+  localStorage.setItem(LS_KEY, JSON.stringify(seeded));
+  return seeded;
+}
+
+function saveNotes(notes: Note[]) {
+  localStorage.setItem(LS_KEY, JSON.stringify(notes));
+}
+
+/** Debounce helper */
+function useDebouncedEffect(effect: () => void, deps: any[], delay: number) {
+  useEffect(() => {
+    const h = setTimeout(effect, delay);
+    return () => clearTimeout(h);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
+}
+
+/** Click-away hook */
 function useClickAway<T extends HTMLElement>(onAway: () => void) {
   const ref = useRef<T | null>(null);
   useEffect(() => {
@@ -282,6 +139,9 @@ function useClickAway<T extends HTMLElement>(onAway: () => void) {
   return ref;
 }
 
+/** =========================
+ *  UI Bits
+ *  ========================= */
 function Toast({ msg, onDone }: { msg: string; onDone: () => void }) {
   useEffect(() => {
     const id = setTimeout(onDone, 1600);
@@ -294,99 +154,224 @@ function Toast({ msg, onDone }: { msg: string; onDone: () => void }) {
   );
 }
 
+/** =========================
+ *  App
+ *  ========================= */
 export default function NotesApp() {
   const [notes, setNotes] = useState<Note[]>(() => loadNotes());
-  const [selectedId, setSelectedId] = useState<string | null>(notes[0]?.id ?? null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [toast, setToast] = useState<string | null>(null);
 
-  useEffect(() => saveNotes(notes), [notes]);
+  /** Persist notes with debounce to reduce writes while typing */
+  useDebouncedEffect(() => saveNotes(notes), [notes], 400);
 
-  const sorted = useMemo(() => [...notes].sort((a, b) => b.id.localeCompare(a.id)), [notes]);
-  const selected = useMemo(() => sorted.find((n) => n.id === selectedId) ?? sorted[0] ?? null, [sorted, selectedId]);
+  /** Sort by date(desc), then id(desc) for stability */
+  const sorted = useMemo(() => {
+    const arr = [...notes];
+    arr.sort((a, b) => {
+      if (a.date === b.date) return b.id.localeCompare(a.id);
+      return b.date.localeCompare(a.date);
+    });
+    return arr;
+  }, [notes]);
 
-  function updateNoteContent(id: string, content: string) {
-    setNotes((prev) => prev.map((n) => (n.id === id ? { ...n, content } : n)));
-  }
+  const selected = useMemo(
+    () => (selectedId ? sorted.find((n) => n.id === selectedId) ?? null : null),
+    [sorted, selectedId]
+  );
 
-  function shareNote(id: string) {
-    const url = `${window.location.origin}${window.location.pathname}?note=${id}`;
-    navigator.clipboard
-      .writeText(url)
-      .then(() => setToast("공유 링크가 복사되었습니다."))
-      .catch(() => setToast("복사 실패. 수동으로 복사하세요."));
-  }
-
+  /** Initial selection: deep link ?note=... or none (home) */
   useEffect(() => {
     const u = new URL(window.location.href);
     const q = u.searchParams.get("note");
-    if (q && notes.some((n) => n.id === q)) setSelectedId(q);
+    if (q && notes.some((n) => n.id === q)) {
+      setSelectedId(q);
+    } else if (q) {
+      setToast("존재하지 않는 노트 링크입니다.");
+      setSelectedId(null);
+    } else {
+      setSelectedId(null); // go to Home by default
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  /** Helpers */
+  function selectNote(id: string) {
+    setSelectedId(id);
+    const url = new URL(window.location.href);
+    url.searchParams.set("note", id);
+    window.history.replaceState(null, "", url.toString());
+  }
+
+  function goHome() {
+    setSelectedId(null);
+    const url = new URL(window.location.href);
+    window.history.replaceState(null, "", url.toString());
+  }
+
+  function shareNote(id: string) {
+    const url = `${window.location.origin}${window.location.pathname}?note=${encodeURIComponent(id)}`;
+    // Try Clipboard API; fallback to execCommand for insecure contexts
+    // @ts-ignore
+    const write = globalThis.navigator?.clipboard?.writeText;
+    if (typeof write === "function") {
+      write(url)
+        .then(() => setToast("공유 링크가 복사되었습니다."))
+        .catch(() => fallbackCopy(url));
+    } else {
+      fallbackCopy(url);
+    }
+  }
+
+  function fallbackCopy(text: string) {
+    const i = document.createElement("input");
+    i.value = text;
+    document.body.appendChild(i);
+    i.select();
+    document.execCommand("copy");
+    i.remove();
+    setToast("공유 링크가 복사되었습니다.");
+  }
 
   return (
     <div className="w-full h-screen flex bg-gray-50 text-gray-900">
-      <aside className={classNames("relative h-full transition-all duration-300 ease-in-out bg-white border-r border-gray-200 shadow-sm", sidebarOpen ? "w-80" : "w-16")}>
-        <div className="flex items-center justify-between p-3 border-b border-gray-100">
+      {/* Sidebar */}
+      <aside
+        className={classNames(
+          "relative h-full transition-all duration-300 ease-in-out bg-white border-r border-gray-200 shadow-sm",
+          sidebarOpen ? "w-80" : "w-16"
+        )}
+        aria-label="노트 사이드바"
+      >
+        <div className="flex items-center justify-between gap-2 p-3 border-b border-gray-100">
+          {/* Home button is fully hidden in compact (match html behavior) */}
           {sidebarOpen && (
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm font-medium"
-              onClick={() => setSelectedId(null)}
+              type="button"
+              className="px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm font-medium"
+              onClick={goHome}
               title="홈"
+              aria-label="홈으로 이동"
             >
               홈
             </button>
           )}
           <button
+            type="button"
             className="px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm whitespace-nowrap min-w-[92px]"
             onClick={() => setSidebarOpen((s) => !s)}
             title="사이드바 열기/닫기"
+            aria-controls="sidebar"
+            aria-expanded={sidebarOpen}
           >
             {sidebarOpen ? "닫기" : "열기"}
           </button>
         </div>
-        <div className="overflow-y-auto h-[calc(100%-56px)] p-2">
+
+        <div id="sidebar" className="overflow-y-auto h-[calc(100%-56px)] p-2">
           {sorted.map((n) => (
-            <NoteListItem key={n.id} note={n} active={selected?.id === n.id} compact={!sidebarOpen} onSelect={() => setSelectedId(n.id)} onShare={() => shareNote(n.id)} />
+            <NoteListItem
+              key={n.id}
+              note={n}
+              active={selected?.id === n.id}
+              compact={!sidebarOpen}
+              onSelect={() => selectNote(n.id)}
+              onShare={() => shareNote(n.id)}
+            />
           ))}
         </div>
       </aside>
-      <main className="flex-1 h-full flex flex-col">
+
+      {/* Main */}
+      <main className="flex-1 h-full flex flex-direction-col">
         <div className="h-14 flex items-center justify-between px-4 border-b border-gray-200 bg-white">
-          <div className="font-semibold truncate">{selected ? selected.title : "홈"}</div>
+          <div className="font-semibold truncate">{selected ? selected.title || "(제목 없음)" : "홈"}</div>
           {!sidebarOpen && (
             <button
+              type="button"
               className="px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm whitespace-nowrap min-w-[110px]"
               onClick={() => setSidebarOpen(true)}
               title="사이드바 열기"
+              aria-controls="sidebar"
+              aria-expanded={true}
             >
               사이드바 열기
             </button>
           )}
         </div>
-        <div className="flex-1 overflow-hidden">
-          {selected ? <Editor key={selected.id} note={selected} onChange={(val) => updateNoteContent(selected.id!, val)} /> : <div className="h-full grid place-items-center text-gray-500">노트를 선택하세요.</div>}
+        <div className="flex-1 overflow-hidden" aria-live="polite">
+          {selected ? (
+            <Editor key={selected.id} note={selected} onChange={(val) => updateNoteContent(selected.id, val)} />
+          ) : (
+            <div className="h-full grid place-items-center text-gray-500">좌측에서 노트를 선택하세요.</div>
+          )}
         </div>
       </main>
+
       {toast && <Toast msg={toast} onDone={() => setToast(null)} />}
     </div>
   );
 }
 
-function NoteListItem({ note, active, compact, onSelect, onShare }: { note: Note; active: boolean; compact: boolean; onSelect: () => void; onShare: () => void }) {
+/** =========================
+ *  Note List Item with A11y Menu
+ *  ========================= */
+function NoteListItem({
+  note,
+  active,
+  compact,
+  onSelect,
+  onShare,
+}: {
+  note: Note;
+  active: boolean;
+  compact: boolean;
+  onSelect: () => void;
+  onShare: () => void;
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useClickAway<HTMLDivElement>(() => setMenuOpen(false));
 
   return (
-    <div className={classNames("group relative flex items-center gap-2 w-full cursor-pointer rounded-xl px-3 py-2 mb-1", active ? "bg-indigo-50 border border-indigo-200" : "hover:bg-gray-100")} onClick={onSelect}>
+    <div
+      className={classNames(
+        "group relative flex items-center gap-2 w-full cursor-pointer rounded-xl px-3 py-2 mb-1",
+        active ? "bg-indigo-50 border border-indigo-200" : "hover:bg-gray-100"
+      )}
+      onClick={onSelect}
+      role="listitem"
+      aria-pressed={active}
+    >
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
-          <div className="truncate text-sm font-medium">{note.title}</div>
-          <button className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 hover:text-gray-900 px-2" onClick={(e) => { e.stopPropagation(); setMenuOpen((v) => !v); }} aria-label="더보기" title="더보기">…</button>
+          <div className="truncate text-sm font-medium">{note.title || "(제목 없음)"}</div>
+          <button
+            type="button"
+            className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 hover:text-gray-900 px-2"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen((v) => !v);
+            }}
+            aria-label="더보기"
+            aria-haspopup="menu"
+            aria-expanded={menuOpen}
+            title="더보기"
+          >
+            …
+          </button>
         </div>
       </div>
+
       {menuOpen && (
-        <div ref={menuRef} className="absolute right-2 top-10 z-20 w-36 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden" onClick={(e) => e.stopPropagation()}>
-          <MenuItem label="공유하기" onClick={onShare} />
+        <div
+          ref={menuRef}
+          className="absolute right-2 top-10 z-20 w-44 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden p-1"
+          role="menu"
+          aria-label="노트 메뉴"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <MenuItem label="공유 링크 복사" onClick={() => { onShare(); setMenuOpen(false); }} />
         </div>
       )}
     </div>
@@ -395,14 +380,43 @@ function NoteListItem({ note, active, compact, onSelect, onShare }: { note: Note
 
 function MenuItem({ label, onClick }: { label: string; onClick: () => void }) {
   return (
-    <button className="w-full text-left px-3 py-2 text-sm hover:bg-gray-100" onClick={(e) => { e.stopPropagation(); onClick(); }}>{label}</button>
+    <button
+      type="button"
+      className="w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-500"
+      role="menuitem"
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick();
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          (e.target as HTMLButtonElement).blur();
+        }
+      }}
+    >
+      {label}
+    </button>
   );
 }
 
+/** =========================
+ *  Editor with debounced onChange
+ *  ========================= */
 function Editor({ note, onChange }: { note: Note; onChange: (v: string) => void }) {
   const [val, setVal] = useState(note.content);
-  useEffect(() => setVal(note.content), [note.id]);
+
+  // Sync when note changes
+  useEffect(() => setVal(note.content), [note.id, note.content]);
+
+  // Debounce push-updates to parent for performance
+  useDebouncedEffect(() => onChange(val), [val], 300);
+
   return (
-    <textarea className="w-full h-full resize-none p-4 focus:outline-none bg-white" placeholder="여기에 노트를 작성하세요…" value={val} onChange={(e) => setVal(e.target.value)} onBlur={() => onChange(val)} />
+    <textarea
+      className="w-full h-full resize-none p-4 focus:outline-none bg-white"
+      placeholder="여기에 노트를 작성하세요…"
+      value={val}
+      onChange={(e) => setVal(e.target.value)}
+    />
   );
 }
