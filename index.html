@@ -2,12 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>Market Monitoring — Notes</title>
+  <title>Market Monitoring — Notes (Read-only)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <!-- XSS 방지 -->
-   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 
   <style>
     :root{
@@ -84,20 +84,20 @@
       padding:0 16px; border-bottom:1px solid var(--line); background:#fff;
     }
     .heading{ font-weight:700; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .editor{ flex:1; }
-    .editor textarea{
-      width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none;
-    }
 
-    /* Toast */
-    .toast{
-      position:fixed; right:24px; bottom:24px; padding:10px 14px; background:#111827; color:#fff;
-      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); font-size:13px;
+    /* Read-only preview area */
+    .editor{
+      flex:1; background:#fff; overflow:auto; padding:16px; line-height:1.7; font-size:15px;
     }
+    .editor h1,.editor h2,.editor h3{ margin:1.2em 0 .6em; }
+    .editor code{ background:#f3f4f6; padding:.2em .4em; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .editor pre code{ display:block; padding:12px; overflow:auto; }
+    .editor blockquote{ border-left:4px solid #e5e7eb; padding-left:12px; color:#374151; }
+    .editor ul, .editor ol{ padding-left:1.2em; }
 
-    /* Compact rules (single source of truth) */
-    .sidebar.compact .hide-when-compact{ display:none !important; } /* hide label-only bits */
-    .sidebar.compact .hide-control-when-compact{ display:none !important; } /* home button entire */
+    /* Compact rules */
+    .sidebar.compact .hide-when-compact{ display:none !important; }
+    .sidebar.compact .hide-control-when-compact{ display:none !important; }
 
     /* Focus visibility */
     :focus-visible{
@@ -109,24 +109,6 @@
     /* Responsive widths refinement */
     @media (max-width: 480px){
       :root{ --sidebar-wide: 280px; --sidebar-compact: 56px; }
-
-    /* 에디터를 좌(텍스트)–우(미리보기) 2열로 */
-    .editor{
-      flex:1; display:grid; grid-template-columns: 1fr 1fr; gap:0; background:#fff;
-    }
-    .editor .pane{ height:100%; }
-    .editor .pane.edit{ border-right:1px solid var(--line); }
-    .editor textarea{
-      width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none;
-    }
-    .editor .preview{
-      padding:16px; overflow:auto; font-size:15px; line-height:1.7;
-    }
-    .editor .preview h1,.editor .preview h2,.editor .preview h3{ margin:1.2em 0 .6em; }
-    .editor .preview code{ background:#f3f4f6; padding:.2em .4em; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .editor .preview pre code{ display:block; padding:12px; overflow:auto; }
-    .editor .preview blockquote{ border-left:4px solid #e5e7eb; padding-left:12px; color:#374151; }
-    .editor .preview ul, .editor .preview ol{ padding-left:1.2em; }
     }
   </style>
 </head>
@@ -134,7 +116,6 @@
   <div id="app" class="app">
     <aside id="sidebar" class="sidebar" aria-label="노트 사이드바">
       <div class="s-top">
-        <!-- 완전 숨김(컴팩트 모드에서) -->
         <button type="button" class="btn hide-control-when-compact" id="homeBtn" title="홈" aria-label="홈으로 이동">홈</button>
         <button type="button" class="btn" id="toggleBtn" title="사이드바 열기/닫기" aria-controls="sidebar" aria-expanded="true">닫기</button>
       </div>
@@ -155,8 +136,8 @@
   </div>
 
   <script>
-    // ======= Utilities =======
-    const LS_KEY = 'daily_notes_v1_html_only';
+    // ======= Read-only: constants & elements =======
+    const LS_KEY = 'daily_notes_v1_html_only'; // 읽기 전용
     const $sidebar  = document.getElementById('sidebar');
     const $notesList= document.getElementById('notesList');
     const $heading  = document.getElementById('heading');
@@ -174,13 +155,7 @@
       return `${y}-${m}-${dd}`;
     };
 
-    function debounce(fn, ms){
-      let t; return function(...args){
-        clearTimeout(t); t = setTimeout(() => fn.apply(this,args), ms);
-      };
-    }
-
-    // ======= Seed =======
+    // ======= Seed (샘플; 생성/수정 비활성화와 무관) =======
     function seed(){
       const t = new Date();
       const d1 = new Date(t);
@@ -195,34 +170,30 @@
 (a) **FIRED** — official release(s) within the past 24h. (b) **NOT FIRED** — no verified ≥1σ consensus surprise detected.
 
 1. **When (KST):**  
-    • **2025-10-15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**.
-    
-2. **What moved:**  
-    • **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.** First estimate from Eurostat. Coverage from major outlets frames this as a renewed monthly decline after July’s +0.5% (rev). Consensus indications from reputable press suggest a modest miss/near-consensus outcome rather than a shock.
-    
-3. **Why it matters (policy/market):**  
-    • IP is a key high-frequency input for euro area GDP nowcasts; a broad m/m drop led by **capital goods (−2.2%)** points to softer investment momentum and adds mild **dovish** bias at the margin for the **ECB** if weakness persists.
+• **2025-10-15 18:00 KST** — Eurostat euro area **Industrial Production (Aug)**.
 
-# Immediate Actions
-(요약된 시드 콘텐츠)`,
+2. **What moved:**  
+• **Euro area Industrial Production (Aug): −1.2% m/m; +1.1% y/y.**
+
+3. **Why it matters:**  
+• High-frequency input for GDP nowcasts; broad m/m drop led by **capital goods (−2.2%)**.`,
           date: fmt(d1)
         },
-        { id: uid(), title: `노트 — ${fmt(d0)}`, content: "???", date: fmt(d0) },
+        { id: uid(), title: `노트 — ${fmt(d0)}`, content: "_(샘플)_ 읽기 전용 보기입니다.", date: fmt(d0) },
       ];
     }
 
-    // ======= Storage =======
+    // ======= Storage (읽기 전용 로드만) =======
     function loadNotes(){
       try{
         const raw = localStorage.getItem(LS_KEY);
         if(!raw) return seed();
         const arr = JSON.parse(raw);
         if(!Array.isArray(arr)) return seed();
+        // content를 포함하되 어떠한 저장도 수행하지 않음
         return arr.map(n => ({ id:n.id, title:n.title||'', content:n.content||'', date:n.date||'1970-01-01' }));
       }catch{ return seed(); }
     }
-    const saveNotesImmediate = (notes) => localStorage.setItem(LS_KEY, JSON.stringify(notes));
-    const saveNotes = debounce(saveNotesImmediate, 400);
 
     // ======= State =======
     let notes = loadNotes();
@@ -231,7 +202,6 @@
 
     // ======= Renderers =======
     function sortLatest(a,b){
-      // 최신순(문자열 비교: YYYY-MM-DD)
       if(a.date === b.date) return b.id.localeCompare(a.id);
       return b.date.localeCompare(a.date);
     }
@@ -247,7 +217,6 @@
         row.className = 'item' + (selectedId === n.id ? ' active' : '');
         row.setAttribute('role','listitem');
         row.setAttribute('aria-pressed', selectedId === n.id ? 'true' : 'false');
-
         row.addEventListener('click', () => selectNote(n.id));
 
         const title = document.createElement('div');
@@ -287,60 +256,13 @@
 
       $heading.textContent = note.title || '(제목 없음)';
 
-      // 레이아웃: 좌측 textarea, 우측 미리보기
-      $editor.innerHTML = '';
-      const paneEdit = document.createElement('div');
-      paneEdit.className = 'pane edit';
-      const ta = document.createElement('textarea');
-      ta.value = note.content || '';
-      ta.placeholder = '여기에 노트를 작성하세요…';
-      paneEdit.appendChild(ta);
-
-      const panePreview = document.createElement('div');
-      panePreview.className = 'pane preview';
-      panePreview.setAttribute('role','document');
-      $editor.appendChild(paneEdit);
-      $editor.appendChild(panePreview);
-
-      const renderPreview = () => {
-        const raw = ta.value ?? '';
-        // Markdown → HTML, sanitize
-        const html = DOMPurify.sanitize(marked.parse(raw));
-        panePreview.innerHTML = html;
-      };
-      renderPreview();
-
-      // 입력시 저장 + 미리보기 갱신(디바운스 저장 기존 로직 활용)
-      ta.addEventListener('input', () => {
-        note.content = ta.value;
-        saveNotes(notes);
-        renderPreview();
-      });
-
-      ta.focus();
-    }
-      const note = notes.find(n => n.id === selectedId);
-      if(!note){
-        $heading.textContent = '홈';
-        $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
-        return;
-      }
-      $heading.textContent = note.title || '(제목 없음)';
-      $editor.innerHTML = '';
-      const ta = document.createElement('textarea');
-      ta.value = note.content || '';
-      ta.placeholder = '여기에 노트를 작성하세요…';
-
-      ta.addEventListener('input', () => {
-        note.content = ta.value;
-        saveNotes(notes);
-      });
-
-      $editor.appendChild(ta);
-      ta.focus();
+      // 읽기 전용: Markdown → HTML 렌더만 수행 (수정/저장 없음)
+      const raw = note.content || '';
+      const html = DOMPurify.sanitize(marked.parse(raw));
+      $editor.innerHTML = `<article role="document">${html}</article>`;
     }
 
-    // ======= Menu =======
+    // ======= Menu (공유만 유지) =======
     function openMenu(anchorEl, note, buttonEl){
       closeMenus();
       const menu = document.createElement('div');
@@ -360,21 +282,15 @@
         return b;
       };
 
+      // 생성/수정/삭제 항목 없음 (폐기)
       const shareBtn = mkItem('공유 링크 복사', () => copyShareLink(note.id));
-          renderList(); renderMain();
-        }
-      });
-      });
 
       menu.appendChild(shareBtn);
       anchorEl.appendChild(menu);
 
       buttonEl.setAttribute('aria-expanded','true');
-
-      // Focus first item for a11y
       shareBtn.focus();
 
-      // Outside click / ESC close using AbortController
       currentMenuAbort = new AbortController();
       const { signal } = currentMenuAbort;
 
@@ -428,7 +344,7 @@
       setTimeout(() => t.remove(), 1600);
     }
 
-    // ======= Sidebar toggle (state via classes only) =======
+    // ======= Sidebar toggle =======
     function setSidebar(open){
       if(open){
         $sidebar.classList.remove('compact');
@@ -444,12 +360,13 @@
     }
     $toggleBtn.addEventListener('click', () => {
       const isCompact = $sidebar.classList.contains('compact');
-      setSidebar(isCompact); // compact면 열기, 아니면 닫기
+      setSidebar(isCompact);
     });
     $openBtn.addEventListener('click', () => setSidebar(true));
     $homeBtn.addEventListener('click', () => {
       selectedId = null;
       const url = new URL(location.href);
+      url.searchParams.delete('note');
       history.replaceState(null, '', url.toString());
       renderList(); renderMain();
     });
@@ -465,8 +382,7 @@
       }
     }
 
-    // ======= Keyboard niceties =======
-    // Close any open menu on window blur (optional hardening)
+    // Close any open menu on window blur
     window.addEventListener('blur', () => closeMenus());
 
     // ======= Init =======
