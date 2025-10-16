@@ -171,19 +171,28 @@
     const $homeBtn  = document.getElementById('homeBtn');
 
     const uid = () => (crypto.randomUUID ? crypto.randomUUID() : (Math.random().toString(36).slice(2)+Date.now().toString(36)));
-    const fmt = (date) => {
-      const d = new Date(date);
-      const y = d.getFullYear();
-      const m = String(d.getMonth()+1).padStart(2,'0');
-      const dd= String(d.getDate()).padStart(2,'0');
-      return `${y}-${m}-${dd}`;
-    };
 
     function seed(){
-      const t = new Date();
-      const d1 = new Date(t);
-      const d0 = new Date(t); d0.setDate(d0.getDate()-1);
       return [
+        {
+          id: uid(),
+          order: 251016,
+          title: `2025. 10. 16. Daily Market Issues`,
+          content: `
+* **AI/semis led risk-on:** TSMC posted a record Q3 profit (~+39% y/y) and raised its 2025 revenue outlook on persistent AI demand; chip stocks rose globally on the guidance. ([Reuters](https://www.reuters.com/world/asia-pacific/tsmc-q3-profit-expected-set-record-ai-spending-boom-2025-10-15/))
+  
+* **Gold set fresh records:** Spot gold pushed past $4,200/oz and extended its record run on safe-haven demand, Fed rate-cut expectations, U.S.–China tensions, and the ongoing U.S. government shutdown. (HSBC also lifted its 2025–26 gold price forecasts.) ([Reuters](https://www.reuters.com/world/china/gold-extends-record-rally-us-china-tensions-rate-outlook-2025-10-16/))
+  
+* **Oil rebounded from multi-month lows:** Brent/WTI edged up ~1% after Trump said India would halt purchases of Russian crude, a headline with potential supply-routing implications. ([Reuters]https://www.reuters.com/business/energy/brent-crude-futures-up-1-after-trump-says-india-promised-stop-buying-russian-oil-2025-10-16/))
+  
+* **Policy & macro backdrop: Fed Governor **Waller signaled support for a 25 bp October rate cut, keeping U.S. yields broadly contained even as data releases are constrained by the shutdown. ([Reuters]https://www.reuters.com/world/us/us-investment-boom-is-sustainable-bessent-says-2025-10-15/))
+  
+* **FX intervention in India:** The RBI was estimated to have sold $3–5B across spot/NDF to stabilize the rupee, delivering its biggest one-day gain in months. ([Reuters]https://www.reuters.com/world/india/india-central-bank-deployed-5-billion-life-jacket-aid-struggling-rupee-bankers-2025-10-16/))
+  
+* **Shutdown drag quantified:** Treasury flagged the ongoing federal shutdown could be costing ~$15B per week, while the U.S. “data blackout” is complicating market signaling and policy assessment. ([Reuters]https://www.reuters.com/world/asia-pacific/hsbc-raises-average-gold-price-forecasts-2025-2026-2025-10-16/))
+`,
+        },
+
         {
           id: uid(),
           order: 251015,
@@ -229,6 +238,7 @@
 <hr>
 
 # Immediate Actions
+
 ## 1. 금리/듀레이션 (EUR)
 
 **1-1. 독일국채 듀레이션 Long (5–7년 선호)**
@@ -405,8 +415,8 @@
 - 22:00: 미국 프리마켓·헤드라인 확인, 증액·축소 금지 규칙 재확인.
     
 `,
-          date: fmt(d1)
         },
+        
         {
           id: uid(),
           order: 251014,
