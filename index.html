@@ -17,7 +17,7 @@
       --brand:#4f46e5; --brand-2:#4338ca;
       --radius:14px;
       --sidebar-wide: 320px;
-      --sidebar-compact: 64px;
+      --sidebar-compact: 72px;
     }
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
@@ -27,7 +27,12 @@
     }
 
     /* App layout */
-    .app{ display:flex; height:100svh; width:100vw; overflow:hidden; }
+    .app{ display:flex; height:100svh; width:100%; max-width:100%; overflow:hidden; }
+    .main{ min-width:0; }
+    .editor{ min-width:0; }
+    .editor .preview{ min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+    .editor .preview img, .editor .preview table{ max-width:100%; height:auto; }
+    .editor .preview pre{ max-width:100%; overflow:auto; }
 
     /* Sidebar */
     .sidebar{
@@ -110,7 +115,7 @@
 
     /* Responsive widths refinement */
     @media (max-width: 480px){
-      :root{ --sidebar-wide: 280px; --sidebar-compact: 56px; }
+      :root{ --sidebar-wide: 160px; --sidebar-compact: 64px; }
     }
 
     /* 1) Monaspace 가변 폰트 등록 */
@@ -644,7 +649,7 @@ Given the cautious tilt in vol and latent macro risks:
         return b;
       };
 
-      const shareBtn = mkItem('공유 링크 복사', () => copyShareLink(note.id));
+      const shareBtn = mkItem('링크 복사', () => copyShareLink(note.id));
 
       menu.appendChild(shareBtn);
       anchorEl.appendChild(menu);
