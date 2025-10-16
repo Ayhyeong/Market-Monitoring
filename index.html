@@ -30,9 +30,6 @@
     .app{ display:flex; height:100svh; width:100%; max-width:100%; overflow:hidden; }
     .main{ min-width:0; }
     .editor{ min-width:0; }
-    .editor .preview{ min-width:0; overflow-wrap:anywhere; word-break:break-word; }
-    .editor .preview img, .editor .preview table{ max-width:100%; height:auto; }
-    .editor .preview pre{ max-width:100%; overflow:auto; }
 
     /* Sidebar */
     .sidebar{
@@ -91,16 +88,6 @@
       padding:0 16px; border-bottom:1px solid var(--line); background:#fff;
     }
     .heading{ font-weight:700; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-
-    /* Read-only preview area */
-    .editor{
-      flex:1; background:#fff; overflow:auto; padding:16px; line-height:1.7; font-size:15px;
-    }
-    .editor h1,.editor h2,.editor h3{ margin:1.2em 0 .6em; }
-    .editor code{ background:#f3f4f6; padding:.2em .4em; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .editor pre code{ display:block; padding:12px; overflow:auto; }
-    .editor blockquote{ border-left:4px solid #e5e7eb; padding-left:12px; color:#374151; }
-    .editor ul, .editor ol{ padding-left:1.2em; }
 
     /* Compact rules */
     .sidebar.compact .hide-when-compact{ display:none !important; }
@@ -404,8 +391,22 @@
     
 - 22:00: 미국 프리마켓·헤드라인 확인, 증액·축소 금지 규칙 재확인.
     
- `,
+`,
           date: fmt(d1)
+        },
+        {
+          id: uid(),
+          order: 251014,
+          title: `2025. 10. 14.`,
+          content: `
+- **VIX (equity vol):** ~ 21.66 [FRED+2Cboe Global Markets+2](https://fred.stlouisfed.org/series/VIXCLS?utm_source=chatgpt.com) — well below the 35 threshold and not above 25 for 3 straight days with +5 pt weekly move.
+    
+- **MOVE (rates vol):** ~ 81.65 [Yahoo Finance](https://finance.yahoo.com/quote/%5EMOVE/?utm_source=chatgpt.com) — far below 160, no +40 move over 10 days.
+    
+- **HY OAS (ICE BofA US High Yield):** ~ 2.95 % (≈ 295 bps) [YCharts+2Trading Economics+2](https://ycharts.com/indicators/us_high_yield_master_ii_optionadjusted_spread?utm_source=chatgpt.com) — below 600 bps and not showing a 100 bp jump in 10 days.
+    
+- **Curve / funding / commodities / bank CDS etc:** No public data found that confirms any of the other tripwire thresholds breached.
+`,
         },
         {
           id: uid(),
