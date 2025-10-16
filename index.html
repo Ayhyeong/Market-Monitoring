@@ -724,7 +724,7 @@ Given the cautious tilt in vol and latent macro risks:
         $sidebar.classList.add('compact');
         $toggleBtn.textContent = isMobile ? '>' : '[>|]';
         $toggleBtn.setAttribute('aria-expanded','false');
-        $openBtn.hidden = false;
+        if ($openBtn) $openBtn.hidden = false;
       }
     }
     
