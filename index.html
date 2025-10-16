@@ -117,7 +117,7 @@
     <aside id="sidebar" class="sidebar" aria-label="노트 사이드바">
       <div class="s-top">
         <button type="button" class="btn hide-control-when-compact" id="homeBtn" title="홈" aria-label="홈으로 이동">홈</button>
-        <button type="button" class="btn" id="toggleBtn" title="사이드바 열기/닫기" aria-controls="sidebar" aria-expanded="true">닫기</button>
+        <button type="button" class="btn" id="toggleBtn" title="사이드바 열기/닫기" aria-controls="sidebar" aria-expanded="true">[|<]</button>
       </div>
       <div id="notesList" class="notes" role="list"></div>
     </aside>
@@ -125,7 +125,6 @@
     <section class="main">
       <div class="m-top">
         <div class="heading" id="heading">홈</div>
-        <button type="button" class="btn" id="openBtn" aria-controls="sidebar" aria-expanded="false" hidden>사이드바 열기</button>
       </div>
       <div id="editor" class="editor" aria-live="polite">
         <div style="height:100%;display:grid;place-items:center;color:#6b7280">
@@ -155,7 +154,6 @@
       return `${y}-${m}-${dd}`;
     };
 
-    // ======= Seed (샘플; 생성/수정 비활성화와 무관) =======
     function seed(){
       const t = new Date();
       const d1 = new Date(t);
@@ -217,7 +215,17 @@
         row.className = 'item' + (selectedId === n.id ? ' active' : '');
         row.setAttribute('role','listitem');
         row.setAttribute('aria-pressed', selectedId === n.id ? 'true' : 'false');
-        row.addEventListener('click', () => selectNote(n.id));
+        row.addEventListener('click', () => {
+          if ($sidebar.classList.contains('compact')) setSidebar(true);
+          selectNote(n.id);
+        });
+        row.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            if ($sidebar.classList.contains('compact')) setSidebar(true);
+            selectNote(n.id);
+          }
+        });
 
         const title = document.createElement('div');
         title.className = 'title';
@@ -282,7 +290,6 @@
         return b;
       };
 
-      // 생성/수정/삭제 항목 없음 (폐기)
       const shareBtn = mkItem('공유 링크 복사', () => copyShareLink(note.id));
 
       menu.appendChild(shareBtn);
@@ -348,12 +355,12 @@
     function setSidebar(open){
       if(open){
         $sidebar.classList.remove('compact');
-        $toggleBtn.textContent = '닫기';
+        $toggleBtn.textContent = '[|<]';
         $toggleBtn.setAttribute('aria-expanded','true');
         $openBtn.hidden = true;
       }else{
         $sidebar.classList.add('compact');
-        $toggleBtn.textContent = '열기';
+        $toggleBtn.textContent = '[>|]';
         $toggleBtn.setAttribute('aria-expanded','false');
         $openBtn.hidden = false;
       }
