@@ -151,6 +151,7 @@
       <div class="s-top">
         <button type="button" class="btn hide-control-when-compact" id="homeBtn" title="홈" aria-label="홈으로 이동">홈</button>
         <button type="button" class="btn" id="toggleBtn" title="사이드바 열기/닫기" aria-controls="sidebar" aria-expanded="true">[|<]</button>
+        <button type="button" class="btn" id="openBtn" hidden>[열기]</button>
       </div>
       <div id="notesList" class="notes" role="list"></div>
     </aside>
@@ -398,7 +399,7 @@
         $sidebar.classList.remove('compact');
         $toggleBtn.textContent = '[|<]';
         $toggleBtn.setAttribute('aria-expanded','true');
-        $openBtn.hidden = true;
+        if ($openBtn) $openBtn.hidden = false;
       }else{
         $sidebar.classList.add('compact');
         $toggleBtn.textContent = '[>|]';
@@ -410,7 +411,9 @@
       const isCompact = $sidebar.classList.contains('compact');
       setSidebar(isCompact);
     });
-    $openBtn.addEventListener('click', () => setSidebar(true));
+    if ($openBtn) {
+      $openBtn.addEventListener('click', () => setSidebar(true));
+    }
     $homeBtn.addEventListener('click', () => {
       selectedId = null;
       const url = new URL(location.href);
