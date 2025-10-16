@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Market Monitoring — Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f8fafc; --panel:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
+      --brand:#4f46e5; --brand-2:#4338ca;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, sans-serif; background: var(--bg); color: var(--text); }
+    .app { display:flex; height:100vh; width:100vw; overflow:hidden; }
+    /* Sidebar */
+    .sidebar { background: var(--panel); border-right:1px solid var(--line); box-shadow: 0 1px 6px rgba(0,0,0,.04); transition: width .25s ease; width: 320px; position:relative; }
+    .sidebar.compact { width: 64px; }
+    .s-top { display:flex; align-items:center; justify-content:space-between; padding:10px; border-bottom:1px solid var(--line);}
+    .btn { font-size:14px; padding:8px 12px; border:0; border-radius:12px; background:#f3f4f6; cursor:pointer; }
+    .btn:hover { background:#e5e7eb; }
+    .btn-ghost { background:#f3f4f6; }
+    .btn-link { padding:0; background:transparent; color:var(--muted); border-radius:8px; }
+    .notes { height: calc(100% - 52px); overflow:auto; padding:8px; }
+    .item { position:relative; display:flex; gap:8px; align-items:center; padding:10px 12px; border-radius:12px; cursor:pointer; }
+    .item:hover { background:#f3f4f6; }
+    .item.active { background:#eef2ff; outline:1px solid #c7d2fe; }
+    .title { font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1; }
+    .more { opacity:0; transition:opacity .15s; color:#6b7280; font-weight:700; padding:0 6px; }
+    .item:hover .more { opacity:1; }
+    .menu { position:absolute; right:8px; top:38px; width:140px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.08); overflow:hidden; z-index:3; }
+    .menu button { width:100%; text-align:left; padding:10px 12px; background:#fff; border:0; font-size:14px; cursor:pointer; }
+    .menu button:hover { background:#f3f4f6; }
+    /* Main */
+    .main { flex:1; display:flex; flex-direction:column; }
+    .m-top { height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; border-bottom:1px solid var(--line); background:#fff; }
+    .heading { font-weight:700; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .editor { flex:1; }
+    .editor textarea { width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none; }
+    .badge { display:inline-block; background:#eef2ff; color:#3730a3; padding:4px 8px; border-radius: 999px; font-size:12px; }
+    .toast { position:fixed; right:24px; bottom:24px; padding:10px 14px; background:#111827; color:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); font-size:13px; }
+    /* Hide label text when compact */
+    .compact .hide-when-compact { display:none; }
+  </style>
+</head>
+<body>
+  <div id="app" class="app">
+    <aside id="sidebar" class="sidebar">
+      <div class="s-top">
+        <button class="btn" id="homeBtn" title="홈"><span class="hide-when-compact">홈</span></button>
+        <button class="btn" id="toggleBtn" title="사이드바 열기/닫기">닫기</button>
+      </div>
+      <div id="notesList" class="notes"></div>
+    </aside>
+
+    <section class="main">
+      <div class="m-top">
+        <div class="heading" id="heading">홈</div>
+        <button class="btn" id="openBtn" style="display:none">사이드바 열기</button>
+      </div>
+      <div id="editor" class="editor">
+        <div style="height:100%;display:grid;place-items:center;color:#6b7280">
+          좌측에서 노트를 선택하세요.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // ======= Data layer (LocalStorage) =======
+    const LS_KEY = 'daily_notes_v1_html_only';
+
+    /**
+     * NOTE SHAPE:
+     * { id: string, title: string, content: string, date: 'YYYY-MM-DD' }
+     * - date는 정렬 전용(표시 안 함, 수정 이력 아님)
+     */
+    function fmt(date) {
+      const d = new Date(date);
+      const y = d.getFullYear();
+      const m = String(d.getMonth()+1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2,'0');
+      return `${y}-${m}-${dd}`;
+    }
+    function uid() {
+      return Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+    }
+    function seed() {
+      const t = new Date();
+      const d1 = new Date(t);
+      const d0 = new Date(t); d0.setDate(d0.getDate()-1);
+      return [
+        { id: uid(), title: `노트 — ${fmt(d1)}`, content: "오늘 메모\n- 마켓 데이터 점검\n- 사이드바 UX 확인", date: fmt(d1) },
+        { id: uid(), title: `노트 — ${fmt(d0)}`, content: "아이디어\n- 공유 링크 쿼리파라미터\n- 정렬은 최신순", date: fmt(d0) },
+      ];
+    }
+    function loadNotes() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (!raw) return seed();
+        const arr = JSON.parse(raw);
+        if (!Array.isArray(arr)) return seed();
+        return arr.map(n => ({ id:n.id, title:n.title||'', content:n.content||'', date:n.date||'1970-01-01' }));
+      } catch { return seed(); }
+    }
+    function saveNotes(notes) {
+      localStorage.setItem(LS_KEY, JSON.stringify(notes));
+    }
+
+    // ======= State =======
+    let notes = loadNotes();
+    let selectedId = null;
+    const $sidebar = document.getElementById('sidebar');
+    const $notesList = document.getElementById('notesList');
+    const $heading = document.getElementById('heading');
+    const $editor = document.getElementById('editor');
+    const $toggleBtn = document.getElementById('toggleBtn');
+    const $openBtn = document.getElementById('openBtn');
+    const $homeBtn = document.getElementById('homeBtn');
+
+    // ======= Rendering =======
+    function sortLatest(a, b) {
+      // 최신순(YYYY-MM-DD 문자열 내림차순 → 같으면 id로 안정화)
+      if (a.date === b.date) return b.id.localeCompare(a.id);
+      return b.date.localeCompare(a.date);
+    }
+
+    function renderList() {
+      notes.sort(sortLatest);
+      $notesList.innerHTML = '';
+      notes.forEach(n => {
+        const row = document.createElement('div');
+        row.className = 'item' + (selectedId === n.id ? ' active':'');
+        row.addEventListener('click', () => selectNote(n.id));
+
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = n.title || '(제목 없음)';
+
+        const more = document.createElement('button');
+        more.className = 'btn-link more';
+        more.textContent = '…';
+        more.title = '더보기';
+        more.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openMenu(row, n);
+        });
+
+        row.appendChild(title);
+        row.appendChild(more);
+        $notesList.appendChild(row);
+      });
+    }
+
+    function openMenu(anchorEl, note) {
+      closeMenus();
+      const menu = document.createElement('div');
+      menu.className = 'menu';
+      const shareBtn = document.createElement('button');
+      shareBtn.textContent = '공유하기';
+      shareBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        copyShareLink(note.id);
+        closeMenus();
+      });
+      menu.appendChild(shareBtn);
+      anchorEl.appendChild(menu);
+
+      // 바깥 클릭 닫기
+      setTimeout(() => {
+        const onDoc = (ev) => {
+          if (!menu.contains(ev.target)) {
+            closeMenus(); document.removeEventListener('mousedown', onDoc);
+          }
+        };
+        document.addEventListener('mousedown', onDoc);
+      }, 0);
+    }
+    function closeMenus() {
+      document.querySelectorAll('.menu').forEach(m => m.remove());
+    }
+
+    function renderMain() {
+      if (!selectedId) {
+        $heading.textContent = '홈';
+        $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#6b7280">좌측에서 노트를 선택하세요.</div>';
+        return;
+      }
+      const note = notes.find(n => n.id === selectedId);
+      if (!note) { $heading.textContent = '홈'; return; }
+      $heading.textContent = note.title || '(제목 없음)';
+      $editor.innerHTML = '';
+      const ta = document.createElement('textarea');
+      ta.value = note.content || '';
+      ta.placeholder = '여기에 노트를 작성하세요…';
+      ta.addEventListener('input', () => {
+        note.content = ta.value;
+        saveNotes(notes);
+      });
+      $editor.appendChild(ta);
+    }
+
+    function selectNote(id) {
+      selectedId = id;
+      const url = new URL(window.location.href);
+      url.searchParams.set('note', id);
+      history.replaceState(null, '', url.toString());
+      renderList(); renderMain();
+    }
+
+    function copyShareLink(id) {
+      const url = `${location.origin}${location.pathname}?note=${encodeURIComponent(id)}`;
+      navigator.clipboard.writeText(url).then(() => toast('공유 링크가 복사되었습니다.'));
+    }
+
+    function toast(msg) {
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 1600);
+    }
+
+    // ======= Sidebar toggle =======
+    function setSidebar(open) {
+      if (open) {
+        $sidebar.classList.remove('compact');
+        document.body.classList.remove('compact');
+        $toggleBtn.textContent = '닫기';
+        $openBtn.style.display = 'none';
+      } else {
+        $sidebar.classList.add('compact');
+        document.body.classList.add('compact');
+        $toggleBtn.textContent = '열기';
+        $openBtn.style.display = '';
+      }
+    }
+    $toggleBtn.addEventListener('click', () => {
+      const isCompact = $sidebar.classList.contains('compact');
+      setSidebar(isCompact); // compact면 열기, 아니면 닫기
+    });
+    $openBtn.addEventListener('click', () => setSidebar(true));
+    $homeBtn.addEventListener('click', () => {
+      selectedId = null;
+      const url = new URL(location.href);
+      url.searchParams.delete('note');
+      history.replaceState(null, '', url.toString());
+      renderList(); renderMain();
+    });
+
+    // ======= Deep link via ?note= =======
+    function bootSelectFromQuery() {
+      const q = new URL(location.href).searchParams.get('note');
+      if (q && notes.some(n => n.id === q)) selectedId = q;
+    }
+
+    // ======= Init =======
+    function init() {
+      bootSelectFromQuery();
+      renderList();
+      renderMain();
+      setSidebar(true);
+    }
+    init();
+  </script>
+</body>
+</html>
