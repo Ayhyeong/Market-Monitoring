@@ -9,6 +9,8 @@
   <!-- XSS 방지 -->
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 
+  <link rel="preload" href="/fonts/MonaspaceNeonVarVF[wght,wdth].woff2" as="font" type="font/woff2" crossorigin>
+  
   <style>
     :root{
       --bg:#f8fafc; --panel:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
@@ -110,6 +112,42 @@
     @media (max-width: 480px){
       :root{ --sidebar-wide: 280px; --sidebar-compact: 56px; }
     }
+
+    /* 1) Monaspace 가변 폰트 등록 */
+    @font-face {
+      font-family: 'Monaspace Neon';
+      src: url('/fonts/MonaspaceNeonVarVF[wght,wdth].woff2') format('woff2-variations');
+      font-weight: 200 800;          /* 가변 굵기 범위 */
+      font-stretch: 75% 125%;        /* 가변 폭(있다면) */
+      font-display: swap;
+    }
+
+    /* 2) 전역 기본 폰트를 모노스페이스로 강제 */
+    html, body {
+      /* Monaspace → 한글 모노 대체 → 일반 모노 → 이모지 */
+      font-family:
+        'Monaspace Neon',
+        'Nanum Gothic Coding',       /* mac/linux 설치 시 사용 */
+        'D2Coding',                  /* Windows에 흔함 */
+        ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace,
+        'Apple Color Emoji', 'Segoe UI Emoji';
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      font-kerning: normal;
+      font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+      font-feature-settings: "calt" 1, "liga" 1, "clig" 1;
+      font-synthesis-weight: none;   /* 가짜 볼드 방지 */
+    }
+
+    /* 3) 모든 요소가 기본 폰트를 상속하도록 강제(폼 컨트롤 포함) */
+    *, *::before, *::after { font: inherit; }
+    input, textarea, select, button, code, pre, kbd, samp { font: inherit; }
+
+    /* 4) 코드 블록 가독성(선택) */
+    pre { white-space: pre; tab-size: 2; }
+    code, pre { background: #f6f8fa; border-radius: 8px; padding: .2em .4em; }
+    pre code { display: block; padding: 12px; }
+    
   </style>
 </head>
 <body>
@@ -161,6 +199,7 @@
       return [
         {
           id: uid(),
+          order: 251016,
           title: `2025-10-16 Euro Area Industrial Production`,
           content: `# ALERT — Daily macro releases
 
@@ -177,7 +216,12 @@
 • High-frequency input for GDP nowcasts; broad m/m drop led by **capital goods (−2.2%)**.`,
           date: fmt(d1)
         },
-        { id: uid(), title: `노트 — ${fmt(d0)}`, content: "_(샘플)_ 읽기 전용 보기입니다.", date: fmt(d0) },
+        {
+          id: uid(),
+          order: 251015,
+          title: `노트 — ${fmt(d0)}`,
+          content: "_(샘플)_ 읽기 전용 보기입니다.",
+        },
       ];
     }
 
@@ -199,9 +243,11 @@
     let currentMenuAbort = null;
 
     // ======= Renderers =======
+    // order(int) 값 기준 내림차순 정렬
     function sortLatest(a,b){
-      if(a.date === b.date) return b.id.localeCompare(a.id);
-      return b.date.localeCompare(a.date);
+      const ao = typeof a.order === 'number' ? a.order : 0;
+      const bo = typeof b.order === 'number' ? b.order : 0;
+      if (ao !== bo) return bo - ao; // 높은 order 먼저
     }
 
     function renderList(){
@@ -270,7 +316,7 @@
       $editor.innerHTML = `<article role="document">${html}</article>`;
     }
 
-    // ======= Menu (공유만 유지) =======
+    // ======= Menu =======
     function openMenu(anchorEl, note, buttonEl){
       closeMenus();
       const menu = document.createElement('div');
