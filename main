@@ -1,0 +1,183 @@
+import React, { useEffect, useMemo, useRef, useState } from "react";
+
+const LS_KEY = "daily_notes_v1";
+
+const fmtDate = (ts: number) => {
+  const d = new Date(ts);
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+};
+
+function uid() {
+  return Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+}
+
+export type Note = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+function seedNotes(): Note[] {
+  const today = Date.now();
+  const day = 24 * 60 * 60 * 1000;
+  const samples: Note[] = [
+    {
+      id: uid(),
+      title: `노트 — ${fmtDate(today)}`,
+      content: "오늘 할 일:\n- 시스템 디자인 정리\n- 모듈 테스트\n- 산책 20분",
+    },
+    {
+      id: uid(),
+      title: `노트 — ${fmtDate(today - day)}`,
+      content: "아이디어 스케치:\n- 사이드바 인터랙션\n- 공유 링크 구조 고민",
+    },
+  ];
+  return samples;
+}
+
+function loadNotes(): Note[] {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return seedNotes();
+    const parsed = JSON.parse(raw) as Note[];
+    return parsed;
+  } catch {
+    return seedNotes();
+  }
+}
+
+function saveNotes(notes: Note[]) {
+  localStorage.setItem(LS_KEY, JSON.stringify(notes));
+}
+
+function classNames(...xs: Array<string | false | null | undefined>) {
+  return xs.filter(Boolean).join(" ");
+}
+
+function useClickAway<T extends HTMLElement>(onAway: () => void) {
+  const ref = useRef<T | null>(null);
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (!ref.current) return;
+      const t = e.target as Node;
+      if (!ref.current.contains(t)) onAway();
+    }
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [onAway]);
+  return ref;
+}
+
+function Toast({ msg, onDone }: { msg: string; onDone: () => void }) {
+  useEffect(() => {
+    const id = setTimeout(onDone, 1600);
+    return () => clearTimeout(id);
+  }, [onDone]);
+  return (
+    <div className="fixed bottom-6 right-6 rounded-2xl px-4 py-2 shadow-lg bg-gray-900 text-white text-sm">
+      {msg}
+    </div>
+  );
+}
+
+export default function NotesApp() {
+  const [notes, setNotes] = useState<Note[]>(() => loadNotes());
+  const [selectedId, setSelectedId] = useState<string | null>(notes[0]?.id ?? null);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [toast, setToast] = useState<string | null>(null);
+
+  useEffect(() => saveNotes(notes), [notes]);
+
+  const sorted = useMemo(() => [...notes].sort((a, b) => b.id.localeCompare(a.id)), [notes]);
+  const selected = useMemo(() => sorted.find((n) => n.id === selectedId) ?? sorted[0] ?? null, [sorted, selectedId]);
+
+  function updateNoteContent(id: string, content: string) {
+    setNotes((prev) => prev.map((n) => (n.id === id ? { ...n, content } : n)));
+  }
+
+  function shareNote(id: string) {
+    const url = `${window.location.origin}${window.location.pathname}?note=${id}`;
+    navigator.clipboard
+      .writeText(url)
+      .then(() => setToast("공유 링크가 복사되었습니다."))
+      .catch(() => setToast("복사 실패. 수동으로 복사하세요."));
+  }
+
+  useEffect(() => {
+    const u = new URL(window.location.href);
+    const q = u.searchParams.get("note");
+    if (q && notes.some((n) => n.id === q)) setSelectedId(q);
+  }, []);
+
+  return (
+    <div className="w-full h-screen flex bg-gray-50 text-gray-900">
+      <aside className={classNames("relative h-full transition-all duration-300 ease-in-out bg-white border-r border-gray-200 shadow-sm", sidebarOpen ? "w-80" : "w-16")}>
+        <div className="flex items-center justify-between p-3 border-b border-gray-100">
+          <button className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm font-medium" onClick={() => setSelectedId(null)} title="홈">
+            <span className={sidebarOpen ? "inline" : "hidden"}>홈</span>
+          </button>
+          <button className="px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm" onClick={() => setSidebarOpen((s) => !s)} title="사이드바 열기/닫기">
+            {sidebarOpen ? "닫기" : "열기"}
+          </button>
+        </div>
+        <div className="overflow-y-auto h-[calc(100%-56px)] p-2">
+          {sorted.map((n) => (
+            <NoteListItem key={n.id} note={n} active={selected?.id === n.id} compact={!sidebarOpen} onSelect={() => setSelectedId(n.id)} onShare={() => shareNote(n.id)} />
+          ))}
+        </div>
+      </aside>
+      <main className="flex-1 h-full flex flex-col">
+        <div className="h-14 flex items-center justify-between px-4 border-b border-gray-200 bg-white">
+          <div className="font-semibold truncate">{selected ? selected.title : "홈"}</div>
+          {!sidebarOpen && (
+            <button className="px-3 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-sm" onClick={() => setSidebarOpen(true)} title="사이드바 열기">
+              사이드바 열기
+            </button>
+          )}
+        </div>
+        <div className="flex-1 overflow-hidden">
+          {selected ? <Editor key={selected.id} note={selected} onChange={(val) => updateNoteContent(selected.id!, val)} /> : <div className="h-full grid place-items-center text-gray-500">노트를 선택하세요.</div>}
+        </div>
+      </main>
+      {toast && <Toast msg={toast} onDone={() => setToast(null)} />}
+    </div>
+  );
+}
+
+function NoteListItem({ note, active, compact, onSelect, onShare }: { note: Note; active: boolean; compact: boolean; onSelect: () => void; onShare: () => void }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useClickAway<HTMLDivElement>(() => setMenuOpen(false));
+
+  return (
+    <div className={classNames("group relative flex items-center gap-2 w-full cursor-pointer rounded-xl px-3 py-2 mb-1", active ? "bg-indigo-50 border border-indigo-200" : "hover:bg-gray-100")} onClick={onSelect}>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between gap-2">
+          <div className="truncate text-sm font-medium">{note.title}</div>
+          <button className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 hover:text-gray-900 px-2" onClick={(e) => { e.stopPropagation(); setMenuOpen((v) => !v); }} aria-label="더보기" title="더보기">…</button>
+        </div>
+      </div>
+      {menuOpen && (
+        <div ref={menuRef} className="absolute right-2 top-10 z-20 w-36 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <MenuItem label="공유하기" onClick={onShare} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MenuItem({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button className="w-full text-left px-3 py-2 text-sm hover:bg-gray-100" onClick={(e) => { e.stopPropagation(); onClick(); }}>{label}</button>
+  );
+}
+
+function Editor({ note, onChange }: { note: Note; onChange: (v: string) => void }) {
+  const [val, setVal] = useState(note.content);
+  useEffect(() => setVal(note.content), [note.id]);
+  return (
+    <textarea className="w-full h-full resize-none p-4 focus:outline-none bg-white" placeholder="여기에 노트를 작성하세요…" value={val} onChange={(e) => setVal(e.target.value)} onBlur={() => onChange(val)} />
+  );
+}
