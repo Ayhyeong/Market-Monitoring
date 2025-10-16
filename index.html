@@ -303,8 +303,6 @@
       });
 
       menu.appendChild(shareBtn);
-      menu.appendChild(renameBtn);
-      menu.appendChild(deleteBtn);
       anchorEl.appendChild(menu);
 
       buttonEl.setAttribute('aria-expanded','true');
@@ -388,7 +386,6 @@
     $homeBtn.addEventListener('click', () => {
       selectedId = null;
       const url = new URL(location.href);
-      url.searchParams.delete('note');
       history.replaceState(null, '', url.toString());
       renderList(); renderMain();
     });
