@@ -4,6 +4,11 @@
   <meta charset="utf-8" />
   <title>Market Monitoring — Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- XSS 방지 -->
+   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
   <style>
     :root{
       --bg:#f8fafc; --panel:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
@@ -104,6 +109,24 @@
     /* Responsive widths refinement */
     @media (max-width: 480px){
       :root{ --sidebar-wide: 280px; --sidebar-compact: 56px; }
+
+    /* 에디터를 좌(텍스트)–우(미리보기) 2열로 */
+    .editor{
+      flex:1; display:grid; grid-template-columns: 1fr 1fr; gap:0; background:#fff;
+    }
+    .editor .pane{ height:100%; }
+    .editor .pane.edit{ border-right:1px solid var(--line); }
+    .editor textarea{
+      width:100%; height:100%; border:0; padding:16px; font-size:15px; line-height:1.6; resize:none; background:#fff; outline:none;
+    }
+    .editor .preview{
+      padding:16px; overflow:auto; font-size:15px; line-height:1.7;
+    }
+    .editor .preview h1,.editor .preview h2,.editor .preview h3{ margin:1.2em 0 .6em; }
+    .editor .preview code{ background:#f3f4f6; padding:.2em .4em; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .editor .preview pre code{ display:block; padding:12px; overflow:auto; }
+    .editor .preview blockquote{ border-left:4px solid #e5e7eb; padding-left:12px; color:#374151; }
+    .editor .preview ul, .editor .preview ol{ padding-left:1.2em; }
     }
   </style>
 </head>
@@ -255,6 +278,47 @@
         $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#6b7280">좌측에서 노트를 선택하세요.</div>';
         return;
       }
+      const note = notes.find(n => n.id === selectedId);
+      if(!note){
+        $heading.textContent = '홈';
+        $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
+        return;
+      }
+
+      $heading.textContent = note.title || '(제목 없음)';
+
+      // 레이아웃: 좌측 textarea, 우측 미리보기
+      $editor.innerHTML = '';
+      const paneEdit = document.createElement('div');
+      paneEdit.className = 'pane edit';
+      const ta = document.createElement('textarea');
+      ta.value = note.content || '';
+      ta.placeholder = '여기에 노트를 작성하세요…';
+      paneEdit.appendChild(ta);
+
+      const panePreview = document.createElement('div');
+      panePreview.className = 'pane preview';
+      panePreview.setAttribute('role','document');
+      $editor.appendChild(paneEdit);
+      $editor.appendChild(panePreview);
+
+      const renderPreview = () => {
+        const raw = ta.value ?? '';
+        // Markdown → HTML, sanitize
+        const html = DOMPurify.sanitize(marked.parse(raw));
+        panePreview.innerHTML = html;
+      };
+      renderPreview();
+
+      // 입력시 저장 + 미리보기 갱신(디바운스 저장 기존 로직 활용)
+      ta.addEventListener('input', () => {
+        note.content = ta.value;
+        saveNotes(notes);
+        renderPreview();
+      });
+
+      ta.focus();
+    }
       const note = notes.find(n => n.id === selectedId);
       if(!note){
         $heading.textContent = '홈';
