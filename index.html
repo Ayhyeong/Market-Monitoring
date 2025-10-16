@@ -115,7 +115,7 @@
 
     /* Responsive widths refinement */
     @media (max-width: 480px){
-      :root{ --sidebar-wide: 160px; --sidebar-compact: 64px; }
+      :root{ --sidebar-wide: 160px; --sidebar-compact: 32px; }
     }
 
     /* 1) Monaspace 가변 폰트 등록 */
@@ -712,18 +712,21 @@ Given the cautious tilt in vol and latent macro risks:
 
     // ======= Sidebar toggle =======
     function setSidebar(open){
+      const isMobile = window.matchMedia('(max-width: 480px)').matches;
       if(open){
         $sidebar.classList.remove('compact');
-        $toggleBtn.textContent = '[|<]';
+        $toggleBtn.textContent = isMobile ? '<' : '[|<]';
         $toggleBtn.setAttribute('aria-expanded','true');
         if ($openBtn) $openBtn.hidden = false;
-      }else{
+      }
+      else{
         $sidebar.classList.add('compact');
-        $toggleBtn.textContent = '[>|]';
+        $toggleBtn.textContent = isMobile ? '>' : '[>|]';
         $toggleBtn.setAttribute('aria-expanded','false');
         $openBtn.hidden = false;
       }
     }
+    
     $toggleBtn.addEventListener('click', () => {
       const isCompact = $sidebar.classList.contains('compact');
       setSidebar(isCompact);
