@@ -235,7 +235,7 @@
 
 - **티켓:** EUREX Bobl(FGBM) Long 1단, Bund(FGBL) Long 1단 → 총 듀레이션을 5–7년 구간으로 정렬. 초장기물(30Y) 비중은 최소화.
     
-- **사이징:** 평시 금리북 DV01의 0.50–0.75× 범위 내에서 진입.
+- **사이징:** 평시 rate book DV01의 0.50–0.75× 범위 내에서 진입.
     
 - **리스크 한도:** 포트폴리오 총 DV01이 평시 한도의 0.75×를 초과 금지. 개별 티켓은 각 일일 VaR의 10% 이내.
     
@@ -572,9 +572,10 @@ Given the cautious tilt in vol and latent macro risks:
     // ======= Renderers =======
     // order(int) 값 기준 내림차순 정렬
     function sortLatest(a,b){
-      const ao = typeof a.order === 'number' ? a.order : 0;
-      const bo = typeof b.order === 'number' ? b.order : 0;
-      if (ao !== bo) return bo - ao; // 높은 order 먼저
+      const ao = (typeof a.order === 'number') ? a.order : 0;
+      const bo = (typeof b.order === 'number') ? b.order : 0;
+      if (ao !== bo) return bo - ao;
+      return 0;
     }
 
     function renderList(){
@@ -622,6 +623,16 @@ Given the cautious tilt in vol and latent macro risks:
       });
     }
 
+    function safeHtmlFromMarkdown(raw){
+      const hasMarked = typeof marked !== 'undefined' && typeof marked.parse === 'function';
+      const hasPurify = typeof DOMPurify !== 'undefined' && typeof DOMPurify.sanitize === 'function';
+      if (hasMarked && hasPurify) {
+        return DOMPurify.sanitize(marked.parse(raw || ''));
+      }
+      const esc = (s) => String(s || '')
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      return `<pre>${esc(raw)}</pre>`;
+    }
     function renderMain(){
       if(!selectedId){
         $heading.textContent = '홈';
@@ -634,12 +645,11 @@ Given the cautious tilt in vol and latent macro risks:
         $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
         return;
       }
-
       $heading.textContent = note.title || '(제목 없음)';
 
-      // 읽기 전용: Markdown → HTML 렌더만 수행 (수정/저장 없음)
-      const raw = note.content || '';
-      const html = DOMPurify.sanitize(marked.parse(raw));
+      let html = '';
+      try { html = safeHtmlFromMarkdown(note.content); }
+      catch { html = '<div style="color:#ef4444">Render Error.</div>'; }
       $editor.innerHTML = `<article role="document">${html}</article>`;
     }
 
@@ -701,12 +711,14 @@ Given the cautious tilt in vol and latent macro risks:
     // ======= Clipboard =======
     function copyShareLink(id){
       const url = `${location.origin}${location.pathname}?note=${encodeURIComponent(id)}`;
-      try{
+      if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(url).then(
           () => toast('공유 링크가 복사되었습니다.'),
           ()  => fallbackCopy(url)
         );
-      }catch{ fallbackCopy(url); }
+      } else {
+        fallbackCopy(url);
+      }
     }
     function fallbackCopy(text){
       const i = document.createElement('input');
