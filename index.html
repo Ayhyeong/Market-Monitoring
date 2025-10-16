@@ -9,7 +9,7 @@
   <!-- XSS 방지 -->
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 
-  <link rel="preload" href="/fonts/MonaspaceNeonVarVF[wght,wdth].woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Monaspace Neon Var.woff2" as="font" type="font/woff2" crossorigin>
   
   <style>
     :root{
@@ -116,27 +116,22 @@
     /* 1) Monaspace 가변 폰트 등록 */
     @font-face {
       font-family: 'Monaspace Neon';
-      src: url('/fonts/MonaspaceNeonVarVF[wght,wdth].woff2') format('woff2-variations');
+      src: url('/fonts/Monaspace Neon Var.woff2') format('woff2-variations');
       font-weight: 200 800;          /* 가변 굵기 범위 */
       font-stretch: 75% 125%;        /* 가변 폭(있다면) */
       font-display: swap;
     }
 
-    /* 2) 전역 기본 폰트를 모노스페이스로 강제 */
     html, body {
-      /* Monaspace → 한글 모노 대체 → 일반 모노 → 이모지 */
       font-family:
         'Monaspace Neon',
-        'Nanum Gothic Coding',       /* mac/linux 설치 시 사용 */
-        'D2Coding',                  /* Windows에 흔함 */
-        ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace,
-        'Apple Color Emoji', 'Segoe UI Emoji';
+        ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       line-height: 1.6;
       -webkit-text-size-adjust: 100%;
       font-kerning: normal;
       font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
       font-feature-settings: "calt" 1, "liga" 1, "clig" 1;
-      font-synthesis-weight: none;   /* 가짜 볼드 방지 */
+      font-synthesis-weight: none;
     }
 
     /* 3) 모든 요소가 기본 폰트를 상속하도록 강제(폼 컨트롤 포함) */
