@@ -1,0 +1,102 @@
+
+## 1. Next‑week key calendar
+
+**Major upcoming events (next week):**
+
+- **U.S.:** retail sales, PPI, CPI prints, Fed speakers. [🔗](https://www.marketwatch.com/economy-politics/calendar)
+    
+- **Eurozone / ECB:** ECB meeting / press conference, euro CPI, industrial production
+    
+- **UK:** BoE meeting, CPI / wage / labor data
+    
+- **Japan:** Tokyo CPI, Tankan / machinery orders
+    
+- **China:** CPI, PPI, trade data
+    
+- **Korea:** trade balance, exports / imports, CPI / core inflation
+    
+---
+
+## 2. Risk‑Backdrop Summary by Pillar (vs prior week)
+
+**Growth:** Global momentum remains soft; U.S. LEI continues to decline (–0.5% in Aug) [The Conference Board](https://www.conference-board.org/topics/us-leading-indicators/)
+**Inflation:** U.S. inflation remains sticky (~2.9 % YoY) [Trading Economics](https://tradingeconomics.com/united-states/calendar); Europe / EM inflation still under watch
+**Labor:** U.S. labor markets still relatively resilient; wage pressures persist
+**Housing / Credit:** Mortgage / housing data remain weak amid high rates; credit spreads modestly wider
+**External / Trade:** U.S. government shutdown may delay trade / import data [BlackRock](https://www.blackrock.com/corporate/insights/blackrock-investment-institute/publications/weekly-commentary); China deflation theme under focus [MarketPulse](https://www.marketpulse.com/markets/markets-weekly-outlook-second-week-us-shutdown-onto-the-third/)
+**Stress / Volatility:** VIX jumped to ~21.66 (from ~16–17) [YCharts+2StreetStats+2](https://ycharts.com/indicators/vix_volatility_index); MOVE ~81.65 [TradingView+1](https://www.tradingview.com/symbols/TVC-MOVE/)
+  
+**Notes / warnings:**
+
+- Equity volatility is rising sharply from prior week (VIX up ~30 % daily move) [YCharts](https://ycharts.com/indicators/vix_volatility_index)
+    
+- Rate vol (MOVE) is within moderate range but trending upward [StreetStats+1](https://streetstats.finance/markets/volatility)
+    
+- Credit spreads not yet in stress zone
+    
+- External headwinds (trade, tariffs, shutdown) remain key risk paths
+    
+
+---
+
+## 3. Updated Playbook & Tactical Tilts
+
+Given the cautious tilt in vol and latent macro risks:
+
+### Hedging / Protection
+
+- **Equity puts / index hedges:** modest allocation to S&P 500 or regional index puts (e.g. US, Korea)
+    
+- **Vol strategies:** consider long-VIX futures or options in small size as a tail hedge
+    
+- **Credit hedges:** credit default swaps (CDS) on high beta issuers or HY/IG indices (light)
+    
+
+### Duration / Curve Stance
+
+- Underweight in front-end (2s) exposure; consider moderate lengthening or butterfly positions
+    
+- Avoid aggressive bear steepening bets yet — curve signals not extreme
+    
+
+### FX Tilts
+
+- Mild USD underweight — if global risk softens, USD may revert
+    
+- Monitor JPY and EUR cross‑basis (not yet triggered)
+    
+
+### Equity Sector Tilts
+
+- Favor defensive / quality sectors (healthcare, staples, utilities)
+    
+- Underweight cyclicals, financials, commodity‑sensitive sectors
+    
+
+### Credit Quality
+
+- Preference toward IG over HY
+    
+- Light exposure to lower credit tiers; maintain liquidity buffer
+    
+
+### Liquidity & Position Sizing Checklist
+
+- Maintain ≥ 5–10 % cash or liquid equivalents
+    
+- Set stop-loss / auto hedges on directional bets
+    
+- Avoid concentrated directional exposures; favor scaled beta
+    
+- Keep management of margin / collateral ready
+    
+
+**Watch these levels closely:**
+
+- VIX approaching mid‑30s zone
+    
+- MOVE breaking above 120–140 range
+    
+- HY OAS widening over 400–500 bps
+    
+- Sharp moves in cross‑currency basis or funding spreadse
