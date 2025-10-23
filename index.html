@@ -160,304 +160,232 @@
   </div>
 
   <script>
-    // ======= Read-only: constants & elements =======
-    const LS_KEY = 'daily_notes_v1_html_only'; // 읽기 전용
-    const $sidebar  = document.getElementById('sidebar');
-    const $notesList= document.getElementById('notesList');
-    const $heading  = document.getElementById('heading');
-    const $editor   = document.getElementById('editor');
-    const $toggleBtn= document.getElementById('toggleBtn');
-    const $openBtn  = document.getElementById('openBtn');
-    const $homeBtn  = document.getElementById('homeBtn');
+  // ======= Elements =======
+  const $sidebar  = document.getElementById('sidebar');
+  const $notesList= document.getElementById('notesList');
+  const $heading  = document.getElementById('heading');
+  const $editor   = document.getElementById('editor');
+  const $toggleBtn= document.getElementById('toggleBtn');
+  const $homeBtn  = document.getElementById('homeBtn');
 
-    const uid = () => (crypto.randomUUID ? crypto.randomUUID() : (Math.random().toString(36).slice(2)+Date.now().toString(36)));
+  const uid = () => (crypto.randomUUID ? crypto.randomUUID() : (Math.random().toString(36).slice(2)+Date.now().toString(36)));
 
-    function seed(){
-      return [
-        {
-          id: uid(),
-          order: 251020,
-          title: `2025. 10. 20. Weekly Macro Brief`,
-          contentUrl: 'content/251020.txt',
-        },
-       
-        {
-          id: uid(),
-          order: 251016,
-          title: `2025. 10. 16. Daily Market Issues`,
-          contentUrl: 'content/251016.txt',
-        },
+  // ======= Seed only (읽기 전용 & contentUrl만) =======
+  function seed(){
+    return [
+      { id: uid(), order: 251020, title: '2025. 10. 20. Weekly Macro Brief',         contentUrl: 'content/251020.txt' },
+      { id: uid(), order: 251016, title: '2025. 10. 16. Daily Market Issues',         contentUrl: 'content/251016.txt' },
+      { id: uid(), order: 251015, title: '2025. 10. 15. Euro Area Industrial Production', contentUrl: 'content/251015.txt' },
+      { id: uid(), order: 251013, title: '2025. 10. 13. Weekly Macro Brief',          contentUrl: 'content/251013.txt' },
+    ];
+  }
 
-        {
-          id: uid(),
-          order: 251015,
-          title: `2025. 10. 15. Euro Area Industrial Production`,
-          content: 'content/251015.txt',
-        },
-       
-        {
-          id: uid(),
-          order: 251013,
-          title: `2025. 10. 13. Weekly Macro Brief`,
-          content: 'content/251013.txt',
-        },
-      ];
-    }
+  // 로컬스토리지 사용 제거: 항상 시드만 사용
+  let notes = seed();
+  let selectedId = null;
+  let currentMenuAbort = null;
 
-    // ======= Storage (읽기 전용 로드만) =======
-    function loadNotes(){
-      try{
-        const raw = localStorage.getItem(LS_KEY);
-        if(!raw) return seed();
-        const arr = JSON.parse(raw);
-        if(!Array.isArray(arr)) return seed();
-        // content를 포함하되 어떠한 저장도 수행하지 않음
-        return arr.map(n => ({ id:n.id, title:n.title||'', content:n.content||'', date:n.date||'1970-01-01' }));
-      }catch{ return seed(); }
-    }
+  // ======= Utils =======
+  function sortLatest(a,b){
+    const ao = (typeof a.order === 'number') ? a.order : 0;
+    const bo = (typeof b.order === 'number') ? b.order : 0;
+    return (bo - ao);
+  }
 
-    // ======= State =======
-    let notes = loadNotes();
-    let selectedId = null;
-    let currentMenuAbort = null;
+  async function fetchText(url) {
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) throw new Error('Load failed');
+    return r.text();
+  }
 
-    // ======= Renderers =======
-    // order(int) 값 기준 내림차순 정렬
-    function sortLatest(a,b){
-      const ao = (typeof a.order === 'number') ? a.order : 0;
-      const bo = (typeof b.order === 'number') ? b.order : 0;
-      if (ao !== bo) return bo - ao;
-      return 0;
-    }
+  function safeHtmlFromMarkdown(raw){
+    const hasMarked = typeof marked !== 'undefined' && typeof marked.parse === 'function';
+    const hasPurify = typeof DOMPurify !== 'undefined' && typeof DOMPurify.sanitize === 'function';
+    if (hasMarked && hasPurify) return DOMPurify.sanitize(marked.parse(raw || ''));
+    const esc = (s) => String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return `<pre>${esc(raw)}</pre>`;
+  }
 
-    function renderList(){
-      notes.sort(sortLatest);
-      $notesList.innerHTML = '';
-      $notesList.setAttribute('aria-label','노트 목록');
+  // ======= Renderers =======
+  function renderList(){
+    notes.sort(sortLatest);
+    $notesList.innerHTML = '';
+    $notesList.setAttribute('aria-label','노트 목록');
 
-      notes.forEach(n => {
-        const row = document.createElement('button');
-        row.type = 'button';
-        row.className = 'item' + (selectedId === n.id ? ' active' : '');
-        row.setAttribute('role','listitem');
-        row.setAttribute('aria-pressed', selectedId === n.id ? 'true' : 'false');
-        row.addEventListener('click', () => {
+    notes.forEach(n => {
+      const row = document.createElement('button');
+      row.type = 'button';
+      row.className = 'item' + (selectedId === n.id ? ' active' : '');
+      row.setAttribute('role','listitem');
+      row.setAttribute('aria-pressed', selectedId === n.id ? 'true' : 'false');
+      row.addEventListener('click', () => {
+        if ($sidebar.classList.contains('compact')) setSidebar(true);
+        selectNote(n.id);
+      });
+      row.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
           if ($sidebar.classList.contains('compact')) setSidebar(true);
           selectNote(n.id);
-        });
-        row.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            if ($sidebar.classList.contains('compact')) setSidebar(true);
-            selectNote(n.id);
-          }
-        });
-
-        const title = document.createElement('div');
-        title.className = 'title';
-        title.textContent = n.title || '(제목 없음)';
-
-        const more = document.createElement('button');
-        more.type = 'button';
-        more.className = 'btn-link more';
-        more.textContent = '…';
-        more.title = '더보기';
-        more.setAttribute('aria-haspopup','menu');
-        more.setAttribute('aria-expanded','false');
-        more.addEventListener('click', (e) => {
-          e.stopPropagation();
-          openMenu(row, n, more);
-        });
-
-        row.appendChild(title);
-        row.appendChild(more);
-        $notesList.appendChild(row);
+        }
       });
+
+      const title = document.createElement('div');
+      title.className = 'title';
+      title.textContent = n.title || '(제목 없음)';
+
+      const more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'btn-link more';
+      more.textContent = '…';
+      more.title = '더보기';
+      more.setAttribute('aria-haspopup','menu');
+      more.setAttribute('aria-expanded','false');
+      more.addEventListener('click', (e) => {
+        e.stopPropagation(); openMenu(row, n, more);
+      });
+
+      row.appendChild(title);
+      row.appendChild(more);
+      $notesList.appendChild(row);
+    });
+  }
+
+  async function renderMain(){
+    if (!selectedId) {
+      $heading.textContent = '홈';
+      $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#6b7280">좌측에서 노트를 선택하세요.</div>';
+      return;
     }
-    
-    async function fetchText(url) {
-      const r = await fetch(url, { cache: 'no-store' });
-      if (!r.ok) throw new Error('Load failed');
-      return r.text();
+    const note = notes.find(n => n.id === selectedId);
+    if(!note){
+      $heading.textContent = '홈';
+      $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
+      return;
     }
 
-    function safeHtmlFromMarkdown(raw){
-      const hasMarked = typeof marked !== 'undefined' && typeof marked.parse === 'function';
-      const hasPurify = typeof DOMPurify !== 'undefined' && typeof DOMPurify.sanitize === 'function';
-      if (hasMarked && hasPurify) {
-        return DOMPurify.sanitize(marked.parse(raw || ''));
-      }
-      
-      const esc = (s) => String(s || '')
-        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-      return `<pre>${esc(raw)}</pre>`;
-    }
-    
-    function renderMain(note){
-      $heading.textContent = note.title || '(제목 없음)';
-      $editor.innerHTML = '<div style="padding:16px;color:#6b7280">불러오는 중…</div>';
+    $heading.textContent = note.title || '(제목 없음)';
+    $editor.innerHTML = '<div style="padding:16px;color:#6b7280">불러오는 중…</div>';
 
-      fetchText(note.contentUrl)
-        .then(md => {
-          const html = safeHtmlFromMarkdown(md);
-          $editor.innerHTML = `<article role="document">${html}</article>`;
-        })
-        .catch(() => {
-          $editor.innerHTML = '<div style="color:#ef4444">콘텐츠를 불러오지 못했습니다.</div>';
-        });
-    }
-
-      const note = notes.find(n => n.id === selectedId);
-      if(!note){
-        $heading.textContent = '홈';
-        $editor.innerHTML = '<div style="height:100%;display:grid;place-items:center;color:#ef4444">존재하지 않는 노트입니다.</div>';
-        return;
-      }
-      $heading.textContent = note.title || '(제목 없음)';
-
-      let html = '';
-      try { html = safeHtmlFromMarkdown(note.content); }
-      catch { html = '<div style="color:#ef4444">Render Error.</div>'; }
+    try{
+      const md = await fetchText(note.contentUrl);
+      const html = safeHtmlFromMarkdown(md);
       $editor.innerHTML = `<article role="document">${html}</article>`;
+    }catch{
+      $editor.innerHTML = '<div style="color:#ef4444">콘텐츠를 불러오지 못했습니다.</div>';
     }
+  }
 
-    // ======= Menu =======
-    function openMenu(anchorEl, note, buttonEl){
-      closeMenus();
-      const menu = document.createElement('div');
-      menu.className = 'menu';
-      menu.setAttribute('role','menu');
-      menu.setAttribute('aria-label','노트 메뉴');
+  // ======= Menu =======
+  function openMenu(anchorEl, note, buttonEl){
+    closeMenus();
+    const menu = document.createElement('div');
+    menu.className = 'menu';
+    menu.setAttribute('role','menu');
+    menu.setAttribute('aria-label','노트 메뉴');
 
-      const mkItem = (label, onClick) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.textContent = label;
-        b.setAttribute('role','menuitem');
-        b.addEventListener('click', (e) => { e.stopPropagation(); onClick(); closeMenus(); });
-        b.addEventListener('keydown', (e) => {
-          if(e.key === 'Escape') { e.preventDefault(); closeMenus(true, buttonEl); }
-        });
-        return b;
-      };
+    const shareBtn = document.createElement('button');
+    shareBtn.type = 'button';
+    shareBtn.textContent = '링크 복사';
+    shareBtn.setAttribute('role','menuitem');
+    shareBtn.addEventListener('click', (e) => { e.stopPropagation(); copyShareLink(note.id); closeMenus(); });
 
-      const shareBtn = mkItem('링크 복사', () => copyShareLink(note.id));
+    menu.appendChild(shareBtn);
+    anchorEl.appendChild(menu);
 
-      menu.appendChild(shareBtn);
-      anchorEl.appendChild(menu);
+    buttonEl.setAttribute('aria-expanded','true');
+    shareBtn.focus();
 
-      buttonEl.setAttribute('aria-expanded','true');
-      shareBtn.focus();
+    currentMenuAbort = new AbortController();
+    const { signal } = currentMenuAbort;
 
-      currentMenuAbort = new AbortController();
-      const { signal } = currentMenuAbort;
+    document.addEventListener('mousedown', (ev) => {
+      if(!menu.contains(ev.target)) { closeMenus(true, buttonEl); }
+    }, { signal });
 
-      document.addEventListener('mousedown', (ev) => {
-        if(!menu.contains(ev.target)) { closeMenus(true, buttonEl); }
-      }, { signal });
+    document.addEventListener('keydown', (ev) => {
+      if(ev.key === 'Escape') { ev.preventDefault(); closeMenus(true, buttonEl); }
+    }, { signal });
+  }
 
-      document.addEventListener('keydown', (ev) => {
-        if(ev.key === 'Escape') { ev.preventDefault(); closeMenus(true, buttonEl); }
-      }, { signal });
+  function closeMenus(focusBack = false, btn = null){
+    document.querySelectorAll('.menu').forEach(m => m.remove());
+    if(currentMenuAbort){ currentMenuAbort.abort(); currentMenuAbort = null; }
+    if(btn){ btn.setAttribute('aria-expanded','false'); if(focusBack) btn.focus(); }
+  }
+
+  // ======= Routing / Selection =======
+  function selectNote(id){
+    selectedId = id;
+    const url = new URL(window.location.href);
+    url.searchParams.set('note', id);
+    history.replaceState(null, '', url.toString());
+    renderList(); renderMain();
+  }
+
+  function bootSelectFromQuery(){
+    const q = new URL(location.href).searchParams.get('note');
+    if(q && notes.some(n => n.id === q)) selectedId = q;
+    else if(q) toast('존재하지 않는 노트 링크입니다.');
+  }
+
+  // ======= Clipboard =======
+  function copyShareLink(id){
+    const url = `${location.origin}${location.pathname}?note=${encodeURIComponent(id)}`;
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(() => toast('공유 링크가 복사되었습니다.'), () => fallbackCopy(url));
+    } else { fallbackCopy(url); }
+  }
+  function fallbackCopy(text){
+    const i = document.createElement('input');
+    i.value = text; document.body.appendChild(i);
+    i.select(); document.execCommand('copy'); i.remove();
+    toast('공유 링크가 복사되었습니다.');
+  }
+
+  // ======= Toast =======
+  function toast(msg){
+    const prev = document.querySelector('.toast'); if(prev) prev.remove();
+    const t = document.createElement('div');
+    t.className = 'toast'; t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 1600);
+  }
+
+  // ======= Sidebar toggle =======
+  function setSidebar(open){
+    const isMobile = window.matchMedia('(max-width: 480px)').matches;
+    if(open){
+      $sidebar.classList.remove('compact');
+      $toggleBtn.textContent = isMobile ? '<' : '[|<]';
+      $toggleBtn.setAttribute('aria-expanded','true');
+    } else {
+      $sidebar.classList.add('compact');
+      $toggleBtn.textContent = isMobile ? '>' : '[>|]';
+      $toggleBtn.setAttribute('aria-expanded','false');
     }
+  }
+  $toggleBtn.addEventListener('click', () => {
+    const isCompact = $sidebar.classList.contains('compact');
+    setSidebar(isCompact);
+  });
+  $homeBtn.addEventListener('click', () => {
+    selectedId = null;
+    const url = new URL(location.href);
+    url.searchParams.delete('note');
+    history.replaceState(null, '', url.toString());
+    renderList(); renderMain();
+  });
 
-    function closeMenus(focusBack = false, btn = null){
-      document.querySelectorAll('.menu').forEach(m => m.remove());
-      if(currentMenuAbort){ currentMenuAbort.abort(); currentMenuAbort = null; }
-      if(btn){ btn.setAttribute('aria-expanded','false'); if(focusBack) btn.focus(); }
-    }
+  // ======= Init =======
+  function init(){
+    bootSelectFromQuery();
+    renderList();
+    renderMain();
+    setSidebar(true);
+  }
+  init();
+</script>
 
-    // ======= Routing / Selection =======
-    function selectNote(id){
-      selectedId = id;
-      const url = new URL(window.location.href);
-      url.searchParams.set('note', id);
-      history.replaceState(null, '', url.toString());
-      renderList(); renderMain();
-    }
-
-    // ======= Clipboard =======
-    function copyShareLink(id){
-      const url = `${location.origin}${location.pathname}?note=${encodeURIComponent(id)}`;
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(url).then(
-          () => toast('공유 링크가 복사되었습니다.'),
-          ()  => fallbackCopy(url)
-        );
-      } else {
-        fallbackCopy(url);
-      }
-    }
-    function fallbackCopy(text){
-      const i = document.createElement('input');
-      i.value = text; document.body.appendChild(i);
-      i.select(); document.execCommand('copy'); i.remove();
-      toast('공유 링크가 복사되었습니다.');
-    }
-
-    // ======= Toast (single) =======
-    function toast(msg){
-      const prev = document.querySelector('.toast'); if(prev) prev.remove();
-      const t = document.createElement('div');
-      t.className = 'toast'; t.textContent = msg;
-      document.body.appendChild(t);
-      setTimeout(() => t.remove(), 1600);
-    }
-
-    // ======= Sidebar toggle =======
-    function setSidebar(open){
-      const isMobile = window.matchMedia('(max-width: 480px)').matches;
-      if(open){
-        $sidebar.classList.remove('compact');
-        $toggleBtn.textContent = isMobile ? '<' : '[|<]';
-        $toggleBtn.setAttribute('aria-expanded','true');
-        if ($openBtn) $openBtn.hidden = false;
-      }
-      else{
-        $sidebar.classList.add('compact');
-        $toggleBtn.textContent = isMobile ? '>' : '[>|]';
-        $toggleBtn.setAttribute('aria-expanded','false');
-        if ($openBtn) $openBtn.hidden = false;
-      }
-    }
-    
-    $toggleBtn.addEventListener('click', () => {
-      const isCompact = $sidebar.classList.contains('compact');
-      setSidebar(isCompact);
-    });
-    if ($openBtn) {
-      $openBtn.addEventListener('click', () => setSidebar(true));
-    }
-    $homeBtn.addEventListener('click', () => {
-      selectedId = null;
-      const url = new URL(location.href);
-      url.searchParams.delete('note');
-      history.replaceState(null, '', url.toString());
-      renderList(); renderMain();
-    });
-
-    // ======= Deep link via ?note= =======
-    function bootSelectFromQuery(){
-      const q = new URL(location.href).searchParams.get('note');
-      if(!q) return;
-      if(notes.some(n => n.id === q)){
-        selectedId = q;
-      }else{
-        toast('존재하지 않는 노트 링크입니다.');
-      }
-    }
-
-    // Close any open menu on window blur
-    window.addEventListener('blur', () => closeMenus());
-
-    // ======= Init =======
-    function init(){
-      bootSelectFromQuery();
-      renderList();
-      renderMain();
-      setSidebar(true);
-    }
-    init();
-  </script>
 </body>
 </html>
