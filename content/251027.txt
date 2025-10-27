@@ -1,0 +1,85 @@
+1) Date
+
+Monday, 27 October 2025 (KST)
+
+⸻
+
+2) Past week: official macro releases (by economy & pillar)
+
+United States
+	•	Credit conditions: The Federal Reserve Board weekly release H.8 (Assets & Liabilities of Commercial Banks) was published 24 Oct. It shows U.S. bank credit was US$18.78 trn for week ending 15 Oct, up from US$18.75 trn a week earlier.  ￼
+	•	Change vs last week: Slight uptick in credit suggests no tightening of bank‑credit supply; positive for credit/credit‑growth pillar.
+	•	Growth / inflation / labour / housing: No major new releases flagged this week in the U.S. that break the prior pattern (e.g., CPI still pending).
+	•	Change vs last week: Neutral.
+
+Eurozone
+	•	External/trade: Eurostat published goods trade for August 2025: a surplus of €1.0 bn (non‑seasonally adjusted) compared with ~€3.0 bn in August 2024. Exports fell ~4.7% y/y; imports down ~3.8% y/y.  ￼
+	•	Change vs last week: Surplus narrowed — less positive for external/trade pillar.
+	•	Growth / inflation: PMI data show acceleration in business activity across Eurozone, per a Reuters piece: “business activity growth accelerates … demand jumps”.  ￼
+	•	Change vs last week: Growth pillar slightly improved.
+	•	Inflation: Final HICP for September expected mid‑October (release calendar).  ￼
+
+China
+	•	Credit conditions: New bank loans in September 2025 rose to ~CNY 1.29 trn, but still below expectations; outstanding yuan loans increased 6.6% y/y—the slowest on record.  ￼
+	•	Change vs last week: Weaker than expected credit demand — negative for credit/growth.
+	•	External/trade: The release for China TSF (Total Social Financing) suggests slowing; TSF expanded ~8.7% y/y in September, down from 8.8% in August.  ￼
+	•	Change vs last week: Credit/support conditions edging weaker.
+	•	Growth/inflation: No major fresh inflation print this week; property slump remains drag.
+
+Japan
+	•	No significant new headline release identified this week for labour/housing/trade that moves needle.
+	•	Change vs last week: Neutral.
+
+United Kingdom
+	•	Labour: Office for National Statistics Labour Market Overview (Oct 2025) shows employment rate for aged 16‑64 at 75.1% (down slightly), unemployment at 4.8% (up). Vacancies fell again to ~717,000 in July‑Sept.  ￼
+	•	Change vs last week: Labour pillar mildly weaker.
+	•	Growth: Economic growth remained very modest (0.1% in August, per media commentary) though not ideal as a major release this week.  ￼
+	•	Change vs last week: Growth pillar weak.
+
+Korea
+	•	Labour/external/housing: I found no new major official macro print this past week that stands out with a change compared to last week in publicly flagged sources.
+	•	Change vs last week: Neutral.
+
+⸻
+
+3) Upcoming key event calendar (next week)
+	•	U.S.: CPI (September) data scheduled Fri 31 Oct (approx) — major risk event.
+	•	Eurozone: HICP final for September (release date around 16 Oct calendar shows, but check next week for detailed breakdown)  ￼
+	•	UK: Next UK Labour Market report (Nov release) but markets will monitor wage/earnings prints and vacancies.
+	•	China: Next TSF/loan data or policy signals (e.g., RRR cut speculation) continue to be relevant.
+	•	Japan/Korea: Watch for industrial production / machinery orders (Japan) and export/import price indices (Korea) as next releases.
+
+⸻
+
+4) Risk‑backdrop summary by pillar
+	•	Growth: Eurozone up slightly (PMI improvement), UK weak, China subdued; overall modest. Slight tilt to neutral‑to‑weak.
+	•	Inflation: Key events ahead in U.S. & Eurozone; currently moderate pressures (Eurozone ~2.2% inflation). Potential upside risk if inflation picks up.
+	•	Labour: UK labour softening; U.S. labour data quiet; Korea stable. Risk skewed slightly to softening labour.
+	•	Housing: Minimal fresh signals; U.S. housing remains a watchlist. Neutral.
+	•	External/trade: Eurozone trade surplus narrowed, China weak credit demand (suggesting weak exports/investment). Slight drag.
+	•	Credit conditions: U.S. bank credit mildly rising, China credit demand weak. Mixed; overall credit support is moderate but weakening in China.
+
+⸻
+
+5) Playbook – updated actions
+	•	Hedges: Increase hedges into U.S. CPI print (Fri) via short‑dated USD rate vol and equity index downside; also hedge GBP ahead of UK wage/labour prints.
+	•	Duration/curve stance:
+	•	USD: Modest long duration until CPI; flatten 2s10s mildly favoring front end if CPI benign.
+	•	EUR: Neutral to slight long given improved trade and contained inflation.
+	•	GBP: Short duration exposure (higher risk from weak labour/ growth).
+	•	FX tilts:
+	•	Long USD vs GBP on weak UK labour/growth signals.
+	•	EUR/GBP: neutral to slight long EUR given UK softness.
+	•	JPY/KRW: neutral until Japan/Korea release more data.
+	•	Equity sector tilts:
+	•	Overweight defensive sectors (Health Care, Staples) given growth and inflation uncertainty.
+	•	Underweight cyclicals (e.g., UK domestic cyclicals) given labour/trade softness.
+	•	Slight overweight EU export‑orientated names, given eurozone trade improvement (but cautious).
+	•	Credit quality stance:
+	•	Preference for higher quality credit (IG) given mixed growth/inflation backdrop; monitor China credit stress for HY exposure.
+	•	Avoid extending credit duration in UK credit given weaker labour/trade.
+	•	Liquidity checklist:
+	•	Ensure cash buffers ahead of major releases (US CPI, UK labour) to deploy post‑print.
+	•	Confirm margin/collateral readiness for hedges in USD, GBP.
+	•	Monitor rollover risk for credit exposures (especially China‑linked) and keep some dry powder.
+	•	Reassess exposures if surprises hit (inflation significantly above/below expectations) and be ready to de‑risk.
