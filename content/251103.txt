@@ -1,0 +1,148 @@
+## 1) Date
+
+Monday, 3 November 2025 (KST)
+
+---
+
+## 2) Past week: official macro releases (by region & pillar)
+
+**Note**: There is limited fresh detailed data publicly flagged for all pillars/regions this past week; many high‑impact releases appear forthcoming.
+
+### United States
+
+- No major new headline release clearly identified this week (growth, inflation, housing, labour) from U.S. official bodies that moves the needle.
+    
+    - **Change vs last week**: Essentially no new signal → U.S. macro momentum remains in stasis.
+        
+
+### Eurozone
+
+- No standout official release publicly highlighted this past week for inflation/growth/labour that markedly changed the narrative (given available calendar info).
+    
+    - **Change vs last week**: Neutral.
+        
+
+### China
+
+- No prominent new official release surfaced in the public domain for the week that clearly updates the credit / growth / external/trade picture.
+    
+    - **Change vs last week**: Neutral.
+        
+
+### Japan
+
+- Same situation: no major official new print identified this week for labour/housing/growth that materially alters the view.
+    
+    - **Change vs last week**: Neutral.
+        
+
+### United Kingdom
+
+- No major fresh release flagged this week (labour, inflation, housing) with a clear change relative to prior week in the sources located.
+    
+    - **Change vs last week**: Neutral.
+        
+
+### Korea
+
+- No new major official macro print for labor/housing/external/credit flagged this week in publicly located data.
+    
+    - **Change vs last week**: Neutral.
+        
+
+**Summary**: The lack of new standout prints means the week has been relatively quiet in terms of official macro surprises. The risk is thus more about upcoming releases and expectations rather than new data shifting the narrative.
+
+---
+
+## 3) Upcoming key event calendar (next week)
+
+- **U.S.**: Key releases likely include CPI (consumer price inflation) and possibly PPI/new home sales/housing starts (check full U.S. BEA/BLS/Census calendar).
+    
+- **Eurozone**: Pending HICP final inflation print, and possibly unemployment/industrial production data.
+    
+- **UK**: Major data expected: inflation (CPI/PPI) and possibly labour market update (wages, unemployment) and retail sales.
+    
+- **Japan**: CPI inflation, machinery orders/industrial production, BoJ meeting or speech risk.
+    
+- **China**: TSF/loan flows and trade data (exports/imports) may be released; policy signals from PBoC may also matter.
+    
+- **Korea**: Export/import price indices, trade balance and perhaps labour/housing release.
+    
+
+---
+
+## 4) Risk‑backdrop summary by pillar
+
+- **Growth**: With no new positive surprises, growth remains **neutral to slightly soft**; watch for upcoming releases for cues.
+    
+- **Inflation**: With key inflation prints due in major economies, the inflation pillar is **unchanged but elevated risk** (upside or downside surprise) given nothing fresh this week.
+    
+- **Labor**: Labour data largely unchanged this week across major markets → labour pillar remains **neutral**, but remains a key watch.
+    
+- **Housing**: Minimal new signals; housing remains **neutral**, but still a potential drag in some economies if housing starts/sales disappoint.
+    
+- **External/trade**: With no major new prints, external/trade remains **neutral**, though underlying global trade softness remains a watchpoint.
+    
+- **Credit conditions**: In absence of new data, credit conditions remain **neutral**, but credit spreads or bank credit flow could be early warning.
+    
+
+---
+
+## 5) Playbook – updated actions
+
+**Hedges**
+
+- With major inflation prints ahead, continue to implement **event hedges** (short‑dated rate volatility, inflation swap hedges, equity downside protection) into the key release windows.
+    
+- FX hedges: Consider hedging currency exposure in economies with inflation risk (e.g., GBP, JPY) or surprise risk.
+    
+
+**Duration / Curve Stance**
+
+- **USD duration**: Hold a modest long in U.S. Treasuries ahead of U.S. CPI; if inflation surprises high, be ready to reduce duration/short front end.
+    
+- **GBP/EUR duration**: Maintain neutral to slightly short duration in GBP given potential negative labour/inflation surprise; EUR neutral‐to‐slight long given relatively less risk of surprise.
+    
+- **Curve**: In major markets, favour mild steepening opportunities where front‑end yields may pull back on benign inflation prints; flattening if inflation surprises high.
+    
+
+**FX tilts**
+
+- Slight long USD vs GBP given downside risks in the UK labour/inflation/housing complex.
+    
+- EUR/GBP: neutral to slight long EUR given relative tail‑risk difference.
+    
+- JPY/KRW: Maintain neutral until clear data signals or policy shifts.
+    
+- Avoid large directional FX bets until major prints land and give clearer signpost.
+    
+
+**Equity sector tilts**
+
+- Overweight **defensive sectors** (e.g., Consumer Staples, HealthCare) given matrix of inflation uncertainty and potential growth softness.
+    
+- Underweight **cyclicals** especially those sensitive to global trade / housing (e.g., materials, homebuilders) given external/trade softness and housing risk.
+    
+- Consider slight overweight in regions/countries with less data risk ahead (e.g., continental Europe if data continues stable) but cautiously.
+    
+
+**Credit quality stance**
+
+- Tilt toward **higher‑quality credit (IG)** given the absence of fresh positive macro surprise and elevated event risk.
+    
+- Reduce exposure to more credit‑sensitive/higher‑beta credit (HY, emerging market credit) until inflation/growth prints give more clarity.
+    
+- Monitor bank credit flows in the U.S. and China for early credit tightening signals.
+    
+
+**Liquidity checklist**
+
+- Maintain **cash buffer** ahead of major inflation/labour/housing releases globally.
+    
+- Confirm **margin and collateral availability** for hedges, especially rate/inflation derivatives.
+    
+- Avoid **over‑commitment** of funds in leveraged positions ahead of major event risk windows.
+    
+- Ensure **rollover readiness** for positions that may need to adjust post‑data surprise.
+    
+- Monitor **market liquidity** (bid‑ask spreads, depth) especially in fixed income and FX ahead of major releases.
