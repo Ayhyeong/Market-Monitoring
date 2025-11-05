@@ -44,115 +44,7 @@
 
 ***
 
-## **2. EUROZONE – Services Inflation & ECB Rate Hold (October 30, 2025)**
-
-### **Release Details**
-- **Date/Time:** October 30, 2025
-- **Source:** ECB Governing Council / Eurostat
-- **Official Releases:** 
-  - [ECB Policy Decision](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
-  - [Eurostat Flash Estimate](https://ec.europa.eu/eurostat)
-
-### **What Moved**
-**ECB Policy:**
-- **Deposit Rate:** Held at 2.00% (third consecutive hold)
-- **Previous:** 2.25% (April 2025) → 2.00% (June 2025), held since
-
-**Inflation Data (October flash):**
-- **Headline HICP:** 2.1% YoY (vs. 2.2% Sept)
-- **Core HICP:** 2.4% YoY (unchanged, vs. 2.3% expected – 0.1pp miss)
-- **Services Inflation:** **3.4% YoY** vs. 3.2% prior (+0.2pp acceleration)
-- **Deviation:** Services inflation **1.4pp above target**, defying expectations for moderation
-
-### **Why It Matters**
-**Policy Relevance:**
-- ECB President Lagarde cited "stubborn service inflation" as primary constraint on further cuts
-- **End of rate-cutting cycle** signaled: market pricing for 2026 cuts pared back by 25bp
-- GDP growth disappointing: Q3 +0.2% QoQ vs. prior +0.1%, but Germany/Italy at 0% growth
-- Manufacturing PMI contractionary for 7th month; services keeping labor market tight → wage pressures
-
-**Market Reaction:**
-- EUR/USD rallied 0.5% to 1.15+ on hawkish hold
-- German 10Y Bund yields +8bp to 2.45%
-- Peripheral spreads (IT/ES vs. DE) compressed 5bp on "no more cuts" repricing
-
-### **Immediate Actions**
-
-**Duration/Curve:**
-- **Sell Eurozone rate cut expectations:** Receive 2y EURIBOR at 1.85-1.90% (pricing 75bp cuts by end-2026 now excessive)
-- **Bear flatteners:** Pay 2s10s; front-end repricing outpaces long-end
-
-**FX:**
-- **Long EUR vs. commodity currencies (AUD, CAD):** ECB pivot to hold vs. RBA/BoC easing
-- **EUR/CHF:** Buy targeting 0.96-0.97 (SNB still easing, ECB paused)
-- **Hedges:** Sell EUR/USD 1.17 calls (3-month) to fade further rally; sticky services cap EUR upside
-
-**Position Sizing:**
-- Trim Italian/Spanish sovereign debt overweights by 25%; spread widening risk if growth stalls
-- Rotate to German Bunds or inflation-linked bonds (services inflation persistent)
-
-**Liquidity:**
-- Watch ESTR-Euribor spreads for funding stress if credit conditions tighten
-
-***
-
-## **3. UNITED STATES – Federal Reserve Policy & Data Blackout**
-
-### **Release Details**
-- **Date/Time:** October 29, 2025, 2:00 PM EDT
-- **Source:** Federal Reserve FOMC
-- **Official Release:** [Federal Reserve Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
-
-### **What Moved**
-**FOMC Decision:**
-- **Fed Funds Target:** 3.75-4.00% (25bp cut, as expected)
-- **Dissents:** 2 members – one favored 50bp cut, one opposed cut
-- **Quantitative Tightening:** **Ends December 1, 2025**
-  - MBS runoff proceeds reinvested in Treasury bills
-  - Balance sheet to stabilize at **$6.59 trillion**
-
-**Economic Data Context:**
-- **September CPI:** 3.0% YoY vs. 3.1% expected (0.3% MoM)
-- **Core CPI:** 3.0% YoY vs. 3.1% expected
-- **August Nonfarm Payrolls:** 22K vs. 75K expected (massive miss)
-- **Initial Jobless Claims (Sept 20):** 218K vs. 235K expected
-- **Government Shutdown:** BLS/Census data releases suspended since Oct 1; September/October employment data **delayed indefinitely**
-
-### **Why It Matters**
-**Policy Relevance:**
-- **Split Committee:** 10-2 vote with divergent dissents signals uncertainty on path forward
-- **Data Blackout:** Fed navigating "blind" without payrolls, retail sales, housing starts for October
-- **Labor Market Revision:** 911K jobs downward revision for 12 months through March 2025 (largest since 2000)
-- **QT Termination:** Signals policy floor reached; reserves at ~10% GDP (lower bound of "ample" range)
-
-**Market Pricing:**
-- December cut: 60% probability (down from 85% pre-meeting)
-- Terminal rate expectations: 3.25-3.50% (up from 3.00%)
-- 10Y UST yield: 4.28%, +15bp since FOMC
-
-### **Immediate Actions**
-
-**Duration/Curve:**
-- **Fade front-end easing:** Receive 2Y UST at 3.90-4.00%; Fed pause likely if jobs data improves when released
-- **5s30s steepeners:** Balance sheet stabilization reduces long-end supply pressure
-- **TIPS:** Real yields attractive at 2.0% on 10Y; inflation floor at 3% with tariff risks
-
-**FX:**
-- **Long USD basket:** DXY targeting 108-110 on Fed hawkish pause vs. global easing (ECB, BoE, RBA)
-- **USD/JPY:** Buy dips to 152 targeting 155-157; BoJ dovish, Fed cautious
-- **Hedges:** USD/CNH appreciation risk from Trump tariff rhetoric; buy 1-month 7.35 calls
-
-**Position Sizing:**
-- Reduce US equity beta by 20%; labor data uncertainty + Fed caution = volatility spike risk
-- Overweight defensives (healthcare, utilities) until employment picture clears
-
-**Liquidity:**
-- **Critical:** Monitor SOFR vs. Fed RRP facility usage (QT end signal); potential year-end squeeze
-- Fed balance sheet floor at $6.59T; if reserves drop below 9% GDP, emergency repo operations likely
-
-***
-
-## **4. CHINA – Total Social Financing & Money Supply (September/October 2025)**
+## **2. CHINA – Total Social Financing & Money Supply (September/October 2025)**
 
 ### **Release Details**
 - **Date:** October 14, 2025 (Sept data); November 4, 2025 (Oct preliminary)
@@ -207,40 +99,9 @@
 
 ***
 
-## **5. ADDITIONAL CONTEXT: Limited Material Surprises**
-
-**No Major Surprises (Past 24 Hours):**
-
-**Japan:**
-- Industrial Production (Sept): +2.2% MoM vs. +1.5% expected (beat, but expected)
-- Unemployment (Sept): 2.6% vs. 2.5% expected (minor miss, no policy change)
-
-**United Kingdom:**
-- Retail Sales (Sept): +0.5% MoM vs. -0.2% expected (beat, but BoE already holding)
-- BoE held rates at 4.00% on November 6 as expected
-
-**United States:**
-- Housing Starts (Sept): 1.31M (annualized) – in line with consensus
-- Case-Shiller HPI (Aug): 327.13, +1.51% YoY (gradual deceleration, no surprise)
-
-***
-
-## **DATA SOURCE LINKS**
-
 ### **Official Releases**
 1. **South Korea CPI:** [Ministry of Economy and Finance](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)
-2. **ECB Policy Decision:** [European Central Bank](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
-3. **Eurostat Flash Estimate:** [Eurostat](https://ec.europa.eu/eurostat)
-4. **Federal Reserve FOMC:** [Fed Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
-5. **China PBoC/NBS:** [National Bureau of Statistics](http://www.stats.gov.cn/english/PressRelease/)
-6. **US BLS Schedule:** [Bureau of Labor Statistics](https://www.bls.gov/schedule/2025/home.htm)
-7. **US Census Schedule:** [Census Bureau](https://www.census.gov/economic-indicators/calendar-listview-2025.html)
-
-### **Consensus Sources**
-1. **Reuters Consensus:** [Reuters Polls](https://www.reuters.com)
-2. **Bloomberg Consensus:** [Bloomberg Economics](https://www.bloomberg.com)
-3. **Trading Economics:** [Forecasts](https://tradingeconomics.com)
-4. **Dow Jones/WSJ:** [MarketWatch](https://www.cnbc.com)
+2. **China PBoC/NBS:** [National Bureau of Statistics](http://www.stats.gov.cn/english/PressRelease/)
 
 ***
 
@@ -249,8 +110,6 @@
 | **Region** | **Trigger** | **Deviation** | **Policy Impact** | **Market Risk** | **Action Priority** |
 |------------|-------------|---------------|-------------------|-----------------|---------------------|
 | **South Korea** | CPI 2.4% vs. 2.2% | +2σ | BOK easing paused | KRW rates, won strength | **HIGH** |
-| **Eurozone** | Services CPI 3.4% | +1.4pp vs. target | ECB cutting cycle ended | EUR rally, Bund selloff | **HIGH** |
-| **United States** | QT termination Dec 1 | Policy shift | Balance sheet floor | USD strength, curve steepening | **MEDIUM** |
 | **China** | TSF 7.8% (record low) | -0.2pp | Stimulus ineffective | CNH weakness, credit stress | **MEDIUM-HIGH** |
 
 ***
