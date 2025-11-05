@@ -1,29 +1,29 @@
 ## **1. SOUTH KOREA – Consumer Price Index (October 2025)**
 
 ### **Release Details**
-- **Date/Time:** November 4, 2025, morning KST[1][2][3][4]
+- **Date/Time:** November 4, 2025, morning KST[^1][^2][^3][^4]
 - **Source:** Statistics Korea / Ministry of Data and Statistics
 - **Official Release:** [Statistics Korea](https://english.moef.go.kr)
 
 ### **What Moved**
-- **CPI (YoY):** 2.4% vs. consensus 2.2% (+0.2pp surprise)[2][3][4][5]
+- **CPI (YoY):** 2.4% vs. consensus 2.2% (+0.2pp surprise)[^2][^3][^4][^5]
 - **Previous:** 2.1% (September 2025)
-- **Magnitude:** **Fastest pace in 15 months** (since July 2024: 2.6%)[4][2]
-- **Core CPI:** 2.2% vs. 2.0% prior (+0.2pp acceleration)[3][4]
-- **MoM:** 0.3% vs. consensus 0.0% (flat expected)[5]
+- **Magnitude:** **Fastest pace in 15 months** (since July 2024: 2.6%)[^4][^2]
+- **Core CPI:** 2.2% vs. 2.0% prior (+0.2pp acceleration)[^3][^4]
+- **MoM:** 0.3% vs. consensus 0.0% (flat expected)[^5]
 - **Deviation:** Exceeded consensus by **2 standard deviations** based on typical forecast errors
 
 ### **Why It Matters**
 **Policy Relevance:**
-- Inflation now **above Bank of Korea's 2% target** for fourth consecutive month after brief dip[2][4]
-- **BOK held rates at 2.50%** at October 23 meeting (third consecutive hold)[6][7]
-- Market divided on November 27 rate decision: consensus had priced 25bp cut, but this print **reduces probability**[8][6]
-- Vice Governor Kim Ung stated inflation expected to "stabilize around 2%" by year-end, but October surprise challenges this view[1]
+- Inflation now **above Bank of Korea's 2% target** for fourth consecutive month after brief dip[^2][^4]
+- **BOK held rates at 2.50%** at October 23 meeting (third consecutive hold)[^6][^7]
+- Market divided on November 27 rate decision: consensus had priced 25bp cut, but this print **reduces probability**[^8][^6]
+- Vice Governor Kim Ung stated inflation expected to "stabilize around 2%" by year-end, but October surprise challenges this view[^1]
 
 **Market Impact:**
-- Won depreciation amplifying imported inflation (energy/food)[7]
-- Housing market rally concerns constraining easing cycle[6][7]
-- Citi economist Kim Jin-wook: "BOK rate-cutting cycle has ended for now at 2.50%"[7]
+- Won depreciation amplifying imported inflation (energy/food)[^7]
+- Housing market rally concerns constraining easing cycle[^6][^7]
+- Citi economist Kim Jin-wook: "BOK rate-cutting cycle has ended for now at 2.50%"[^7]
 
 ### **Immediate Actions**
 
@@ -47,7 +47,7 @@
 ## **2. EUROZONE – Services Inflation & ECB Rate Hold (October 30, 2025)**
 
 ### **Release Details**
-- **Date/Time:** October 30, 2025[9][10][11][12][13][14]
+- **Date/Time:** October 30, 2025[^9][^10][^11][^12][^13][14]
 - **Source:** ECB Governing Council / Eurostat
 - **Official Releases:** 
   - [ECB Policy Decision](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
@@ -55,24 +55,24 @@
 
 ### **What Moved**
 **ECB Policy:**
-- **Deposit Rate:** Held at 2.00% (third consecutive hold)[11][12][13][14][9]
+- **Deposit Rate:** Held at 2.00% (third consecutive hold)[^11][^12][^13][14][^9]
 - **Previous:** 2.25% (April 2025) → 2.00% (June 2025), held since
 
 **Inflation Data (October flash):**
 - **Headline HICP:** 2.1% YoY (vs. 2.2% Sept)[15][16]
 - **Core HICP:** 2.4% YoY (unchanged, vs. 2.3% expected – 0.1pp miss)[16][15]
-- **Services Inflation:** **3.4% YoY** vs. 3.2% prior (+0.2pp acceleration)[17][9][15][16]
+- **Services Inflation:** **3.4% YoY** vs. 3.2% prior (+0.2pp acceleration)[17][^9][15][16]
 - **Deviation:** Services inflation **1.4pp above target**, defying expectations for moderation
 
 ### **Why It Matters**
 **Policy Relevance:**
-- ECB President Lagarde cited "stubborn service inflation" as primary constraint on further cuts[9][17]
-- **End of rate-cutting cycle** signaled: market pricing for 2026 cuts pared back by 25bp[16][9]
-- GDP growth disappointing: Q3 +0.2% QoQ vs. prior +0.1%, but Germany/Italy at 0% growth[17][9][16]
+- ECB President Lagarde cited "stubborn service inflation" as primary constraint on further cuts[^9][17]
+- **End of rate-cutting cycle** signaled: market pricing for 2026 cuts pared back by 25bp[16][^9]
+- GDP growth disappointing: Q3 +0.2% QoQ vs. prior +0.1%, but Germany/Italy at 0% growth[17][^9][16]
 - Manufacturing PMI contractionary for 7th month; services keeping labor market tight → wage pressures[16]
 
 **Market Reaction:**
-- EUR/USD rallied 0.5% to 1.15+ on hawkish hold[11]
+- EUR/USD rallied 0.5% to 1.15+ on hawkish hold[^11]
 - German 10Y Bund yields +8bp to 2.45%[16]
 - Peripheral spreads (IT/ES vs. DE) compressed 5bp on "no more cuts" repricing
 
@@ -228,17 +228,17 @@
 ## **DATA SOURCE LINKS**
 
 ### **Official Releases**
-1. **South Korea CPI:** [Ministry of Economy and Finance](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)[3]
+1. **South Korea CPI:** [Ministry of Economy and Finance](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)[^3]
 2. **ECB Policy Decision:** [European Central Bank](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)[14]
-3. **Eurostat Flash Estimate:** [Eurostat](https://ec.europa.eu/eurostat)[55][10]
+3. **Eurostat Flash Estimate:** [Eurostat](https://ec.europa.eu/eurostat)[55][^10]
 4. **Federal Reserve FOMC:** [Fed Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)[18]
 5. **China PBoC/NBS:** [National Bureau of Statistics](http://www.stats.gov.cn/english/PressRelease/)[34]
 6. **US BLS Schedule:** [Bureau of Labor Statistics](https://www.bls.gov/schedule/2025/home.htm)[56]
 7. **US Census Schedule:** [Census Bureau](https://www.census.gov/economic-indicators/calendar-listview-2025.html)[57]
 
 ### **Consensus Sources**
-1. **Reuters Consensus:** [Reuters Polls](https://www.reuters.com)[48][5]
-2. **Bloomberg Consensus:** [Bloomberg Economics](https://www.bloomberg.com)[23][2]
+1. **Reuters Consensus:** [Reuters Polls](https://www.reuters.com)[48][^5]
+2. **Bloomberg Consensus:** [Bloomberg Economics](https://www.bloomberg.com)[23][^2]
 3. **Trading Economics:** [Forecasts](https://tradingeconomics.com)[58][25][45]
 4. **Dow Jones/WSJ:** [MarketWatch](https://www.cnbc.com)[23]
 
@@ -257,19 +257,19 @@
 
 **OVERALL ASSESSMENT:** Multiple policy-relevant triggers fired. Primary focus should be on **Korea CPI surprise** (immediate rate path repricing) and **Eurozone services inflation** (hawkish ECB pivot). US data blackout creates binary risk for November 7 payrolls release (if published). China credit contraction warrants defensive positioning acrosson warrants defensive positioning across EM Asia.
 
-[1](https://biz.chosun.com/en/en-policy/2025/11/04/GUA7CW4JPFDYVBZVIDVFW273YU/)
-[2](https://en.yna.co.kr/view/AEN20251104000952320)
-[3](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)
-[4](https://en.yna.co.kr/view/AEN20251104000951320)
-[5](https://www.reuters.com/world/asia-pacific/south-korea-october-inflation-24-yy-faster-than-expected-2025-11-03/)
-[6](https://tradingeconomics.com/south-korea/interest-rate)
-[7](https://evrimagaci.org/gpt/south-korea-inflation-surges-as-won-weakens-in-october-514988)
-[8](https://www.businesstimes.com.sg/international/south-koreas-inflation-picks-backing-case-bok-rate-hold)
-[9](https://www.financialcontent.com/article/marketminute-2025-11-5-eurozone-stagnation-looms-as-ecb-holds-firm-on-rates-amidst-stubborn-service-inflation)
-[10](https://www.ecb.europa.eu)
-[11](https://www.mitrade.com/kr/insights/news/live-news/article-6-1212846-20251022)
-[12](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)
-[13](https://www.wam.ae/en/article/bmgrkrw-european-central-bank-keeps-interest-rate)
+[^1]: https://biz.chosun.com/en/en-policy/2025/11/04/GUA7CW4JPFDYVBZVIDVFW273YU/
+[^2](https://en.yna.co.kr/view/AEN20251104000952320)
+[^3](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)
+[^4](https://en.yna.co.kr/view/AEN20251104000951320)
+[^5](https://www.reuters.com/world/asia-pacific/south-korea-october-inflation-24-yy-faster-than-expected-2025-11-03/)
+[^6](https://tradingeconomics.com/south-korea/interest-rate)
+[^7](https://evrimagaci.org/gpt/south-korea-inflation-surges-as-won-weakens-in-october-514988)
+[^8](https://www.businesstimes.com.sg/international/south-koreas-inflation-picks-backing-case-bok-rate-hold)
+[^9](https://www.financialcontent.com/article/marketminute-2025-11-5-eurozone-stagnation-looms-as-ecb-holds-firm-on-rates-amidst-stubborn-service-inflation)
+[^10](https://www.ecb.europa.eu)
+[^11](https://www.mitrade.com/kr/insights/news/live-news/article-6-1212846-20251022)
+[^12](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)
+[^13](https://www.wam.ae/en/article/bmgrkrw-european-central-bank-keeps-interest-rate)
 [14](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
 [15](https://www.euronews.com/business/2025/10/31/eurozone-inflation-slows-to-21-yet-lagarde-stays-cautious)
 [16](http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2025-11-5-eurozone-stagnation-looms-as-ecb-holds-firm-on-rates-amidst-stubborn-service-inflation)
