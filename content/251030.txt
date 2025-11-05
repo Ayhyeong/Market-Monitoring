@@ -1,0 +1,59 @@
+## **1. UNITED STATES – Federal Reserve Policy & Data Blackout**
+
+### **Release Details**
+- **Date/Time:** October 29, 2025, 2:00 PM EDT
+- **Source:** Federal Reserve FOMC
+- **Official Release:** [Federal Reserve Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
+
+### **What Moved**
+**FOMC Decision:**
+- **Fed Funds Target:** 3.75-4.00% (25bp cut, as expected)
+- **Dissents:** 2 members – one favored 50bp cut, one opposed cut
+- **Quantitative Tightening:** **Ends December 1, 2025**
+  - MBS runoff proceeds reinvested in Treasury bills
+  - Balance sheet to stabilize at **$6.59 trillion**
+
+**Economic Data Context:**
+- **September CPI:** 3.0% YoY vs. 3.1% expected (0.3% MoM)
+- **Core CPI:** 3.0% YoY vs. 3.1% expected
+- **August Nonfarm Payrolls:** 22K vs. 75K expected (massive miss)
+- **Initial Jobless Claims (Sept 20):** 218K vs. 235K expected
+- **Government Shutdown:** BLS/Census data releases suspended since Oct 1; September/October employment data **delayed indefinitely**
+
+### **Why It Matters**
+**Policy Relevance:**
+- **Split Committee:** 10-2 vote with divergent dissents signals uncertainty on path forward
+- **Data Blackout:** Fed navigating "blind" without payrolls, retail sales, housing starts for October
+- **Labor Market Revision:** 911K jobs downward revision for 12 months through March 2025 (largest since 2000)
+- **QT Termination:** Signals policy floor reached; reserves at ~10% GDP (lower bound of "ample" range)
+
+**Market Pricing:**
+- December cut: 60% probability (down from 85% pre-meeting)
+- Terminal rate expectations: 3.25-3.50% (up from 3.00%)
+- 10Y UST yield: 4.28%, +15bp since FOMC
+
+### **Immediate Actions**
+
+**Duration/Curve:**
+- **Fade front-end easing:** Receive 2Y UST at 3.90-4.00%; Fed pause likely if jobs data improves when released
+- **5s30s steepeners:** Balance sheet stabilization reduces long-end supply pressure
+- **TIPS:** Real yields attractive at 2.0% on 10Y; inflation floor at 3% with tariff risks
+
+**FX:**
+- **Long USD basket:** DXY targeting 108-110 on Fed hawkish pause vs. global easing (ECB, BoE, RBA)
+- **USD/JPY:** Buy dips to 152 targeting 155-157; BoJ dovish, Fed cautious
+- **Hedges:** USD/CNH appreciation risk from Trump tariff rhetoric; buy 1-month 7.35 calls
+
+**Position Sizing:**
+- Reduce US equity beta by 20%; labor data uncertainty + Fed caution = volatility spike risk
+- Overweight defensives (healthcare, utilities) until employment picture clears
+
+**Liquidity:**
+- **Critical:** Monitor SOFR vs. Fed RRP facility usage (QT end signal); potential year-end squeeze
+- Fed balance sheet floor at $6.59T; if reserves drop below 9% GDP, emergency repo operations likely
+
+***
+
+1. **Federal Reserve FOMC:** [Fed Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
+2. **US BLS Schedule:** [Bureau of Labor Statistics](https://www.bls.gov/schedule/2025/home.htm)
+3. **US Census Schedule:** [Census Bureau](https://www.census.gov/economic-indicators/calendar-listview-2025.html)
