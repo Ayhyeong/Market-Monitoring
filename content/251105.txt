@@ -1,29 +1,29 @@
 ## **1. SOUTH KOREA – Consumer Price Index (October 2025)**
 
 ### **Release Details**
-- **Date/Time:** November 4, 2025, morning KST[^1][^2][^3][^4]
+- **Date/Time:** November 4, 2025, morning KST
 - **Source:** Statistics Korea / Ministry of Data and Statistics
 - **Official Release:** [Statistics Korea](https://english.moef.go.kr)
 
 ### **What Moved**
-- **CPI (YoY):** 2.4% vs. consensus 2.2% (+0.2pp surprise)[^2][^3][^4][^5]
+- **CPI (YoY):** 2.4% vs. consensus 2.2% (+0.2pp surprise)
 - **Previous:** 2.1% (September 2025)
-- **Magnitude:** **Fastest pace in 15 months** (since July 2024: 2.6%)[^4][^2]
-- **Core CPI:** 2.2% vs. 2.0% prior (+0.2pp acceleration)[^3][^4]
-- **MoM:** 0.3% vs. consensus 0.0% (flat expected)[^5]
+- **Magnitude:** **Fastest pace in 15 months** (since July 2024: 2.6%)
+- **Core CPI:** 2.2% vs. 2.0% prior (+0.2pp acceleration)
+- **MoM:** 0.3% vs. consensus 0.0% (flat expected)
 - **Deviation:** Exceeded consensus by **2 standard deviations** based on typical forecast errors
 
 ### **Why It Matters**
 **Policy Relevance:**
-- Inflation now **above Bank of Korea's 2% target** for fourth consecutive month after brief dip[^2][^4]
-- **BOK held rates at 2.50%** at October 23 meeting (third consecutive hold)[^6][^7]
-- Market divided on November 27 rate decision: consensus had priced 25bp cut, but this print **reduces probability**[^8][^6]
-- Vice Governor Kim Ung stated inflation expected to "stabilize around 2%" by year-end, but October surprise challenges this view[^1]
+- Inflation now **above Bank of Korea's 2% target** for fourth consecutive month after brief dip
+- **BOK held rates at 2.50%** at October 23 meeting (third consecutive hold)
+- Market divided on November 27 rate decision: consensus had priced 25bp cut, but this print **reduces probability**
+- Vice Governor Kim Ung stated inflation expected to "stabilize around 2%" by year-end, but October surprise challenges this view
 
 **Market Impact:**
-- Won depreciation amplifying imported inflation (energy/food)[^7]
-- Housing market rally concerns constraining easing cycle[^6][^7]
-- Citi economist Kim Jin-wook: "BOK rate-cutting cycle has ended for now at 2.50%"[^7]
+- Won depreciation amplifying imported inflation (energy/food)
+- Housing market rally concerns constraining easing cycle
+- Citi economist Kim Jin-wook: "BOK rate-cutting cycle has ended for now at 2.50%"
 
 ### **Immediate Actions**
 
@@ -47,7 +47,7 @@
 ## **2. EUROZONE – Services Inflation & ECB Rate Hold (October 30, 2025)**
 
 ### **Release Details**
-- **Date/Time:** October 30, 2025[^9][^10][^11][^12][^13][14]
+- **Date/Time:** October 30, 2025
 - **Source:** ECB Governing Council / Eurostat
 - **Official Releases:** 
   - [ECB Policy Decision](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
@@ -55,25 +55,25 @@
 
 ### **What Moved**
 **ECB Policy:**
-- **Deposit Rate:** Held at 2.00% (third consecutive hold)[^11][^12][^13][14][^9]
+- **Deposit Rate:** Held at 2.00% (third consecutive hold)
 - **Previous:** 2.25% (April 2025) → 2.00% (June 2025), held since
 
 **Inflation Data (October flash):**
-- **Headline HICP:** 2.1% YoY (vs. 2.2% Sept)[15][16]
-- **Core HICP:** 2.4% YoY (unchanged, vs. 2.3% expected – 0.1pp miss)[16][15]
-- **Services Inflation:** **3.4% YoY** vs. 3.2% prior (+0.2pp acceleration)[17][^9][15][16]
+- **Headline HICP:** 2.1% YoY (vs. 2.2% Sept)
+- **Core HICP:** 2.4% YoY (unchanged, vs. 2.3% expected – 0.1pp miss)
+- **Services Inflation:** **3.4% YoY** vs. 3.2% prior (+0.2pp acceleration)
 - **Deviation:** Services inflation **1.4pp above target**, defying expectations for moderation
 
 ### **Why It Matters**
 **Policy Relevance:**
-- ECB President Lagarde cited "stubborn service inflation" as primary constraint on further cuts[^9][17]
-- **End of rate-cutting cycle** signaled: market pricing for 2026 cuts pared back by 25bp[16][^9]
-- GDP growth disappointing: Q3 +0.2% QoQ vs. prior +0.1%, but Germany/Italy at 0% growth[17][^9][16]
-- Manufacturing PMI contractionary for 7th month; services keeping labor market tight → wage pressures[16]
+- ECB President Lagarde cited "stubborn service inflation" as primary constraint on further cuts
+- **End of rate-cutting cycle** signaled: market pricing for 2026 cuts pared back by 25bp
+- GDP growth disappointing: Q3 +0.2% QoQ vs. prior +0.1%, but Germany/Italy at 0% growth
+- Manufacturing PMI contractionary for 7th month; services keeping labor market tight → wage pressures
 
 **Market Reaction:**
-- EUR/USD rallied 0.5% to 1.15+ on hawkish hold[^11]
-- German 10Y Bund yields +8bp to 2.45%[16]
+- EUR/USD rallied 0.5% to 1.15+ on hawkish hold
+- German 10Y Bund yields +8bp to 2.45%
 - Peripheral spreads (IT/ES vs. DE) compressed 5bp on "no more cuts" repricing
 
 ### **Immediate Actions**
@@ -99,35 +99,35 @@
 ## **3. UNITED STATES – Federal Reserve Policy & Data Blackout**
 
 ### **Release Details**
-- **Date/Time:** October 29, 2025, 2:00 PM EDT[18]
+- **Date/Time:** October 29, 2025, 2:00 PM EDT
 - **Source:** Federal Reserve FOMC
 - **Official Release:** [Federal Reserve Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
 
 ### **What Moved**
 **FOMC Decision:**
-- **Fed Funds Target:** 3.75-4.00% (25bp cut, as expected)[19][18]
-- **Dissents:** 2 members – one favored 50bp cut, one opposed cut[18][19]
-- **Quantitative Tightening:** **Ends December 1, 2025**[20][19][18]
+- **Fed Funds Target:** 3.75-4.00% (25bp cut, as expected)
+- **Dissents:** 2 members – one favored 50bp cut, one opposed cut
+- **Quantitative Tightening:** **Ends December 1, 2025**
   - MBS runoff proceeds reinvested in Treasury bills
-  - Balance sheet to stabilize at **$6.59 trillion**[21][20]
+  - Balance sheet to stabilize at **$6.59 trillion**
 
 **Economic Data Context:**
-- **September CPI:** 3.0% YoY vs. 3.1% expected (0.3% MoM)[22][23][24]
-- **Core CPI:** 3.0% YoY vs. 3.1% expected[23][22]
-- **August Nonfarm Payrolls:** 22K vs. 75K expected (massive miss)[25][26][27]
-- **Initial Jobless Claims (Sept 20):** 218K vs. 235K expected[28][29]
-- **Government Shutdown:** BLS/Census data releases suspended since Oct 1; September/October employment data **delayed indefinitely**[30][31][23]
+- **September CPI:** 3.0% YoY vs. 3.1% expected (0.3% MoM)
+- **Core CPI:** 3.0% YoY vs. 3.1% expected
+- **August Nonfarm Payrolls:** 22K vs. 75K expected (massive miss)
+- **Initial Jobless Claims (Sept 20):** 218K vs. 235K expected
+- **Government Shutdown:** BLS/Census data releases suspended since Oct 1; September/October employment data **delayed indefinitely**
 
 ### **Why It Matters**
 **Policy Relevance:**
-- **Split Committee:** 10-2 vote with divergent dissents signals uncertainty on path forward[18]
-- **Data Blackout:** Fed navigating "blind" without payrolls, retail sales, housing starts for October[30][23]
-- **Labor Market Revision:** 911K jobs downward revision for 12 months through March 2025 (largest since 2000)[32][25]
-- **QT Termination:** Signals policy floor reached; reserves at ~10% GDP (lower bound of "ample" range)[33][19]
+- **Split Committee:** 10-2 vote with divergent dissents signals uncertainty on path forward
+- **Data Blackout:** Fed navigating "blind" without payrolls, retail sales, housing starts for October
+- **Labor Market Revision:** 911K jobs downward revision for 12 months through March 2025 (largest since 2000)
+- **QT Termination:** Signals policy floor reached; reserves at ~10% GDP (lower bound of "ample" range)
 
 **Market Pricing:**
-- December cut: 60% probability (down from 85% pre-meeting)[19]
-- Terminal rate expectations: 3.25-3.50% (up from 3.00%)[19]
+- December cut: 60% probability (down from 85% pre-meeting)
+- Terminal rate expectations: 3.25-3.50% (up from 3.00%)
 - 10Y UST yield: 4.28%, +15bp since FOMC
 
 ### **Immediate Actions**
@@ -148,45 +148,45 @@
 
 **Liquidity:**
 - **Critical:** Monitor SOFR vs. Fed RRP facility usage (QT end signal); potential year-end squeeze
-- Fed balance sheet floor at $6.59T; if reserves drop below 9% GDP, emergency repo operations likely[20]
+- Fed balance sheet floor at $6.59T; if reserves drop below 9% GDP, emergency repo operations likely
 
 ***
 
 ## **4. CHINA – Total Social Financing & Money Supply (September/October 2025)**
 
 ### **Release Details**
-- **Date:** October 14, 2025 (Sept data); November 4, 2025 (Oct preliminary)[34][35][36]
+- **Date:** October 14, 2025 (Sept data); November 4, 2025 (Oct preliminary)
 - **Source:** People's Bank of China (PBoC)
 - **Official Release:** [NBS/PBoC](http://www.aastocks.com/en/forex/news/)
 
 ### **What Moved**
 **September Data:**
-- **M2:** 8.4% YoY vs. 8.5% consensus (slight miss)[35]
-- **M1:** 7.2% YoY vs. 6.1% expected (beat)[35]
-- **TSF (Outstanding):** 7.8% YoY vs. 8.0% prior (record low)[36]
-- **New TSF:** RMB 3.76 trillion (Sept) → RMB 1.4T (Oct preliminary, vs. 1.55T expected)[36]
+- **M2:** 8.4% YoY vs. 8.5% consensus (slight miss)
+- **M1:** 7.2% YoY vs. 6.1% expected (beat)
+- **TSF (Outstanding):** 7.8% YoY vs. 8.0% prior (record low)
+- **New TSF:** RMB 3.76 trillion (Sept) → RMB 1.4T (Oct preliminary, vs. 1.55T expected)
 
 **October PMI (Nov 1 release):**
-- **Manufacturing PMI:** 49.0 vs. 49.8 prior (7th consecutive contraction)[37][34]
-- **Retail Sales (Sept):** 3.0% YoY vs. 3.4% prior (slowest since Nov 2024)[38][39]
-- **Industrial Production (Sept):** 6.5% YoY vs. 5.0% expected (beat)[38]
+- **Manufacturing PMI:** 49.0 vs. 49.8 prior (7th consecutive contraction)
+- **Retail Sales (Sept):** 3.0% YoY vs. 3.4% prior (slowest since Nov 2024)
+- **Industrial Production (Sept):** 6.5% YoY vs. 5.0% expected (beat)
 
 ### **Why It Matters**
 **Policy Relevance:**
-- TSF growth at **record low** signals credit demand collapse despite policy easing[36]
-- PBoC studying "revision of M2 statistics" to better reflect real money supply[36]
-- Retail sales weakness confirms consumption drag; stimulus measures (rate cuts, RRR cuts) not gaining traction[40][38]
-- Trump re-election risk: 60%+ tariffs threatened → export sector vulnerability[36]
+- TSF growth at **record low** signals credit demand collapse despite policy easing
+- PBoC studying "revision of M2 statistics" to better reflect real money supply
+- Retail sales weakness confirms consumption drag; stimulus measures (rate cuts, RRR cuts) not gaining traction
+- Trump re-election risk: 60%+ tariffs threatened → export sector vulnerability
 
 **Market Impact:**
-- CNH weakened to 7.32 per USD[41]
+- CNH weakened to 7.32 per USD
 - CSI 300 equity index -3% on growth concerns
 - Credit spreads (corporate bonds) widening 20bp
 
 ### **Immediate Actions**
 
 **Duration/Curve:**
-- **Long China sovereign bonds:** 10Y CGBs at 1.75% pricing further easing; target 1.65%[41]
+- **Long China sovereign bonds:** 10Y CGBs at 1.75% pricing further easing; target 1.65%
 - **Sell credit:** IG/HY Chinese corporate spreads to widen on default risk; underweight property developers
 
 **FX:**
@@ -212,35 +212,35 @@
 **No Major Surprises (Past 24 Hours):**
 
 **Japan:**
-- Industrial Production (Sept): +2.2% MoM vs. +1.5% expected (beat, but expected)[42][43][44]
-- Unemployment (Sept): 2.6% vs. 2.5% expected (minor miss, no policy change)[45]
+- Industrial Production (Sept): +2.2% MoM vs. +1.5% expected (beat, but expected)
+- Unemployment (Sept): 2.6% vs. 2.5% expected (minor miss, no policy change)
 
 **United Kingdom:**
-- Retail Sales (Sept): +0.5% MoM vs. -0.2% expected (beat, but BoE already holding)[46][47]
-- BoE held rates at 4.00% on November 6 as expected[48][49][50]
+- Retail Sales (Sept): +0.5% MoM vs. -0.2% expected (beat, but BoE already holding)
+- BoE held rates at 4.00% on November 6 as expected
 
 **United States:**
-- Housing Starts (Sept): 1.31M (annualized) – in line with consensus[51][52]
-- Case-Shiller HPI (Aug): 327.13, +1.51% YoY (gradual deceleration, no surprise)[53][54]
+- Housing Starts (Sept): 1.31M (annualized) – in line with consensus
+- Case-Shiller HPI (Aug): 327.13, +1.51% YoY (gradual deceleration, no surprise)
 
 ***
 
 ## **DATA SOURCE LINKS**
 
 ### **Official Releases**
-1. **South Korea CPI:** [Ministry of Economy and Finance](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)[^3]
-2. **ECB Policy Decision:** [European Central Bank](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)[14]
-3. **Eurostat Flash Estimate:** [Eurostat](https://ec.europa.eu/eurostat)[55][^10]
-4. **Federal Reserve FOMC:** [Fed Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)[18]
-5. **China PBoC/NBS:** [National Bureau of Statistics](http://www.stats.gov.cn/english/PressRelease/)[34]
-6. **US BLS Schedule:** [Bureau of Labor Statistics](https://www.bls.gov/schedule/2025/home.htm)[56]
-7. **US Census Schedule:** [Census Bureau](https://www.census.gov/economic-indicators/calendar-listview-2025.html)[57]
+1. **South Korea CPI:** [Ministry of Economy and Finance](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)
+2. **ECB Policy Decision:** [European Central Bank](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
+3. **Eurostat Flash Estimate:** [Eurostat](https://ec.europa.eu/eurostat)
+4. **Federal Reserve FOMC:** [Fed Statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
+5. **China PBoC/NBS:** [National Bureau of Statistics](http://www.stats.gov.cn/english/PressRelease/)
+6. **US BLS Schedule:** [Bureau of Labor Statistics](https://www.bls.gov/schedule/2025/home.htm)
+7. **US Census Schedule:** [Census Bureau](https://www.census.gov/economic-indicators/calendar-listview-2025.html)
 
 ### **Consensus Sources**
-1. **Reuters Consensus:** [Reuters Polls](https://www.reuters.com)[48][^5]
-2. **Bloomberg Consensus:** [Bloomberg Economics](https://www.bloomberg.com)[23][^2]
-3. **Trading Economics:** [Forecasts](https://tradingeconomics.com)[58][25][45]
-4. **Dow Jones/WSJ:** [MarketWatch](https://www.cnbc.com)[23]
+1. **Reuters Consensus:** [Reuters Polls](https://www.reuters.com)
+2. **Bloomberg Consensus:** [Bloomberg Economics](https://www.bloomberg.com)
+3. **Trading Economics:** [Forecasts](https://tradingeconomics.com)
+4. **Dow Jones/WSJ:** [MarketWatch](https://www.cnbc.com)
 
 ***
 
@@ -256,117 +256,3 @@
 ***
 
 **OVERALL ASSESSMENT:** Multiple policy-relevant triggers fired. Primary focus should be on **Korea CPI surprise** (immediate rate path repricing) and **Eurozone services inflation** (hawkish ECB pivot). US data blackout creates binary risk for November 7 payrolls release (if published). China credit contraction warrants defensive positioning acrosson warrants defensive positioning across EM Asia.
-
-[^1]: https://biz.chosun.com/en/en-policy/2025/11/04/GUA7CW4JPFDYVBZVIDVFW273YU/
-[^2](https://en.yna.co.kr/view/AEN20251104000952320)
-[^3](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6287)
-[^4](https://en.yna.co.kr/view/AEN20251104000951320)
-[^5](https://www.reuters.com/world/asia-pacific/south-korea-october-inflation-24-yy-faster-than-expected-2025-11-03/)
-[^6](https://tradingeconomics.com/south-korea/interest-rate)
-[^7](https://evrimagaci.org/gpt/south-korea-inflation-surges-as-won-weakens-in-october-514988)
-[^8](https://www.businesstimes.com.sg/international/south-koreas-inflation-picks-backing-case-bok-rate-hold)
-[^9](https://www.financialcontent.com/article/marketminute-2025-11-5-eurozone-stagnation-looms-as-ecb-holds-firm-on-rates-amidst-stubborn-service-inflation)
-[^10](https://www.ecb.europa.eu)
-[^11](https://www.mitrade.com/kr/insights/news/live-news/article-6-1212846-20251022)
-[^12](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)
-[^13](https://www.wam.ae/en/article/bmgrkrw-european-central-bank-keeps-interest-rate)
-[14](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html)
-[15](https://www.euronews.com/business/2025/10/31/eurozone-inflation-slows-to-21-yet-lagarde-stays-cautious)
-[16](http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2025-11-5-eurozone-stagnation-looms-as-ecb-holds-firm-on-rates-amidst-stubborn-service-inflation)
-[17](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251103~0f11a1cf5d.en.pdf)
-[18](https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm)
-[19](https://www.schwab.com/learn/story/fomc-meeting)
-[20](https://www.reuters.com/business/finance/fed-end-balance-sheet-reduction-december-1-2025-10-29/)
-[21](https://tradingeconomics.com/united-states/central-bank-balance-sheet)
-[22](https://www.ssga.com/ch/en_gb/intermediary/insights/weekly-economic-perspectives-27-october-2025)
-[23](https://www.cnbc.com/2025/10/24/cpi-inflation-september-2025.html)
-[24](https://www.fisherinvestments.com/en-us/insights/market-commentary/what-did-the-delayed-inflation-report-say)
-[25](https://tradingeconomics.com/united-states/non-farm-payrolls)
-[26](https://www.bls.gov/news.release/empsit.nr0.htm)
-[27](https://www.abnamro.com/research/en/our-research/us-labour-market-grinds-to-a-halt-september-cut-inevitable)
-[28](https://tradingeconomics.com/united-states/jobless-claims)
-[29](https://tradingeconomics.com/united-states/jobless-claims/news/482889)
-[30](https://www.bloomberg.com/news/articles/2025-10-28/how-the-us-government-shutdown-cut-off-economic-data-the-fed-relies-on)
-[31](https://news.futunn.com/en/post/64305853/jinshi-futures-morning-briefing-tuesday-november-4-2025)
-[32](https://www.cnbc.com/2025/09/09/jobs-report-revisions-september-2025-.html)
-[33](https://discoveryalert.com.au/news/federal-reserve-quantitative-tightening-2025-conclusion/)
-[34](https://www.stats.gov.cn/english/PressRelease/)
-[35](http://www.aastocks.com/en/forex/news/comment.aspx?id=NOW.1476820&catg=1)
-[36](https://english.aawsat.com/business/5080493-china%E2%80%99s-october-new-lending-tumbles-more-expected-despite-policy-support)
-[37](https://tradingeconomics.com/china/business-confidence)
-[38](https://www.bssnews.net/business/322992)
-[39](https://tradingeconomics.com/china/retail-sales-annual)
-[40](https://www.bbvaresearch.com/wp-content/uploads/2025/04/China-banking-monitor-2025.pdf)
-[41](https://tradingeconomics.com/china/government-bond-yield/news/493951)
-[42](https://english.news.cn/asiapacific/20251031/c13e826643fc4118a7cb20100a175623/c.html)
-[43](https://tradingeconomics.com/japan/industrial-production-mom)
-[44](https://www.akm.ru/eng/news/japan-s-industrial-production-increased-by-2-2-in-september/)
-[45](https://tradingeconomics.com/japan/unemployment-rate)
-[46](https://tradingeconomics.com/united-kingdom/retail-sales)
-[47](https://www.ons.gov.uk/releases/retailsalesgreatbritainoctober2025)
-[48](https://www.reuters.com/world/uk/bank-england-hold-rates-this-quarter-resume-cutting-early-2026-2025-10-28/)
-[49](https://think.ing.com/articles/bank-of-england-to-hold-rates-despite-better-inflation-news/)
-[50](https://www.money.co.uk/mortgages/bank-of-england-base-rate)
-[51](https://nationalmortgageprofessional.com/news/housing-starts-permits-rise-september)
-[52](https://economics.td.com/us-housing-starts-and-permits)
-[53](https://ycharts.com/indicators/case_shiller_home_price_index_national)
-[54](https://www.cotality.com/press-releases/cotality-case-shiller-september-2025)
-[55](https://data.ecb.europa.eu)
-[56](https://www.bls.gov/schedule/2025/home.htm)
-[57](https://www.census.gov/economic-indicators/calendar-listview-2025.html)
-[58](https://tradingeconomics.com/euro-area/unemployment-rate)
-[59](https://www.scotiabank.com/content/dam/scotiabank/sub-brands/scotiabank-economics/english/documents/global-outlook/globaloutlook_3Q2019.pdf)
-[60](https://www.research.unicredit.eu/DocsKey/economics_docs_2021_181953.ashx?EXT=pdf&KEY=C814QI31EjqIm_1zIJDBJB6dDKN-ZlwQwmzPU8IXdJ8%3D&T=1)
-[61](https://www.unicreditbank.sk/content/dam/cee2020-pws-sk/en-documents/others/economics_docs_2017_162612.pdf)
-[62](https://www.scribd.com/document/762742091/Barclays-Global-Economics-Weekly-No-news-is-good-news-20240328)
-[63](https://www.academia.edu/22180750/Economic_Research_Global_Data_Watch_Outside_of_the_US_and_China_the_global_economy_stagnated_last_quarter)
-[64](https://www.research.unicredit.eu/DocsKey/economics_docs_2022_184258.ashx?EXT=pdf&KEY=C814QI31EjqIm_1zIJDBJMFJK6gFt5Ic8ChzcuRXBYo%3D&T=1)
-[65](https://statspolicy.gov/assets/fcsm/files/docs/OMB_pfei_schedule_of_release_dates_2025.pdf)
-[66](https://www.scribd.com/document/515471755/JPM-Macro-Data-Watch-89p)
-[67](https://www.bea.gov)
-[68](https://knowen-production.s3.amazonaws.com/uploads/attachment/file/2283/JPM_J_P__Morgan_Perspect_Kolanovic+-+Global+Financial+Crisis.pdf)
-[69](https://www.bea.gov/news/schedule/next-year)
-[70](https://global.morningstar.com/en-gb/economy/will-bank-england-cut-uk-interest-rates-again-2025)
-[71](https://www.mof.go.jp/english/policy/jgbs/publication/newsletter/jgb2025_04e.pdf)
-[72](https://www.boj.or.jp/en/about/calendar/index.htm)
-[73](http://english.moef.go.kr)
-[74](https://www.boj.or.jp/en/)
-[75](https://www.facebook.com/ChinaGlobalTVNetwork/posts/with-a-series-of-swift-and-targeted-measures-chinas-economy-demonstrated-stable-/1494743225352478/)
-[76](https://www.stat.go.jp/english/)
-[77](https://www.ssga.com/ca/en/institutional/insights/weekly-economic-perspectives-15-september-2025)
-[78](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales)
-[79](https://tradingeconomics.com/united-states/unemployment-rate)
-[80](https://tradingeconomics.com/united-states/retail-sales)
-[81](https://www.bls.gov/news.release/archives/ppi_04112025.htm)
-[82](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
-[83](https://www.census.gov)
-[84](https://www.federalreserve.gov/releases/h15/)
-[85](https://www.pwccn.com/en/research-and-insights/china-economic-quarterly-q1-q2-2025.pdf)
-[86](http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2025-11-4-us-jobs-data-looms-a-critical-test-for-the-dollar-as-markets-brace-for-volatility)
-[87](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-30102025-bp)
-[88](https://www.wealthwayfx.com/news-details/756/japan-core-cpi-forecast-released-at-3-3-percent-for-october)
-[89](https://ec.europa.eu/eurostat/news/euro-indicators)
-[90](https://www.ons.gov.uk/releases/retailsalesgreatbritainnovember2025timeseries)
-[91](https://ec.europa.eu/eurostat/statistics-explained/index.php/Unemployment_statistics)
-[92](https://dashboard.e-stat.go.jp/en/)
-[93](https://www.fibre2fashion.com/news/retail-industry/uk-store-sales-rise-1-1-in-oct-outpacing-online-for-2nd-month-306200-newsdetails.htm)
-[94](https://www.wealthwayfx.com/news-details/762/us-core-pce-inflation-forecast-released-at-2-7-percent-for-october)
-[95](https://www.bea.gov/news/2025/gross-domestic-product-2nd-quarter-2025-third-estimate-gdp-industry-corporate-profits)
-[96](https://hubbardobrieneconomics.com/2025/09/26/real-gdp-growth-revised-up-and-pce-inflation-running-slightly-below-expectations/)
-[97](https://www.bea.gov/data/personal-consumption-expenditures-price-index)
-[98](https://www.cmegroup.com/education/events/econoday/2025/10/feed627463.html)
-[99](https://fred.stlouisfed.org/series/ICSA)
-[100](https://www.myfxbook.com/news/china-manufacturing-sector-ebbs-in-october---ratingdog/42554)
-[101](https://www.steelorbis.com/steel-news/latest-news/japans-industrial-output-up-22-percent-in-september-2025-from-august-1417407.htm)
-[102](https://hardlines.ca/gp_dailynews/u-s-starts-permits-down-in-september/)
-[103](https://tradingeconomics.com/united-states/case-shiller-home-price-index)
-[104](https://www.nahb.org/news-and-economics/press-releases/2024/10/single-family-starts-trend-higher-in-september)
-[105](https://fred.stlouisfed.org/series/CSUSHPINSA)
-[106](https://www.federalreserve.gov/monetarypolicy/bst_recenttrends.htm)
-[107](https://www.ig.com/uk/news-and-trade-ideas/us-non-farm-payrolls-preview---october-2025--more-labour-market--250930)
-[108](https://crypto.com/us/predictions/learn/predicting-jobs-added-october-2025-to-january-2026)
-[109](https://www.linkedin.com/pulse/october-us-jobs-report-kory-kantenga-ph-d--6dige)
-[110](https://www.axa-im.co.uk/inflation-reaction-ecb-cut-rates-october)
-[111](https://www.cnbc.com/2025/10/23/bank-of-korea-policy-interest-rate-tighter-property-rules-household-debt-seoul-bok-borrowing.html)
-[112](https://capital.com/en-au/analysis/us-non-farm-payrolls-forecast-to-show-continued-labour-market-sluggishness)
-[113](https://www.capitaleconomics.com/publications/asia-rapid-response/korea-policy-rate-oct-2025)
