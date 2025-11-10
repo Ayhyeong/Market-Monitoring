@@ -1,0 +1,84 @@
+## 1) Past Week – Official Macro Releases
+
+**No new officially confirmed past‑week macro data can be retrieved in this run.**  
+
+---
+
+## 2) Upcoming Key Events (Next Week)
+
+Likely major scheduled releases watched globally (dates subject to each region’s official calendar):
+
+|Region|Potential Key Releases / Events|Source (calendar)|
+|---|---|---|
+|US|CPI, PPI, Retail Sales, Housing Starts|https://www.bls.gov/schedule/economic-news-release.htm|
+|Eurozone|HICP inflation (final), Industrial Production|[https://ec.europa.eu/eurostat/news/release-calendar](https://ec.europa.eu/eurostat/news/release-calendar?utm_source=chatgpt.com)|
+|China|Trade Balance, TSF / Loan Growth|http://www.stats.gov.cn/english/PressRelease/|
+|Japan|CPI, Core Machinery Orders|[https://www.stat.go.jp/english/data/](https://www.stat.go.jp/english/data/)|
+|UK|Labour Market Report, CPI|https://www.ons.gov.uk/releases|
+|Korea|Export/Import Trade Statistics|[https://kostat.go.kr/portal/eng](https://kostat.go.kr/portal/eng)|
+
+No central bank policy meetings confirmed in this run.
+
+---
+
+## 3) Risk‑Backdrop (No Change vs Last Week)
+
+|Pillar|Current Assessment|Rationale|
+|---|---|---|
+|Growth|Neutral‑to‑slightly‑soft|No new positive growth confirmations.|
+|Inflation|Event‑risk elevated|Key inflation releases upcoming.|
+|Labor|Stable‑to‑softening bias|Labour data unchanged; new data pending.|
+|Housing|Neutral|No new official prints.|
+|External/Trade|Neutral‑to‑soft|Trade trends require next release to confirm direction.|
+|Credit|Neutral|No new bank credit or TSF updates confirmed.|
+
+---
+
+## 4) Playbook (Carried Forward, No Data‑Driven Adjustment)
+
+### Hedges
+
+- Maintain short‑dated volatility hedges into upcoming CPI‑style releases.
+    
+- Maintain equity downside hedges sized to implied volatility conditions.
+    
+
+### Duration / Curve
+
+- **USD duration:** Slight long bias ahead of inflation releases; be ready to reduce if inflation surprises high.
+    
+- **GBP duration:** Slight short bias until UK labor/inflation confirms improvement.
+    
+- **EUR duration:** Neutral‑to‑slight long.
+    
+
+### FX Tilts
+
+- Modest **long USD vs GBP**, given persistent UK macro downside risk.
+    
+- **EUR/GBP:** neutral‑to‑slight long EUR.
+    
+- **JPY/KRW:** maintain neutral positioning until data arrives.
+    
+
+### Equity Sector Tilts
+
+- Overweight **defensives** (Healthcare, Staples).
+    
+- Underweight **cyclicals** tied to trade and housing.
+    
+
+### Credit Quality Stance
+
+- Prefer **investment‑grade** over high‑yield.
+    
+- Keep credit duration moderate.
+    
+
+### Liquidity Checklist
+
+- Maintain cash buffer.
+    
+- Confirm margin and collateral sufficiency.
+    
+- Avoid new leverage until key inflation data is released.
