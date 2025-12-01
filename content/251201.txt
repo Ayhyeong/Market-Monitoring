@@ -1,0 +1,235 @@
+Here’s a concise, cross-region macro wrap for the past week with changes versus the prior week, source links, and a forward calendar.
+
+US: Mixed but stable labor signals; partial data gaps persist. Initial jobless claims eased to 216k for week ending Nov 22, near 2025 lows, while continuing claims edged up to 1.96m, indicating slightly softer re-employment amid stable layoffs. With many US releases rescheduled after the shutdown, core PCE tracking remains reliant on nowcasts and estimates rather than official October/November prints, keeping inflation assessment provisional.[rbc+5](https://www.rbc.com/en/economics/us-analysis/us-featured-analysis/the-us-government-shutdown-ends-but-we-still-need-data/)​
+
+Eurozone: Inflation near 2%, core firming at 2.4% in October; flash November country prints suggest slight uptick in headline. The ECB rhetoric remains cautious on further cuts given stickier core components.[tradingeconomics+2](https://tradingeconomics.com/euro-area/core-inflation-rate)​
+
+China: Official manufacturing PMI rose to 49.2 in November but stayed in contraction for an eighth month, underscoring weak domestic demand and the case for further support. Credit pulse was soft in October (TSF dropped versus September), limiting the private-sector funding impulse into Q4.[investing+4](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)​
+
+Japan: Tokyo core CPI held around 2.8% in November; coupled with firmer output, this keeps a December/January BOJ hike in play. Services inflation and wage dynamics support persistence above target, even as real wages remain pressured.[bloomberg+3](https://www.bloomberg.com/news/articles/2025-11-27/tokyo-inflation-beats-forecast-keeping-boj-on-rate-hike-path)​
+
+UK: CPI slowed to 3.6% y/y in October; housing indicators point to softer asking prices and mixed mortgage approvals into autumn, keeping affordability restraints in place. BoE remains on hold per November MPR context, watching disinflation and growth slack.[builtplace+3](https://builtplace.com/weekly-summary-21st-november-2025/)​
+
+Korea: Early-November exports up around 8% y/y on semis/autos strength; October headline exports slowed but remained positive, pointing to continued external momentum into late Q4. Domestic activity shows mixed signals with manufacturing PMI back below 50 in October and CPI around mid-2s recently, per official bulletins.[tradingeconomics+5](https://tradingeconomics.com/south-korea/exports)​
+
+Meaningful changes versus last week (and why)
+
+- China growth pulse deteriorated marginally: November NBS PMI improved to 49.2 but stayed sub-50 for an eighth month, reinforcing that any sequential stabilization is weak and uneven; this shifts risks toward additional policy easing versus last week’s tentative stabilization narrative.[tradingview+1](https://www.tradingview.com/news/reuters.com,2025:newsml_P8N3R3034:0-china-s-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows/)​
+    
+- Japan inflation and policy path: Tokyo core CPI staying near 2.8% plus firmer output increased odds for a near-term BOJ hike compared with a week ago when the policy path was more evenly balanced across December/January.[reuters+1](https://www.reuters.com/world/asia-pacific/core-consumer-prices-japans-capital-rise-28-yryr-november-2025-11-27/)​
+    
+- US labor steadied at low claims: Another dip in initial claims to 216k reduced near-term recession signaling versus last week’s prints, even as continuing claims trend higher; the split argues for slower hiring but limited layoffs compared with prior week’s labor tone.[tradingeconomics+1](https://tradingeconomics.com/united-states/jobless-claims)​
+    
+- Eurozone inflation tone little changed: October headline near 2% with core at 2.4% keeps last week’s “near target headline, sticky core” stance intact.[tradingeconomics+1](https://tradingeconomics.com/euro-area/inflation-cpi)​
+    
+- Korea external momentum intact: First-20-day export growth near 8% y/y, with semiconductors strong, supports the view of tech-led recovery persisting into month-end versus last week’s early read-throughs.[bloomberg+2](https://www.bloomberg.com/news/articles/2025-11-21/south-korea-s-early-trade-data-show-export-momentum-continues)​
+    
+
+Date
+
+- Report date: 2025-12-01 (KST).[tradingeconomics](https://tradingeconomics.com/calendar?article=29328&g=top&importance=2&startdate=2025-11-28)​
+    
+
+Upcoming week: key events (next 7–10 days)
+
+- US: ISM manufacturing/services (Nov), S&P/Case-Shiller HPI (Sep), Conference Board confidence (Nov), Pending home sales (Oct), International trade (Oct, rescheduled), and FOMC blackout approaching mid-December meeting; watch Dec labor reports timing given prior shutdown adjustments.[spglobal+3](https://www.spglobal.com/marketintelligence/en/mi/research-analysis/week-ahead-economic-preview-week-of-24-november-2025.html)​
+    
+- Eurozone: Flash HICP for November (aggregate) and ECB speakers; follow-through from big-4 flash country HICP indicating slight headline uptick.[capitaleconomics+1](https://www.capitaleconomics.com/publications/europe-rapid-response/germany-france-italy-spain-hicp-november-2025)​
+    
+- China: Caixin PMIs (Nov) to cross-check NBS PMI contraction; watch credit/TSF timing into December.[tradingeconomics+1](https://tradingeconomics.com/china/total-social-financing)​
+    
+- Japan: BoJ commentary and wage/consumption prints after Tokyo CPI; hike timing focal point.[boj+1](https://www.boj.or.jp/en/about/press/koen_2025/data/ko251127a1.pdf)​
+    
+- UK: Housing and BoE speeches; incoming November CPI in mid-December, so near-term focus on housing/credit.[ons+2](https://www.ons.gov.uk/economy/inflationandpriceindices)​
+    
+- Korea: Final November trade and S&P Global PMI; BOK communication on growth/inflation mix.[english.moef+2](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6293)​
+    
+
+Risk-backdrop by pillar
+
+- Growth:
+    
+    - US steady but downshifted hiring pace implied by rising continuing claims; soft data gaps reduce visibility until December catch-up releases.[tradingeconomics+2](https://tradingeconomics.com/united-states/jobless-claims/news/505174)​
+        
+    - Eurozone subdued growth with headline inflation near target; PMIs hovering near 50 imply below-trend growth.[ebc+1](https://www.ebc.com/forex/eurozone-divergence-inflation-eases-but-gdp-weakens)​
+        
+    - China manufacturing still sub-50; sequential improvement small, signaling weak demand.[investing+1](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)​
+        
+    - Japan growth supported by output stabilization; policy normalization risk rises.[bloomberg+1](https://www.bloomberg.com/news/articles/2025-11-27/tokyo-inflation-beats-forecast-keeping-boj-on-rate-hike-path)​
+        
+    - Korea external demand for semis/autos boosts growth pulse into month-end.[tradingeconomics+1](https://tradingeconomics.com/south-korea/exports)​
+        
+- Inflation:
+    
+    - US: Nowcasts point to modest monthly gains; official prints delayed, raising uncertainty in the near term.[bea+1](https://www.bea.gov/data/personal-consumption-expenditures-price-index)​
+        
+    - Eurozone: Headline ~2.1% in October; core 2.4%—sticky services.[tradingeconomics+1](https://tradingeconomics.com/euro-area/core-inflation-rate)​
+        
+    - China: Disinflationary demand backdrop persists despite policy support.[tradingeconomics+1](https://tradingeconomics.com/china/total-social-financing)​
+        
+    - Japan: Tokyo core ~2.8%—above target and persistent.[tradingeconomics+1](https://tradingeconomics.com/japan/tokyo-cpi)​
+        
+    - UK: CPI 3.6% y/y in October—gradual disinflation.[ons](https://www.ons.gov.uk/economy/inflationandpriceindices)​
+        
+    - Korea: CPI near mid-2s recently; food/energy contributed in October.[english.moef](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6293)​
+        
+- Labor:
+    
+    - US: Initial claims low; continuing claims elevated—slower churn, softer hiring.[tradingeconomics+1](https://tradingeconomics.com/united-states/jobless-claims)​
+        
+    - Eurozone/UK/Japan: Labor tightness easing marginally; Japan’s wage narrative supports BOJ normalization.[boj+1](https://www.boj.or.jp/en/about/press/koen_2025/data/ko251127a1.pdf)​
+        
+    - Korea: Labor signals mixed alongside manufacturing softness.[tradingeconomics+1](https://tradingeconomics.com/south-korea/manufacturing-pmi)​
+        
+- Housing:
+    
+    - US: Upcoming Case-Shiller and pending sales to gauge rate-sensitive demand; affordability still tight.[tradingeconomics+1](https://tradingeconomics.com/calendar?article=29328&g=top&importance=2&startdate=2025-11-28)​
+        
+    - UK: Asking prices softer; approvals improved modestly into autumn.[tradingeconomics+1](https://tradingeconomics.com/united-kingdom/mortgage-approvals)​
+        
+    - Eurozone/Japan/Korea: Limited fresh weekly signals.
+        
+- External/trade:
+    
+    - Korea and China in focus: Korea exports firm on semis/autos; China PMI contraction flags soft external demand.[bloomberg+2](https://www.bloomberg.com/news/articles/2025-11-21/south-korea-s-early-trade-data-show-export-momentum-continues)​
+        
+    - US trade data rescheduled this week.[bea](https://www.bea.gov/news/schedule)​
+        
+- Credit/financial conditions:
+    
+    - China TSF dropped in October, signaling softer private credit impulse heading into late Q4.[tradingeconomics](https://tradingeconomics.com/china/total-social-financing)​
+        
+    - Eurozone policy bias cautious; BoE on hold; BOJ normalization risk rising.[bankofengland+2](https://www.bankofengland.co.uk/monetary-policy-report/2025/november-2025)​
+        
+    - US conditions to hinge on December data catch-up and FOMC.[bea](https://www.bea.gov/news/schedule)​
+        
+
+Actionable playbook
+
+- Hedges:
+    
+    - Growth downside: Own duration via intermediate USTs into data catch-up uncertainty, add equity downside via S&P puts around major prints.[clevelandfed+1](https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)​
+        
+    - China demand risk: Hedge EM Asia beta with CNH downside or MSCI China put spreads around PMI/credit windows.[investing+1](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)​
+        
+- Rates/duration/curve:
+    
+    - US: Modestly long duration; favor 5s–10s over front end until core inflation prints firm up; keep modest 2s10s steepener optionality into December meeting.[clevelandfed+1](https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)​
+        
+    - Eurozone: Neutral duration; sticky core vs near-target headline argues for carry in semi-core; avoid aggressive bull steepeners until HICP finalized.[tradingeconomics+2](https://tradingeconomics.com/euro-area/inflation-cpi)​
+        
+    - Japan: Reduce JGB duration beta; position for mild bear steepening if BOJ signals December/January hike.[reuters+1](https://www.reuters.com/world/asia-pacific/core-consumer-prices-japans-capital-rise-28-yryr-november-2025-11-27/)​
+        
+    - UK: Neutral-to-modest long; disinflation continues, BoE on hold.[bankofengland+1](https://www.bankofengland.co.uk/monetary-policy-report/2025/november-2025)​
+        
+    - Korea: Neutral; external tailwinds but domestic PMI soft—keep flexibility for BOK guidance shifts.[tradingeconomics+2](https://tradingeconomics.com/south-korea/manufacturing-pmi)​
+        
+- FX tilts:
+    
+    - USD: Mildly supported by US growth resilience and policy uncertainty; tactically long DXY into data week, but fade on soft core prints.[tradingeconomics+2](https://tradingeconomics.com/united-states/jobless-claims)​
+        
+    - EUR: Range-bound; stickiness in core limits dovish repricing—neutral to slightly constructive vs GBP.[tradingeconomics+1](https://tradingeconomics.com/euro-area/core-inflation-rate)​
+        
+    - JPY: Keep some long JPY optionality on BOJ hike risk in Dec/Jan.[bloomberg+1](https://www.bloomberg.com/news/articles/2025-11-27/tokyo-inflation-beats-forecast-keeping-boj-on-rate-hike-path)​
+        
+    - KRW: Constructive near term on export momentum; hedge with CNH weakness risk.[bloomberg+1](https://www.bloomberg.com/news/articles/2025-11-21/south-korea-s-early-trade-data-show-export-momentum-continues)​
+        
+    - GBP: Sideways bias; wait for next CPI and housing follow-through.[tradingeconomics+1](https://tradingeconomics.com/united-kingdom/mortgage-approvals)​
+        
+- Equities: sector tilts
+    
+    - Overweight: Semiconductors and autos in Korea/global where export momentum persists; quality growth/large-cap tech in US amid stable labor and benign nowcasted inflation.[clevelandfed+2](https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)​
+        
+    - Underweight: China domestic cyclicals until PMI returns above 50 and TSF re-accelerates.[investing+1](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)​
+        
+    - Neutral: Eurozone cyclicals until HICP/core and PMIs firm.[ebc+1](https://www.ebc.com/forex/eurozone-divergence-inflation-eases-but-gdp-weakens)​
+        
+- Credit stance:
+    
+    - Favor IG over HY given China demand softness and US data uncertainty; keep HY exposure in higher-quality BBs with low refi risk.[bea+2](https://www.bea.gov/news/schedule)​
+        
+    - In EM Asia, prefer Korea IG exporters over China property/cyclicals given export momentum vs credit softness.[tradingeconomics+1](https://tradingeconomics.com/china/total-social-financing)​
+        
+- Liquidity checklist (next week):
+    
+    - Confirm collateral and cash ladders ahead of FOMC/US catch-up data dates.[bea](https://www.bea.gov/news/schedule)​
+        
+    - Keep VaR headroom for BOJ and Eurozone HICP surprises.[capitaleconomics+1](https://www.capitaleconomics.com/publications/europe-rapid-response/germany-france-italy-spain-hicp-november-2025)​
+        
+    - Stagger orders around China PMI/credit windows; wider spreads likely into prints.[investing+1](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)​
+        
+
+Sources
+
+- US: Jobless claims and calendar/nowcast status.[bls+4](https://www.bls.gov/news.release/empsit.nr0.htm)​
+    
+- Eurozone: Inflation/core and flash country guidance.[tradingeconomics+2](https://tradingeconomics.com/euro-area/inflation-cpi)​
+    
+- China: NBS PMI and TSF.[finance.yahoo+3](https://uk.finance.yahoo.com/news/chinas-factory-activity-contracts-8th-020537390.html)​
+    
+- Japan: Tokyo CPI and BOJ context.[tradingeconomics+3](https://tradingeconomics.com/japan/tokyo-cpi)​
+    
+- UK: CPI and housing/credit.[builtplace+3](https://builtplace.com/weekly-summary-21st-november-2025/)​
+    
+- Korea: Early trade, exports, PMI, and official bulletin.[koreatimes+5](https://www.koreatimes.co.kr/economy/20251121/exports-log-82-on-year-gain-during-first-20-days-of-november)​
+    
+
+1. [https://www.rbc.com/en/economics/us-analysis/us-featured-analysis/the-us-government-shutdown-ends-but-we-still-need-data/](https://www.rbc.com/en/economics/us-analysis/us-featured-analysis/the-us-government-shutdown-ends-but-we-still-need-data/)
+2. [https://tradingeconomics.com/united-states/jobless-claims](https://tradingeconomics.com/united-states/jobless-claims)
+3. [https://www.bea.gov/data/personal-consumption-expenditures-price-index](https://www.bea.gov/data/personal-consumption-expenditures-price-index)
+4. [https://www.bea.gov/data/personal-consumption-expenditures-price-index-excluding-food-and-energy](https://www.bea.gov/data/personal-consumption-expenditures-price-index-excluding-food-and-energy)
+5. [https://tradingeconomics.com/united-states/jobless-claims/news/505174](https://tradingeconomics.com/united-states/jobless-claims/news/505174)
+6. [https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting](https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)
+7. [https://tradingeconomics.com/euro-area/core-inflation-rate](https://tradingeconomics.com/euro-area/core-inflation-rate)
+8. [https://tradingeconomics.com/euro-area/inflation-cpi](https://tradingeconomics.com/euro-area/inflation-cpi)
+9. [https://www.capitaleconomics.com/publications/europe-rapid-response/germany-france-italy-spain-hicp-november-2025](https://www.capitaleconomics.com/publications/europe-rapid-response/germany-france-italy-spain-hicp-november-2025)
+10. [https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581](https://www.investing.com/news/economy-news/chinas-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows-4382581)
+11. [https://www.tradingview.com/news/reuters.com,2025:newsml_P8N3R3034:0-china-s-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows/](https://www.tradingview.com/news/reuters.com,2025:newsml_P8N3R3034:0-china-s-factory-activity-shrinks-for-eighth-month-in-november-pmi-shows/)
+12. [https://uk.finance.yahoo.com/news/chinas-factory-activity-contracts-8th-020537390.html](https://uk.finance.yahoo.com/news/chinas-factory-activity-contracts-8th-020537390.html)
+13. [https://www.reuters.com/world/asia-pacific/chinas-factory-activity-set-shrink-eighth-month-2025-11-28/](https://www.reuters.com/world/asia-pacific/chinas-factory-activity-set-shrink-eighth-month-2025-11-28/)
+14. [https://tradingeconomics.com/china/total-social-financing](https://tradingeconomics.com/china/total-social-financing)
+15. [https://www.bloomberg.com/news/articles/2025-11-27/tokyo-inflation-beats-forecast-keeping-boj-on-rate-hike-path](https://www.bloomberg.com/news/articles/2025-11-27/tokyo-inflation-beats-forecast-keeping-boj-on-rate-hike-path)
+16. [https://tradingeconomics.com/japan/tokyo-cpi](https://tradingeconomics.com/japan/tokyo-cpi)
+17. [https://www.boj.or.jp/en/about/press/koen_2025/data/ko251127a1.pdf](https://www.boj.or.jp/en/about/press/koen_2025/data/ko251127a1.pdf)
+18. [https://www.reuters.com/world/asia-pacific/core-consumer-prices-japans-capital-rise-28-yryr-november-2025-11-27/](https://www.reuters.com/world/asia-pacific/core-consumer-prices-japans-capital-rise-28-yryr-november-2025-11-27/)
+19. [https://builtplace.com/weekly-summary-21st-november-2025/](https://builtplace.com/weekly-summary-21st-november-2025/)
+20. [https://www.ons.gov.uk/economy/inflationandpriceindices](https://www.ons.gov.uk/economy/inflationandpriceindices)
+21. [https://tradingeconomics.com/united-kingdom/mortgage-approvals](https://tradingeconomics.com/united-kingdom/mortgage-approvals)
+22. [https://www.bankofengland.co.uk/monetary-policy-report/2025/november-2025](https://www.bankofengland.co.uk/monetary-policy-report/2025/november-2025)
+23. [https://tradingeconomics.com/south-korea/exports](https://tradingeconomics.com/south-korea/exports)
+24. [https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6293](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6293)
+25. [https://tradingeconomics.com/south-korea/manufacturing-pmi](https://tradingeconomics.com/south-korea/manufacturing-pmi)
+26. [https://www.bloomberg.com/news/articles/2025-11-21/south-korea-s-early-trade-data-show-export-momentum-continues](https://www.bloomberg.com/news/articles/2025-11-21/south-korea-s-early-trade-data-show-export-momentum-continues)
+27. [https://www.koreatimes.co.kr/economy/20251121/exports-log-82-on-year-gain-during-first-20-days-of-november](https://www.koreatimes.co.kr/economy/20251121/exports-log-82-on-year-gain-during-first-20-days-of-november)
+28. [https://www.koreaherald.com/article/10620816](https://www.koreaherald.com/article/10620816)
+29. [https://tradingeconomics.com/calendar?article=29328&g=top&importance=2&startdate=2025-11-28](https://tradingeconomics.com/calendar?article=29328&g=top&importance=2&startdate=2025-11-28)
+30. [https://www.spglobal.com/marketintelligence/en/mi/research-analysis/week-ahead-economic-preview-week-of-24-november-2025.html](https://www.spglobal.com/marketintelligence/en/mi/research-analysis/week-ahead-economic-preview-week-of-24-november-2025.html)
+31. [https://www.bea.gov/news/schedule](https://www.bea.gov/news/schedule)
+32. [https://www.bls.gov/news.release/empsit.nr0.htm](https://www.bls.gov/news.release/empsit.nr0.htm)
+33. [https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar](https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar)
+34. [https://tradingeconomics.com/china/manufacturing-pmi](https://tradingeconomics.com/china/manufacturing-pmi)
+35. [https://www.ebc.com/forex/eurozone-divergence-inflation-eases-but-gdp-weakens](https://www.ebc.com/forex/eurozone-divergence-inflation-eases-but-gdp-weakens)
+36. [https://www.longtermtrends.net/weekly-macro-report/](https://www.longtermtrends.net/weekly-macro-report/)
+37. [https://www.amp.com.au/resources/insights-hub/weekly-market-update-28-11-2025](https://www.amp.com.au/resources/insights-hub/weekly-market-update-28-11-2025)
+38. [https://tradingeconomics.com/united-states/calendar](https://tradingeconomics.com/united-states/calendar)
+39. [https://www.ecb.europa.eu/stats/macroeconomic_and_sectoral/hicp/html/index.en.html](https://www.ecb.europa.eu/stats/macroeconomic_and_sectoral/hicp/html/index.en.html)
+40. [https://www.bls.gov/schedule/2025/home.htm](https://www.bls.gov/schedule/2025/home.htm)
+41. [https://www.marketwatch.com/economy-politics/calendar](https://www.marketwatch.com/economy-politics/calendar)
+42. [https://statbel.fgov.be/en/themes/consumer-prices/consumer-price-index](https://statbel.fgov.be/en/themes/consumer-prices/consumer-price-index)
+43. [https://www.ocbc.com.mo/edm/OCBC_Weekly_Macro_View.pdf](https://www.ocbc.com.mo/edm/OCBC_Weekly_Macro_View.pdf)
+44. [https://datatrack.trendforce.com/blog/content/19760/tokyo-cpi-surges-in-november-bolstering-bojs-next-rate-hike](https://datatrack.trendforce.com/blog/content/19760/tokyo-cpi-surges-in-november-bolstering-bojs-next-rate-hike)
+45. [https://www.ebc.com/forex/japan-s-latest-data-highlights-inflation-consumption-and-amp-jobs](https://www.ebc.com/forex/japan-s-latest-data-highlights-inflation-consumption-and-amp-jobs)
+46. [https://builtplace.com/weekly-summary-7th-november-2025/](https://builtplace.com/weekly-summary-7th-november-2025/)
+47. [http://english.moef.go.kr/pu/selectTbPublicDtl.do?boardCd=P0002&seq=](http://english.moef.go.kr/pu/selectTbPublicDtl.do?boardCd=P0002&seq=)
+48. [https://www.stat.go.jp/english/](https://www.stat.go.jp/english/)
+49. [https://cdn.ihsmarkit.com/www/pdf/6125099_6125096_0.1.pdf](https://cdn.ihsmarkit.com/www/pdf/6125099_6125096_0.1.pdf)
+50. [https://eiec.kdi.re.kr/userdata/eco_bul/202511/202511.pdf](https://eiec.kdi.re.kr/userdata/eco_bul/202511/202511.pdf)
+51. [https://mods.go.kr/anse](https://mods.go.kr/anse)
+52. [https://www.rossmartin.co.uk/autumn-budget-2025/8727-autumn-budget-2025-at-a-glance](https://www.rossmartin.co.uk/autumn-budget-2025/8727-autumn-budget-2025-at-a-glance)
+53. [https://www.wealthwayfx.com/news-details/762/us-core-pce-inflation-forecast-released-at-2-7-percent-for-october](https://www.wealthwayfx.com/news-details/762/us-core-pce-inflation-forecast-released-at-2-7-percent-for-october)
+54. [https://koreajoongangdaily.joins.com/news/2025-11-24/business/economy/Koreas-exports-expected-to-continue-upward-trend-in-November-on-strong-chip-auto-performance/2461501](https://koreajoongangdaily.joins.com/news/2025-11-24/business/economy/Koreas-exports-expected-to-continue-upward-trend-in-November-on-strong-chip-auto-performance/2461501)
+55. [https://www.reuters.com/world/us/us-weekly-jobless-claims-fall-continuing-claims-increase-2025-11-20/](https://www.reuters.com/world/us/us-weekly-jobless-claims-fall-continuing-claims-increase-2025-11-20/)
+56. [https://www.chosun.com/english/market-money-en/2025/11/11/NXNZBK6FIZFQ3OHJ2ZBURHWZUI/](https://www.chosun.com/english/market-money-en/2025/11/11/NXNZBK6FIZFQ3OHJ2ZBURHWZUI/)
+57. [https://www.reuters.com/world/asia-pacific/south-korea-exports-seen-rising-november-tech-demand-us-trade-deal-2025-11-27/](https://www.reuters.com/world/asia-pacific/south-korea-exports-seen-rising-november-tech-demand-us-trade-deal-2025-11-27/)
+58. [https://fred.stlouisfed.org/series/PCE](https://fred.stlouisfed.org/series/PCE)
+59. [https://www.bea.gov](https://www.bea.gov/)
