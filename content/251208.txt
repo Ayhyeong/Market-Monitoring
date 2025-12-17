@@ -1,0 +1,127 @@
+Direct answer: Over the past week, headline official releases painted a mixed but stable macro backdrop: Eurozone activity firmed on PMIs while German factory orders rose; US official data flow remains constrained by the prior shutdown ahead of the December 16 jobs report; Japan’s household spending weakened; UK October GDP is due December 12; China’s latest official inflation data are for October; Korea’s labor data remain benign with a low jobless rate.[1][2][3][4][5][6][7]
+
+## Past week highlights
+- US: Limited new official prints due to earlier shutdown; BLS set to publish November Employment Situation on Dec 16; ADP reported a private payroll drop on Dec 3.[7][8]
+- Eurozone: Composite PMI signaled the fastest expansion in 30 months in November; German October factory orders +1.5% m/m.[6][1]
+- UK: Next official monthly GDP (October) scheduled Dec 12.[5][9]
+- China: Most recent official CPI/PPI are October (CPI +0.2% y/y; PPI -2.1% y/y); November PMIs were released Dec 1.[4][10]
+- Japan: Household spending fell 3.0% y/y in October.[2]
+- Korea: Unemployment at 2.6% in October (latest official).[3]
+
+## What changed vs last week
+- Eurozone growth pulse: Meaningfully firmer as November PMI showed the fastest activity in 30 months, indicating momentum improvement versus prior weeks’ moderate pace. Rationale: stronger services offset manufacturing drag.[1]
+- Germany external/domestic mix: Orders +1.5% m/m in October driven by domestic strength and large transport equipment; indicates incremental improvement in capex pipeline versus the prior month’s already-revised gain.[6]
+- Japan consumption: Turned weaker with October household spending -3.0% y/y, the sharpest drop since Jan 2024, signaling a deterioration versus September.[2]
+- US labor readings: No new BLS hard data; ADP showed a notable private payroll contraction, tilting near-term labor tone softer versus the prior week.[8]
+- UK growth: No new outturns; focus shifts to Dec 12 GDP release, so assessment unchanged pending data.[5]
+- China inflation/growth: No fresh official CPI/PPI in the week; stance unchanged pending November CPI/PPI due this week.[10]
+
+## Date and upcoming week
+- Date: 2025-12-08 (KST).  
+- Key events this week (indicative):
+  - US: FOMC decision (Dec 11–12 window referenced in week-ahead coverage) and BLS November Employment Situation on Dec 16; JOLTS/other delayed prints referenced by calendars.[11][12]
+  - Eurozone/DE: Germany final inflation (Nov), industrial production; Euro area data flow normal.[11]
+  - UK: Monthly GDP, production (Oct) on Dec 12.[9][5]
+  - China: November CPI/PPI; November trade balance.[10][11]
+  - Japan: Q3 GDP final; November PPI.[11]
+  - Korea: November unemployment this week per regional calendars.[11]
+
+## Risk backdrop by pillar
+- Growth: Eurozone PMIs point to firmer near-term growth; Germany orders suggest capex pipeline support; Japan consumption weakens; US assessment constrained by data delays.[7][1][2][6]
+- Inflation: Eurozone inflation remains close to 2% per recent reads; China’s last CPI +0.2% y/y and PPI -2.1% y/y; US official CPI last published September remains around 3% core; updates due in coming weeks.[13][14][4]
+- Labor: US hard data pending; ADP shows softening; Korea unemployment low at 2.6% (Oct).[3][8]
+- Housing: UK housing to be informed via monthly GDP/production this week; US housing flow light in the week, with sector commentary noting modest existing sales previously.[15][5]
+- External/trade: Germany orders showed domestic strength with softer non-euro foreign orders; China trade due this week to update external pulse.[6][11]
+- Credit/financial conditions: Market focus on FOMC; week-ahead sources flag broad central bank meetings and benign eurozone price pressures supportive of steady policy.[1][11]
+
+## 7-day playbook
+- Rates/duration and curve
+  - Duration: Maintain moderate-long duration bias into major central bank week given softer Japan consumption, benign eurozone inflation dynamics, and US labor uncertainty from ADP.[8][2][1]
+  - Curve: Favor mild 2s10s steepening expressions in US/EU as policy risk leans to cuts in 2026 while growth is mixed; avoid heavy front-end shorts pre-FOMC.[1][11]
+
+- FX tilts
+  - EUR: Neutral to modestly constructive near term on firmer PMI momentum, but avoid chasing given services-driven inflation stickiness risk.[1]
+  - USD: Neutral into FOMC and US jobs; elevated event risk suggests lower conviction.[7][11]
+  - JPY: Maintain defensive long bias via options given weak domestic spending and upcoming GDP/PPI, with BoJ policy optionality ahead.[2][11]
+  - KRW: Neutral; await Korea labor update and China CPI/PPI/trade as key drivers.[10][11]
+
+- Equities
+  - Sector tilts: Overweight quality defensives and services-exposed EU names benefiting from PMI resilience; underweight Japan domestic cyclicals sensitive to consumption; keep US tilt toward cash-generative growth until labor clarity returns.[8][2][1]
+  - Europe industrials: Selectively positive where order books tied to transport equipment strength in Germany, acknowledging volatility from large orders.[6]
+
+- Credit
+  - Quality: Favor IG over HY near term given mixed growth and event risk; HY beta less attractive until US labor clarity and China prints confirm stabilization.[2][8]
+  - Europe corporates: Supportive on improved activity but avoid lower-quality manufacturers with export exposure given softer foreign orders in German data.[6]
+
+- Hedges and optionality
+  - Into event-heavy week, use:
+    - Equity downside via put spreads on broad indices.[11]
+    - Rates vol: Own limited-tenor payer swaptions to hedge upside inflation surprises from China CPI or euro services prices.[10][1]
+    - FX: EURUSD strangles around key central bank windows; USDJPY downside calls (JPY calls) for risk-off/BoJ optionality.[11]
+
+- Liquidity checklist
+  - Pre-position: Reduce gross leverage ahead of FOMC and UK GDP print.[5][11]
+  - Stagger orders and widen limits around data drop times flagged in calendars.[12][9]
+  - Maintain cash buffer for post-event rebalancing; confirm margin headroom with higher intraday vol expected.[11]
+
+Notes on sources: Where possible, changes and schedules are anchored to official or widely used sources including BLS, Destatis, ONS, NBS of China, and recognized week-ahead calendars; several US series remain disrupted/timed due to the prior federal shutdown and revised publication dates.[12][5][7][10][6][11]
+
+[1](https://www.reuters.com/world/europe/euro-zone-business-activity-expands-fastest-pace-30-months-november-pmi-shows-2025-12-03/)
+[2](https://tradingeconomics.com/japan/household-spending)
+[3](https://tradingeconomics.com/south-korea/unemployment-rate)
+[4](https://english.www.gov.cn/archive/statistics/202511/09/content_WS6910307ec6d00ca5f9a076e7.html)
+[5](https://www.ons.gov.uk/releases/gdpmonthlyestimateukoctober2025)
+[6](https://www.destatis.de/EN/Press/2025/12/PE25_432_421.html?nn=2112)
+[7](https://www.bls.gov/news.release/empsit.nr0.htm)
+[8](https://www.reuters.com/business/us-private-payrolls-unexpectedly-decrease-november-adp-says-2025-12-03/)
+[9](https://www.ons.gov.uk/releasecalendar?highlight=true&limit=10&page=1&release-type=type-upcoming&sort=date-newest)
+[10](https://www.stats.gov.cn/english/PressRelease/)
+[11](https://www.spglobal.com/marketintelligence/en/mi/research-analysis/week-ahead-economic-preview-week-of-8-december-2025.html)
+[12](https://www.bls.gov/schedule/)
+[13](https://www.bls.gov/news.release/cpi.nr0.htm)
+[14](https://tradingeconomics.com/euro-area/inflation-cpi)
+[15](https://nationalmortgageprofessional.com/news/mortgage-economic-review-december-2025)
+[16](https://www.spglobal.com/marketintelligence/en/mi/research-analysis/week-ahead-economic-preview-week-of-1-december-2025.html)
+[17](https://www.reuters.com/business/euro-zone-business-activity-growth-accelerates-demand-jumps-pmi-shows-2025-10-24/)
+[18](https://tradingeconomics.com/united-states/core-inflation-rate)
+[19](https://tradingeconomics.com/calendar?article=29329&g=top&importance=2&startdate=2025-12-05)
+[20](https://tradingeconomics.com/united-states/calendar)
+[21](https://cdn.ihsmarkit.com/www/pdf/6129000_6128987_0.1.pdf)
+[22](https://www.newyorkfed.org/research/calendars/i-dec25.html)
+[23](https://www.bloomberg.com/news/articles/2025-11-29/euro-zone-inflation-near-2-to-seal-deal-on-ecb-rate-hold)
+[24](https://cdn.ihsmarkit.com/www/pdf/6125099_6125096_0.1.pdf)
+[25](https://tradingeconomics.com/euro-area/manufacturing-pmi)
+[26](https://www.ft.com/week-ahead)
+[27](https://www.bls.gov/schedule/2025/home.htm)
+[28](https://ec.europa.eu/eurostat/statistics-explained/index.php/Inflation_in_the_euro_area)
+[29](https://dsbb.imf.org/sdds-plus/week-ahead)
+[30](https://www.instagram.com/p/DRtcgh6k6wS/)
+[31](http://english.scio.gov.cn/pressroom/2025-11/10/content_118168733.html)
+[32](https://www.dir.co.jp/english/research/report/jmonthly/20251205_025456.pdf)
+[33](https://think.ing.com/downloads/pdf/snap/south-korean-jobless-rate-edged-up-yet-not-leading-to-the-boks-cut-in-november)
+[34](https://english.sse.com.cn/news/newsrelease/voice/c/c_20251110_10797652.shtml)
+[35](https://www.boj.or.jp/en/about/press/koen_2025/data/ko251201a1.pdf)
+[36](https://tradingeconomics.com/south-korea/unemployed-persons)
+[37](https://www.china-briefing.com/news/chinas-economy-in-october-2025/)
+[38](https://www.stat.go.jp/english/data/handbook/pdf/2025all.pdf)
+[39](https://www.ceicdata.com/en/indicator/korea/unemployment-rate)
+[40](https://www.stats.gov.cn/english/)
+[41](https://www.ig.com/sg/news-and-trade-ideas/Week-Ahead-8-December-2025-251205)
+[42](https://english.moef.go.kr/pu/selectTbPublicDtl.do?boardCd=P0002&seq=2048)
+[43](https://www.kdi.re.kr/eng/research/economy)
+[44](https://tradingeconomics.com/calendar?article=29326&g=top&importance=2&startdate=2025-11-14)
+[45](https://tradingeconomics.com/japan/household-spending-mom)
+[46](https://tradingeconomics.com/united-states/non-farm-payrolls)
+[47](https://www.aa.com.tr/en/economy/germanys-factory-orders-up-15-in-october-exceeding-expectations/3762743)
+[48](https://www.bls.gov/news.release/empsit.htm)
+[49](https://www.ons.gov.uk/economy/grossdomesticproductgdp)
+[50](https://tradingeconomics.com/united-kingdom/monthly-gdp-mom)
+[51](https://www.wsj.com/world/asia/german-factory-orders-rise-again-843cefaa)
+[52](https://www.gov.uk/government/statistics/announcements/gdp-quarterly-national-accounts-uk-october-to-december-2025)
+[53](https://www.destatis.de/EN/Press/2025/12/PE25_432_421.html)
+[54](https://www.gov.uk/government/statistics/announcements/gdp-first-quarterly-estimate-uk-october-to-december-2025)
+[55](https://www.destatis.de/EN/Themes/Economic-Sectors-Enterprises/Industry-Manufacturing/_node.html)
+[56](https://seekingalpha.com/article/4850703-us-total-nonfarm-employment-in-november-2025)
+[57](https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukoctobertodecember2025timeseries)
+[58](http://www.xinhuanet.com/english/europe/20251205/c23f487c2ab24f369478509772db290b/c.html)
+[59](https://fred.stlouisfed.org/series/PAYEMS)
