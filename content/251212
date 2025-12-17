@@ -1,57 +1,79 @@
-## Alert — Korea labor report (Nov 2025)
-- When (KST): 2025-12-10 (morning Seoul time).[2][1]
+## Alert
+- When (KST): Thu, Dec 12, 2025, 10:30 PM KST equivalent for a 8:30 AM ET release on Dec 11, 2025.[3]
 - What moved:
-  - Unemployment rate (sa): 2.7% in November, up from 2.6% in October.[2]
-  - Headline employment: Statistics Korea reported the “economically active population” release for November on Dec 10. (Official release marker and timing reference).[1]
+  - US Initial Jobless Claims: 236,000, up 44,000 w/w, vs. consensus ~220,000; 4‑week average up to 216,750. Continuing claims fell to about 1.84–1.93 million depending on measure/window cited in the release and coverage. The jump exceeded most economist estimates and was highlighted as the largest increase since the pandemic onset, with seasonal adjustment noise around Thanksgiving noted by media and analysts.[5][4][3]
 - Why it matters:
-  - Labor tightness and employment momentum feed into Bank of Korea policy assessment of domestic demand and services inflation; even a small uptick in joblessness from very low levels keeps focus on whether labor conditions are gradually normalizing rather than re‑tightening.[2]
-  - Korea’s macro now sits alongside elevated liquidity concerns raised recently (BoK communications and market commentary), making labor/demand data relevant to the BoK’s hold‑bias and monitoring of inflation persistence.[3]
+  - Policy relevance: Claims are a high-frequency labor market gauge that inform near‑term assessments of slack and recession risk; persistent elevation could influence the Fed’s reaction function on the margin even after recent rate cuts. The size of the weekly jump raises attention to labor market cooling risks, though holiday seasonal effects complicate interpretation.[4][5]
+  - Market relevance: A perceived softening in labor conditions tends to bull‑steepen U.S. curves, pressure the USD on growth/rate‑differential expectations, and support front‑end duration and risk‑parity hedges if growth risks build.[5][4]
 - Immediate actions:
-  - Duration/curve: Maintain a modest long duration bias in KRW rates until clearer acceleration in wage or services inflation emerges; the slight uptick in joblessness does not argue for near‑term BoK hikes. Position size small given data is not a clear surprise.[2]
-  - FX tilt: Neutral to slightly constructive KRW if subsequent activity data stabilize; avoid aggressive KRW longs ahead of upcoming global prints. Use tight stops given liquidity narratives around M2 can add KRW volatility.[3]
-  - Equities: No change in beta; lean toward domestically defensive exposure if labor softness broadens, but the current move is marginal. Hedge with index puts 1–2% OTM on a 1–2 week horizon, small premium outlay.[2]
-  - Liquidity/ops: No special collateral or margin actions required; keep dry powder for potential moves around next major global releases (e.g., U.S. CPI, retail sales).[4]
+  - Rates/duration: Add modest duration on front‑end and belly (2s–5s–7s) into any dip, sized conservatively given seasonal noise; consider receiving short‑tenor OIS or ED/SR futures bias for 1–2 meetings forward.[4][5]
+  - Curve: Position for bull‑steepening if follow‑through soft data persist (e.g., 2s10s steepeners via swaps or cash). Use tight risk limits until confirmation by next week’s data flow.[5][4]
+  - FX: Tilt slightly short USD versus low‑beta G10 (EUR, JPY) on softer U.S. growth impulse; keep stops tight given holiday volatility and European policy headlines.[1][4]
+  - Equities/credit hedges: Add tactical downside hedges (e.g., S&P puts or skew via put spreads) if already long cyclicals; in credit, prefer higher‑quality IG over HY beta until claims normalize.[4][5]
+  - Liquidity and sizing: Use smaller clips and wider tiers this week due to seasonal adjustment uncertainty; reassess after the next claims print and upcoming rescheduled U.S. releases.[2][5]
 
-## Sources
-- Official release page: Statistics Korea employment/“economically active population” release noted by the government portal on Dec 10, 2025.[1]
-- Reputable consensus/market coverage: Reuters notes the seasonally adjusted unemployment rate edged up to 2.7% in November from 2.6% in October.[2]
-- Related central bank/liquidity context (for policy relevance): Market coverage of recent BoK remarks on M2/liquidity and implications for KRW and prices.[3]
-- Next key U.S. CPI timing reference (for planning around upcoming catalysts): BLS indicates the November 2025 CPI is slated for Dec 18, 2025, 8:30 A.M. ET.[4]
+## Source links
+- Official release (data): U.S. Department of Labor, Unemployment Insurance Weekly Claims—PDF news release for week ended Dec 6, published Dec 11.[3]
+- Consensus/coverage: Bloomberg and Reuters coverage of the surprise and seasonal‑adjustment context.[6][5][4]
+- Related official calendars/updates:
+  - BEA schedule update noting Dec 11 release of U.S. International Trade in Goods and Services (Sept) and broader post‑shutdown calendar changes.[2]
+  - ECB press release (Dec 11) on simplification of EU banking rules—policy‑relevant but not one of the requested macro series. Included for awareness given market context.[1]
 
-[1](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6311)
-[2](https://www.reuters.com/world/asia-pacific/south-korea-jobless-rate-edges-up-27-nov-2025-12-09/)
-[3](https://biz.chosun.com/en/en-policy/2025/11/28/VT2RLXLI4VHOHGBM33QOPO44NY/)
-[4](https://www.bls.gov/cpi/)
-[5](https://www.bls.gov/news.release/cpi.nr0.htm)
-[6](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251203_1~43a7a4dec9.en.html)
-[7](https://www.bls.gov/news.release/ppi.nr0.htm)
-[8](https://www.bancaditalia.it/media/bce-comunicati/documenti/2025/Weekly_Financial_Statement_09122025.pdf)
-[9](https://en.yna.co.kr/view/AEN20251210000851320)
-[10](https://www.bls.gov/schedule/news_release/ppi.htm)
-[11](https://www.ecb.europa.eu/press/annual-reports-financial-statements/wfs/2025/html/ecb.fs251209.en.html)
-[12](https://en.yna.co.kr/view/AEN20251210000800320)
-[13](https://www.ecb.europa.eu/press/blog/date/2025/html/ecb.blog20251209~9ba130ff20.en.html)
-[14](https://mods.go.kr/anse)
-[15](https://www.bls.gov/news.release/ppi.htm)
-[16](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251208~4c07c78304.en.html)
-[17](http://english.moef.go.kr/pc/selectTbPressCenterList.do?boardCd=N0001)
-[18](https://www.bls.gov/ppi/)
-[19](https://www.reuters.com/sustainability/boards-policy-regulation/ecb-backs-simpler-not-looser-bank-rules-sources-say-2025-12-09/)
-[20](https://www.kostat.go.kr/menu.es?mid=a20100000000)
-[21](https://www.bls.gov/bls/news-release/cpi.htm)
-[22](https://www.ecb.europa.eu/press/pubbydate/html/index.en.html)
-[23](https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=6071&type=N&insttCode=A260122)
-[24](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-13112025-ap)
-[25](https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251205-1)
-[26](https://www.edmond-de-rothschild.com/en/news/show/5338-moving-towards-a-new-equilibrium)
-[27](https://ec.europa.eu/eurostat/news/release-calendar)
-[28](https://tradingeconomics.com/china/total-social-financing)
-[29](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-04122025-ap)
-[30](https://documents1.worldbank.org/curated/en/871931468182936603/txt/95722-REVISED-WP-PUBLIC-Box391460B-EAP-Economic-Update-2015-04.txt)
-[31](https://ec.europa.eu/eurostat/statistics-explained/index.php/Retail_trade_volume_index_overview)
-[32](https://www-pub.iaea.org/MTCD/Publications/PDF/TRS444_web.pdf)
-[33](https://mods.go.kr/menu.es?mid=a20105010000)
-[34](https://www.cso.ie/en/releasesandpublications/ep/p-ipt/industrialproductionandturnoveroctober2025/)
-[35](https://www.sec.gov/Archives/edgar/data/19957/000119312520132944/0001193125-20-132944.txt)
-[36](https://sri.kostat.go.kr/menu.es?mid=a20105010000)
-[37](https://ec.europa.eu/eurostat/news/euro-indicators)
+[1](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251211~aa5c9271b8.en.html)
+[2](https://www.bea.gov)
+[3](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20251562.pdf)
+[4](https://www.bloomberg.com/news/articles/2025-12-11/us-jobless-claims-jump-by-most-since-2020-after-holiday-plunge)
+[5](https://money.usnews.com/investing/news/articles/2025-12-11/us-weekly-jobless-claims-surge-amid-seasonal-adjustment-challenges)
+[6](https://www.reuters.com/world/us/us-weekly-jobless-claims-surge-amid-seasonal-adjustment-challenges-2025-12-11/)
+[7](https://tradingeconomics.com/united-states/consumer-price-index-cpi)
+[8](https://www.investing.com/news/economy-news/ecb-to-cut-rates-by-25-bps-on-dec-12-at-least-four-more-likely-in-2025-reuters-poll-3756503)
+[9](https://www.koreatimes.co.kr/southkorea/society/20251209/single-person-households-become-largest-household-type-in-korea-in-2024-data)
+[10](https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)
+[11](https://www.ecb.europa.eu/press/pubbydate/html/index.en.html)
+[12](https://cm.asiae.co.kr/en/article/2025121109094331013)
+[13](https://www.usinflationcalculator.com/inflation/consumer-price-index-release-schedule/)
+[14](https://www.reuters.com/sustainability/boards-policy-regulation/ecb-proposes-simpler-bank-capital-rules-2025-12-11/)
+[15](https://www.kedglobal.com/business-politics/newsView/ked202512110007)
+[16](https://www.bls.gov/schedule/news_release/ppi.htm)
+[17](https://www.regulationtomorrow.com/de/capital-adequacy-germany/ecb-governing-council-proposes-simplification-of-eu-banking-rules/)
+[18](https://m.arirang.com/news/view?id=289989)
+[19](https://www.bls.gov/schedule/news_release/cpi.htm)
+[20](https://www.banque-france.fr/system/files/2025-12/ecb-press-release_2025-12-09_Consolidated-financial-statement-of-the-Eurosystem-as-at-5-December-2025.pdf)
+[21](https://en.yna.co.kr/view/AEN20251210008400320)
+[22](https://fred.stlouisfed.org/releases/calendar)
+[23](https://www.ecb.europa.eu/press/press_conference/html/index.en.html)
+[24](https://www.kma.go.kr/eng/)
+[25](https://www.census.gov/economic-indicators/calendar-listview.html)
+[26](https://www.ecb.europa.eu)
+[27](https://www.washingtonpost.com/business/2025/12/11/unemployment-benefits-jobless-claims-layoffs-labor/c55572d0-d697-11f0-a93c-a869cf73ebd6_story.html)
+[28](https://stocktwits.com/news-articles/markets/equity/bea-cancels-q3-2025-gdp-advance-estimate-due-to-43-day-federal-shutdown/cL5bio9REQA)
+[29](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp250911~6afb7a9490.en.html)
+[30](https://www.latimes.com/business/story/2025-12-11/jobless-benefit-applications-jump-to-236-000-last-week-as-concerns-about-labor-market-persist)
+[31](https://www.wealthwayfx.com/news-details/761/bea-released-forecast-showing-us-gdp-growth-slowed-to-3-1-percent-in-q3)
+[32](https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html)
+[33](https://abcnews.go.com/Business/wireStory/us-jobless-benefit-applications-jump-236000-continuing-claims-128310083)
+[34](https://www.bea.gov/news/schedule)
+[35](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250611_2~63f4c6d0af.en.html)
+[36](https://www.atlantafed.org/cqer/research/gdpnow)
+[37](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251208~4c07c78304.en.html)
+[38](https://www.bls.gov/news.release/empsit.nr0.htm)
+[39](https://www.reuters.com/business/us-bureau-economic-analysis-working-new-economic-data-calendar-post-shutdown-2025-11-14/)
+[40](https://www.bls.gov/news.release/pdf/empsit.pdf)
+[41](https://equalsmoney.com/economic-calendar/events/us-gdp)
+[42](https://www.tmhcc.com/en/news-and-articles/thought-leadership/uk-retail-sector-report-2025)
+[43](https://tradingeconomics.com/south-korea/industrial-production-mom)
+[44](https://nrf.com/media-center/press-releases/nrf-expects-holiday-sales-to-surpass-1-trillion-for-the-first-time-in-2025)
+[45](https://mods.go.kr/board.es?mid=a20103030000&bid=11721&act=view&list_no=435811&tag=&nPage=1)
+[46](https://www.ons.gov.uk/releases/retailsalesgreatbritaindecember2025)
+[47](https://koreajoongangdaily.joins.com/news/2025-11-28/business/economy/Koreas-industrial-output-declines-in-October-as-chipmaking-construction-slide/2465661)
+[48](https://www.dol.gov/ui/data.pdf)
+[49](https://www.ons.gov.uk/releasecalendar)
+[50](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6285)
+[51](https://dol.ny.gov)
+[52](https://www.ons.gov.uk/releasecalendar?release-type=type-upcoming&page=2)
+[53](https://kostat.go.kr/board.es?mid=a20103030000&bid=11721&tag=&list_no=)
+[54](https://tradingeconomics.com/united-states/jobless-claims)
+[55](https://www.reuters.com/business/retail-consumer/us-retail-sales-miss-expectations-september-2025-11-25/)
+[56](https://english.moef.go.kr/pc/selectTbPressCenterDtl.do?boardCd=N0001&seq=6302)
+[57](https://www.epi.org/indicators/unemployment-insurance-claims/)
+[58](https://tradingeconomics.com/united-kingdom/retail-sales-annual)
