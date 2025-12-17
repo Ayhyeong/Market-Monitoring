@@ -1,70 +1,68 @@
-Direct answer: Over the past week, headline official releases painted a mixed but stable macro backdrop: Eurozone activity firmed on PMIs while German factory orders rose; US official data flow remains constrained by the prior shutdown ahead of the December 16 jobs report; Japan’s household spending weakened; UK October GDP is due December 12; China’s latest official inflation data are for October; Korea’s labor data remain benign with a low jobless rate.[1][2][3][4][5][6][7]
-
 ## Past week highlights
-- US: Limited new official prints due to earlier shutdown; BLS set to publish November Employment Situation on Dec 16; ADP reported a private payroll drop on Dec 3.[7][8]
-- Eurozone: Composite PMI signaled the fastest expansion in 30 months in November; German October factory orders +1.5% m/m.[6][1]
-- UK: Next official monthly GDP (October) scheduled Dec 12.[5][9]
-- China: Most recent official CPI/PPI are October (CPI +0.2% y/y; PPI -2.1% y/y); November PMIs were released Dec 1.[4][10]
-- Japan: Household spending fell 3.0% y/y in October.[2]
-- Korea: Unemployment at 2.6% in October (latest official).[3]
+- US: Limited new official prints due to earlier shutdown; BLS set to publish November Employment Situation on Dec 16; ADP reported a private payroll drop on Dec 3.
+- Eurozone: Composite PMI signaled the fastest expansion in 30 months in November; German October factory orders +1.5% m/m.
+- UK: Next official monthly GDP (October) scheduled Dec 12.
+- China: Most recent official CPI/PPI are October (CPI +0.2% y/y; PPI -2.1% y/y); November PMIs were released Dec 1.
+- Japan: Household spending fell 3.0% y/y in October.
+- Korea: Unemployment at 2.6% in October (latest official).
 
 ## What changed vs last week
-- Eurozone growth pulse: Meaningfully firmer as November PMI showed the fastest activity in 30 months, indicating momentum improvement versus prior weeks’ moderate pace. Rationale: stronger services offset manufacturing drag.[1]
-- Germany external/domestic mix: Orders +1.5% m/m in October driven by domestic strength and large transport equipment; indicates incremental improvement in capex pipeline versus the prior month’s already-revised gain.[6]
-- Japan consumption: Turned weaker with October household spending -3.0% y/y, the sharpest drop since Jan 2024, signaling a deterioration versus September.[2]
-- US labor readings: No new BLS hard data; ADP showed a notable private payroll contraction, tilting near-term labor tone softer versus the prior week.[8]
-- UK growth: No new outturns; focus shifts to Dec 12 GDP release, so assessment unchanged pending data.[5]
-- China inflation/growth: No fresh official CPI/PPI in the week; stance unchanged pending November CPI/PPI due this week.[10]
+- Eurozone growth pulse: Meaningfully firmer as November PMI showed the fastest activity in 30 months, indicating momentum improvement versus prior weeks’ moderate pace. Rationale: stronger services offset manufacturing drag.
+- Germany external/domestic mix: Orders +1.5% m/m in October driven by domestic strength and large transport equipment; indicates incremental improvement in capex pipeline versus the prior month’s already-revised gain.
+- Japan consumption: Turned weaker with October household spending -3.0% y/y, the sharpest drop since Jan 2024, signaling a deterioration versus September.
+- US labor readings: No new BLS hard data; ADP showed a notable private payroll contraction, tilting near-term labor tone softer versus the prior week.
+- UK growth: No new outturns; focus shifts to Dec 12 GDP release, so assessment unchanged pending data.
+- China inflation/growth: No fresh official CPI/PPI in the week; stance unchanged pending November CPI/PPI due this week.
 
 ## Date and upcoming week
 - Date: 2025-12-08 (KST).  
 - Key events this week (indicative):
-  - US: FOMC decision (Dec 11–12 window referenced in week-ahead coverage) and BLS November Employment Situation on Dec 16; JOLTS/other delayed prints referenced by calendars.[11][12]
-  - Eurozone/DE: Germany final inflation (Nov), industrial production; Euro area data flow normal.[11]
-  - UK: Monthly GDP, production (Oct) on Dec 12.[9][5]
-  - China: November CPI/PPI; November trade balance.[10][11]
-  - Japan: Q3 GDP final; November PPI.[11]
-  - Korea: November unemployment this week per regional calendars.[11]
+  - US: FOMC decision (Dec 11–12 window referenced in week-ahead coverage) and BLS November Employment Situation on Dec 16; JOLTS/other delayed prints referenced by calendars.
+  - Eurozone/DE: Germany final inflation (Nov), industrial production; Euro area data flow normal.
+  - UK: Monthly GDP, production (Oct) on Dec 12.
+  - China: November CPI/PPI; November trade balance.
+  - Japan: Q3 GDP final; November PPI.
+  - Korea: November unemployment this week per regional calendars.
 
 ## Risk backdrop by pillar
-- Growth: Eurozone PMIs point to firmer near-term growth; Germany orders suggest capex pipeline support; Japan consumption weakens; US assessment constrained by data delays.[7][1][2][6]
-- Inflation: Eurozone inflation remains close to 2% per recent reads; China’s last CPI +0.2% y/y and PPI -2.1% y/y; US official CPI last published September remains around 3% core; updates due in coming weeks.[13][14][4]
-- Labor: US hard data pending; ADP shows softening; Korea unemployment low at 2.6% (Oct).[3][8]
-- Housing: UK housing to be informed via monthly GDP/production this week; US housing flow light in the week, with sector commentary noting modest existing sales previously.[15][5]
-- External/trade: Germany orders showed domestic strength with softer non-euro foreign orders; China trade due this week to update external pulse.[6][11]
-- Credit/financial conditions: Market focus on FOMC; week-ahead sources flag broad central bank meetings and benign eurozone price pressures supportive of steady policy.[1][11]
+- Growth: Eurozone PMIs point to firmer near-term growth; Germany orders suggest capex pipeline support; Japan consumption weakens; US assessment constrained by data delays.
+- Inflation: Eurozone inflation remains close to 2% per recent reads; China’s last CPI +0.2% y/y and PPI -2.1% y/y; US official CPI last published September remains around 3% core; updates due in coming weeks.
+- Labor: US hard data pending; ADP shows softening; Korea unemployment low at 2.6% (Oct).
+- Housing: UK housing to be informed via monthly GDP/production this week; US housing flow light in the week, with sector commentary noting modest existing sales previously.
+- External/trade: Germany orders showed domestic strength with softer non-euro foreign orders; China trade due this week to update external pulse.
+- Credit/financial conditions: Market focus on FOMC; week-ahead sources flag broad central bank meetings and benign eurozone price pressures supportive of steady policy.
 
 ## 7-day playbook
 - Rates/duration and curve
-  - Duration: Maintain moderate-long duration bias into major central bank week given softer Japan consumption, benign eurozone inflation dynamics, and US labor uncertainty from ADP.[8][2][1]
-  - Curve: Favor mild 2s10s steepening expressions in US/EU as policy risk leans to cuts in 2026 while growth is mixed; avoid heavy front-end shorts pre-FOMC.[1][11]
+  - Duration: Maintain moderate-long duration bias into major central bank week given softer Japan consumption, benign eurozone inflation dynamics, and US labor uncertainty from ADP.
+  - Curve: Favor mild 2s10s steepening expressions in US/EU as policy risk leans to cuts in 2026 while growth is mixed; avoid heavy front-end shorts pre-FOMC.
 
 - FX tilts
-  - EUR: Neutral to modestly constructive near term on firmer PMI momentum, but avoid chasing given services-driven inflation stickiness risk.[1]
-  - USD: Neutral into FOMC and US jobs; elevated event risk suggests lower conviction.[7][11]
-  - JPY: Maintain defensive long bias via options given weak domestic spending and upcoming GDP/PPI, with BoJ policy optionality ahead.[2][11]
-  - KRW: Neutral; await Korea labor update and China CPI/PPI/trade as key drivers.[10][11]
+  - EUR: Neutral to modestly constructive near term on firmer PMI momentum, but avoid chasing given services-driven inflation stickiness risk.
+  - USD: Neutral into FOMC and US jobs; elevated event risk suggests lower conviction.
+  - JPY: Maintain defensive long bias via options given weak domestic spending and upcoming GDP/PPI, with BoJ policy optionality ahead.
+  - KRW: Neutral; await Korea labor update and China CPI/PPI/trade as key drivers.
 
 - Equities
-  - Sector tilts: Overweight quality defensives and services-exposed EU names benefiting from PMI resilience; underweight Japan domestic cyclicals sensitive to consumption; keep US tilt toward cash-generative growth until labor clarity returns.[8][2][1]
-  - Europe industrials: Selectively positive where order books tied to transport equipment strength in Germany, acknowledging volatility from large orders.[6]
+  - Sector tilts: Overweight quality defensives and services-exposed EU names benefiting from PMI resilience; underweight Japan domestic cyclicals sensitive to consumption; keep US tilt toward cash-generative growth until labor clarity returns.
+  - Europe industrials: Selectively positive where order books tied to transport equipment strength in Germany, acknowledging volatility from large orders.
 
 - Credit
-  - Quality: Favor IG over HY near term given mixed growth and event risk; HY beta less attractive until US labor clarity and China prints confirm stabilization.[2][8]
-  - Europe corporates: Supportive on improved activity but avoid lower-quality manufacturers with export exposure given softer foreign orders in German data.[6]
+  - Quality: Favor IG over HY near term given mixed growth and event risk; HY beta less attractive until US labor clarity and China prints confirm stabilization.
+  - Europe corporates: Supportive on improved activity but avoid lower-quality manufacturers with export exposure given softer foreign orders in German data.
 
 - Hedges and optionality
   - Into event-heavy week, use:
-    - Equity downside via put spreads on broad indices.[11]
-    - Rates vol: Own limited-tenor payer swaptions to hedge upside inflation surprises from China CPI or euro services prices.[10][1]
-    - FX: EURUSD strangles around key central bank windows; USDJPY downside calls (JPY calls) for risk-off/BoJ optionality.[11]
+    - Equity downside via put spreads on broad indices.
+    - Rates vol: Own limited-tenor payer swaptions to hedge upside inflation surprises from China CPI or euro services prices.
+    - FX: EURUSD strangles around key central bank windows; USDJPY downside calls (JPY calls) for risk-off/BoJ optionality.
 
 - Liquidity checklist
-  - Pre-position: Reduce gross leverage ahead of FOMC and UK GDP print.[5][11]
-  - Stagger orders and widen limits around data drop times flagged in calendars.[12][9]
-  - Maintain cash buffer for post-event rebalancing; confirm margin headroom with higher intraday vol expected.[11]
+  - Pre-position: Reduce gross leverage ahead of FOMC and UK GDP print.
+  - Stagger orders and widen limits around data drop times flagged in calendars.
+  - Maintain cash buffer for post-event rebalancing; confirm margin headroom with higher intraday vol expected.
 
-Notes on sources: Where possible, changes and schedules are anchored to official or widely used sources including BLS, Destatis, ONS, NBS of China, and recognized week-ahead calendars; several US series remain disrupted/timed due to the prior federal shutdown and revised publication dates.[12][5][7][10][6][11]
+Notes on sources: Where possible, changes and schedules are anchored to official or widely used sources including BLS, Destatis, ONS, NBS of China, and recognized week-ahead calendars; several US series remain disrupted/timed due to the prior federal shutdown and revised publication dates.
 
 [1](https://www.reuters.com/world/europe/euro-zone-business-activity-expands-fastest-pace-30-months-november-pmi-shows-2025-12-03/)
 [2](https://tradingeconomics.com/japan/household-spending)
