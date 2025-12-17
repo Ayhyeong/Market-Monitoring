@@ -1,0 +1,95 @@
+## What moved
+- Fed policy and projections: The Federal Reserve issued its FOMC statement and updated projections on Dec 10, 2025 (ET), i.e., Dec 11, 2025 KST evening. This constitutes a major official central bank release within the requested window.[1]
+- Context note: Multiple US statistical agencies have revised calendars due to the recent shutdown, with BEA flagging a Dec 11, 2025 8:30 a.m. ET release for September international trade—a potential same‑day addition to watch, but the statement itself indicates it is scheduled rather than already posted at time of writing.[5][6][7][8]
+
+## Why it matters
+- Policy signaling: The FOMC statement and projections steer expectations for the path of policy rates, directly affecting UST duration, curve shape, and USD. Markets typically re‑price front‑end rates and adjust risk assets on these releases.[1]
+- Liquidity and volatility: FOMC days increase intraday volatility and can widen bid‑ask spreads in rates, FX, and equities, necessitating tighter risk controls and liquidity buffers. Major outlets highlighted the policy direction and market reaction, underscoring significance.[4][3]
+
+## Immediate actions
+- Duration and curve
+  - If projections imply a more accommodative path than priced: Add 2–5y duration selectively and position for bull steepening via 2s10s steepeners; use tight stops given post‑FOMC volatility.[1]
+  - If projections are more hawkish than priced: Reduce front‑end duration, consider bear flattener via 5s30s flatteners; prefer options (payer swaptions) to cap downside.[1]
+- FX tilt
+  - Dovish read: Modest short USD vs. EUR and JPY on policy‑rate path convergence; scale in and reassess after press conference transcript.[3][1]
+  - Hawkish read: Maintain or add tactical long USD vs. low‑beta FX (EUR, GBP).[1]
+- Equities and credit
+  - Dovish read: Add beta in cyclicals; in credit, extend modestly in IG 3–5y while avoiding lower‑quality HY until rates path is clearer.[3][1]
+  - Hawkish read: De‑risk cyclicals; favor quality/low‑vol; in credit, shorten spread duration.[1]
+- Liquidity and risk
+  - Widen liquidity buffers for 24–48 hours; use limit orders; reduce order size during the first hour post‑release; review VAR and stress limits against larger intraday ranges typical on FOMC days.[3][1]
+
+## When (KST)
+- Fed FOMC statement and projections: Released Dec 10, 2025 (ET); this corresponds to the morning of Dec 11, 2025 KST (late night/early morning window).[1]
+
+## Data source links
+- Official release page (policy): Federal Reserve Board—News & Events: FOMC statement and economic projections (Dec 10, 2025).[2][1]
+- Reputable consensus/coverage: Major coverage indicating market relevance and policy takeaways (live report recapping the decision and context).[4][3]
+- Scheduling context for other US data around the window: BEA’s post‑shutdown schedule showing Dec 11 U.S. International Trade announcement timing.[6][7][5]
+
+Notes on other agencies within the past 24 hours:
+- ECB/Eurostat: No new macro indicator release in the past 24 hours; the most recent ECB item is the weekly Eurosystem consolidated financial statement on Dec 9, 2025.[9][10]
+- BLS: Calendar adjustments indicate delayed CPI/Employment releases; no new BLS macro release in the past 24 hours.[11][12][13]
+- BEA/Census: BEA indicates Dec 11 trade release timing, but confirmation of the actual post within the last 24 hours is pending; Census maintains the economic indicators hub but shows delays.[7][14][5][6]
+- Japan (Statistics Bureau/BoJ), China (NBS/PBoC), UK (ONS/BoE), Korea (Statistics Korea/BoK): No qualifying CPI/PPI/GDP/unemployment/retail sales/industrial production/TSF/M2 releases in the last 24 hours detected; recent BoK policy communication predates the window.[15][16][17]
+
+[1](https://www.federalreserve.gov/newsevents.htm)
+[2](https://www.federalreserve.gov/newsevents/pressreleases.htm)
+[3](https://www.cnn.com/business/live-news/federal-reserve-interest-rate-12-10-2025)
+[4](https://www.cnn.com/2025/12/10/economy/fed-december-rate-decision)
+[5](https://www.reuters.com/business/schedule-us-economic-data-delayed-by-government-shutdown-2025-11-28/)
+[6](https://www.bea.gov)
+[7](https://www.bea.gov/news/schedule)
+[8](https://content.govdelivery.com/accounts/USDOCBEA/bulletins/3fb668f)
+[9](https://www.ecb.europa.eu/press/annual-reports-financial-statements/wfs/2025/html/ecb.fs251209.en.html)
+[10](https://www.ecb.europa.eu/press/annual-reports-financial-statements/wfs/2025/html/ecb.fs251209.cs.html)
+[11](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+[12](https://www.bls.gov/news.release/empsit.htm)
+[13](https://www.bls.gov/newsroom/)
+[14](https://www.census.gov/economic-indicators/)
+[15](https://en.yna.co.kr/view/AEN20251127004000320)
+[16](https://tradingeconomics.com/south-korea/interest-rate/news/505302)
+[17](https://tradingeconomics.com/south-korea/interest-rate)
+[18](https://tradingeconomics.com/calendar)
+[19](https://www.bls.gov/schedule/2025/12_sched_list.htm)
+[20](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251203_1~43a7a4dec9.en.html)
+[21](https://www.investing.com/news/economic-indicators/factboxschedule-for-us-economic-data-delayed-by-government-shutdown-4382104)
+[22](https://www.bls.gov/schedule/)
+[23](https://www.reuters.com/business/us-bureau-economic-analysis-working-new-economic-data-calendar-post-shutdown-2025-11-14/)
+[24](https://www.ecb.europa.eu/pub/pdf/other/ecb.mepletter251205_de_Masi~2eaa7c7ed4.en.pdf)
+[25](https://www.bls.gov/news.release/archives/eci_12102025.htm)
+[26](https://www.ecb.europa.eu/press/blog/date/2025/html/ecb.blog20251209~9ba130ff20.en.html)
+[27](https://www.reuters.com/world/americas/g20-countries-medium-term-growth-be-weakest-since-2009-crisis-imf-says-2025-11-19/)
+[28](https://www.bls.gov/schedule/2025/home.htm)
+[29](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251208~4c07c78304.en.html)
+[30](https://www.reuters.com/markets/us/us-census-bureau-says-implementing-strategies-bring-economic-data-releases-back-2025-12-03/)
+[31](https://www.ecb.europa.eu/press/inter/date/2025/html/ecb.in251204~fe41146d19.en.html)
+[32](https://www.kostat.go.kr/board.es?mid=a10301010000&bid=233&act=view&list_no=435013&tag=&nPage=1)
+[33](https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/index.html)
+[34](https://en.yna.co.kr/view/AEN20251023003700320)
+[35](https://www.kostat.go.kr/boardDownload.es?bid=11094&list_no=439004&seq=4)
+[36](https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/5916794/index.html)
+[37](https://kostat.go.kr/menu.es?mid=a10301000000)
+[38](https://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/2025111716285493444/index.html)
+[39](https://www.wsj.com/economy/central-banking/bank-of-korea-cuts-rates-slashes-2025-growth-outlook-f0bcb31a)
+[40](https://www.kostat.go.kr/board.es?mid=a30301010500&bid=5110&act=view&list_no=439257&tag=&nPage=1)
+[41](https://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/2025111716285457166/index.html)
+[42](https://english.moef.go.kr/pc/selectTbPressCenterList.do?boardCd=N0001&division=010)
+[43](https://kostat.go.kr/board.es?mid=a10301010000&bid=222&tag=&act=view&list_no=438888)
+[44](https://www.pbc.gov.cn/tiaofasi/144941/144979/3941920/2025111716285450163/index.html)
+[45](https://www.korea.net/Government/Briefing-Room/Press-Releases)
+[46](https://kostat.go.kr/boardDownload.es?bid=5125&list_no=439233&seq=4)
+[47](https://www.pbc.gov.cn/goutongjiaoliu/113456/113475/02956fa496c84888a9dfaea57aab82aa/index.html)
+[48](https://kostat.go.kr/menu.es?mid=a60301000000)
+[49](https://www.bls.gov/eag/eag.us.htm)
+[50](https://x.com/BEA_News/status/1993094373706256796)
+[51](https://www.bls.gov/bls/newsrels.htm)
+[52](https://www.census.gov/economic-indicators/calendar-listview.html)
+[53](https://www.frbdiscountwindow.org)
+[54](https://x.com/bea_news)
+[55](https://statspolicy.gov/assets/fcsm/files/docs/OMB_pfei_schedule_of_release_dates_2025.pdf)
+[56](https://x.com/BEA_News)
+[57](https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/09/pfei_schedule_release_dates_cy2025_09202024.pdf)
+[58](https://x.com/federalreserve)
+[59](https://www.bls.gov/news.release/cpi.htm)
+[60](https://fred.stlouisfed.org/releases/calendar)
