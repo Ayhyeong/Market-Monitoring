@@ -1,0 +1,79 @@
+## What released
+- UK GDP monthly estimate (October 2025): ONS bulletin released 12 Dec 2025, alongside IoP and IoS companion releases dated the same day.[2][3][1]
+- UK Construction Output (October 2025): ONS bulletin released 12 Dec 2025.[4]
+
+No new past-24h official releases were found from BLS/BEA/Census/Fed, Eurostat/ECB, Japan SBJ/BoJ, China NBS/PBoC, or Korea Statistics Korea/BoK; BEA and BLS schedules indicate reschedulings and upcoming dates but not new past-24h data releases.[5][6][7][8][9]
+
+## Triggers assessment
+- (a) Any official release in past 24 hours: Yes, ONS published October 2025 GDP monthly estimate, IoP, IoS, and Construction Output on 12 Dec (UK time), which falls within the last 24 hours relative to KST morning of 13 Dec.[3][1][2][4]
+- (b) Material surprise (≥1σ vs. consensus) or policy‑relevant revision: Cannot be confirmed from official bulletins alone because they do not provide market consensus; no immediate reputable consensus article within the past 24 hours was identified for these specific UK releases in the sources checked here. Therefore, no surprise trigger is fired based on available evidence.[1][2][3]
+
+## Alert
+- When (KST): UK ONS bulletins dated 12 Dec 2025 likely posted during UK business hours; for Korea (KST), receipt on 12–13 Dec. Treat as received within the last 24 hours as of 9:07 AM KST, 13 Dec 2025.[2][3][4][1]
+- What moved: UK October 2025 macro activity suite published (GDP monthly estimate, IoP, IoS, Construction Output). Magnitude vs. consensus: Not assessed; no consensus source confirming ≥1σ surprise was found in this sweep.[3][4][1][2]
+- Why it matters: These monthly activity indicators update the UK’s near‑term growth picture ahead of the quarterly national accounts due 22 Dec and can shape BoE expectations if they shift trend assessments for services/manufacturing/construction.[1][2][3]
+- Immediate actions:
+  - Portfolio: Keep UK duration and GBP FX tilts unchanged until consensus/surprise metrics are verified; avoid pre‑emptive convexity adds without confirmed deviation.  
+  - Liquidity: For UK‑exposed equities/credit, keep normal liquidity buffers; monitor 22 Dec Quarterly National Accounts for larger moves.  
+  - Hedging: Use light, short‑dated FTSE 100/GBPUSD option collars only if subsequent consensus checks show a notable miss/beat; for now, no escalation.  
+  These steps reflect standard risk discipline when data are released without confirmed market surprise.[2][3][1]
+
+## Source links
+- Official releases (ONS): GDP monthly estimate Oct 2025; Index of Production Oct 2025; Index of Services Oct 2025; Construction Output Oct 2025.[4][3][1][2]
+- Reputable consensus sources: Not identified within this query window for these specific releases; BEA/BLS pages confirm US rescheduling rather than new data in past 24 hours. Monitor Reuters/Bloomberg/WSJ for consensus updates as they post.[7][8][9]
+
+[1](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/bulletins/indexofservices/october2025)
+[2](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/bulletins/indexofproduction/october2025)
+[3](https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/october2025)
+[4](https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/bulletins/constructionoutputingreatbritain/october2025)
+[5](https://www.bls.gov/news.release/empsit.htm)
+[6](https://www.bls.gov/schedule/)
+[7](https://www.bea.gov/news/blog/2025-12-04/economic-release-schedule-update)
+[8](https://www.bea.gov/news/blog/2025-12-10/economic-release-schedule-updates)
+[9](https://www.bea.gov)
+[10](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+[11](https://www.bancaditalia.it/media/bce-comunicati/documenti/2025/ecb-gc251121-en.pdf?language_id=1)
+[12](https://www.reuters.com/markets/us/us-data-has-fed-striding-toward-rate-cut-next-week-tip-toeing-into-2025-2024-12-13/)
+[13](https://www.banque-france.fr/system/files/2025-10/ecb-press-release_20251013_ECB-sets-transitional-provisions-for-minimum-reserve-requirements-following-introduction-of-euro-in-Bulgaria.pdf)
+[14](https://tradingeconomics.com/calendar)
+[15](https://www.bls.gov/news.release/pdf/empsit.pdf)
+[16](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251211~aa5c9271b8.en.html)
+[17](https://www.reuters.com/business/take-five/global-markets-themes-graphic-2025-12-05/)
+[18](https://www.bls.gov/news.release/empsit.nr0.htm)
+[19](https://www.ecb.europa.eu/press/pubbydate/2025/html/ecb.simplification_supervisory_reporting_framework202512.en.html)
+[20](https://www.reuters.com/markets/us/wall-street-beats-are-more-show-than-science-fridson-2025-12-12/)
+[21](https://www.ecb.europa.eu/press/pubbydate/html/index.en.html)
+[22](https://www.reuters.com/business/odds-fed-rate-cut-december-knifes-edge-hawks-doves-face-off-2025-11-13/)
+[23](https://www.bls.gov/schedule/news_release/current_year.asp)
+[24](https://www.reuters.com/sustainability/boards-policy-regulation/ecb-proposes-simpler-bank-capital-rules-2025-12-11/)
+[25](https://www.reuters.com/world/china/global-markets-global-markets-2025-11-13/)
+[26](https://www.bls.gov/schedule/news_release/ppi.htm)
+[27](https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html)
+[28](https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/bulletins/uktrade/october2025)
+[29](https://www.stat.go.jp/english/info/news/20250131.html)
+[30](https://kostat.go.kr/board.es?mid=a20101000000&bid=a201010000)
+[31](https://www.stat.go.jp/english/data/handbook/pdf/2025half_2.pdf)
+[32](https://mods.go.kr/anse/)
+[33](https://www.ons.gov.uk/businessindustryandtrade/internationaltrade)
+[34](https://www.stat.go.jp/english/info/news/20251030.html)
+[35](https://kostat.go.kr/board.es?mid=a20105010000&bid=a201050100)
+[36](https://www.stat.go.jp/english/data/handbook/pdf/2023all.pdf)
+[37](https://kosis.kr/index/index.do)
+[38](https://www.stat.go.jp/english/info/news/archives.html)
+[39](https://kosis.kr)
+[40](https://www.ons.gov.uk/economy/grossdomesticproductgdp)
+[41](https://www.stat.go.jp/english/data/handbook/pdf/2025all.pdf)
+[42](https://x.com/KOSTATIN)
+[43](https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/bulletins/uktrade/previousreleases)
+[44](https://www.stat.go.jp/english/info/news/20241225.html)
+[45](https://www.ecb.europa.eu/press/tvservices/webcast/html/index.en.html)
+[46](https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html)
+[47](https://www.bea.gov/news/blog/2025-12-01/economic-release-schedule-updates)
+[48](https://www.ecb.europa.eu/press/press_conference/html/index.en.html)
+[49](https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/october2025/pdf)
+[50](https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp250210~77679a7d66.da.html)
+[51](https://www.bea.gov/news/schedule)
+[52](https://www.ecb.europa.eu/press/pubbydate/html/index.ga.html)
+[53](https://www.bea.gov/?page=25)
+[54](https://www.ecb.europa.eu/press/projections/html/index.en.html)
+[55](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/bulletins/indexofservices/october2025/pdf)
