@@ -1,0 +1,27 @@
+## What happened (KST time)
+- When: 2025‑12‑19 21:19 KST (BoJ “Change in the Guideline for Money Market Operations” publication timestamp). [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- What: BoJ set the uncollateralized overnight call rate “around 0.75%,” raised the complementary deposit facility rate to 0.75%, and the basic loan/discount rate to 1.0%, effective Dec 22, 2025. Decision was unanimous. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Context given by BoJ: Economy recovering moderately; tight labor market; steady wage increases expected; underlying CPI rising moderately; real rates to remain “significantly negative” even after the hike; guidance that further gradual increases are likely if the Outlook baseline materializes. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+
+## Why it matters
+- Policy relevance: This is a fresh tightening step that lifts Japan’s short‑term policy rate to around 0.75% with explicit guidance that additional hikes are possible, reinforcing Japan’s shift away from ultra‑easy policy. Such moves can pressure global duration, steepen curves, and affect JPY and cross‑asset volatility. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Market impact significance: Official communications note real rates remain “significantly negative,” implying room for incremental normalization, which can reprice JGB term premia and ripple into G10 rates and FX via yield differentials. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+
+## Immediate actions
+- Rates/duration:
+  - Reduce JGB duration; favor intermediate over long JGB tenors where convexity risk is elevated during normalization. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+  - In global portfolios, maintain a mild underweight to developed‑market duration into potential spillovers; favor belly over long end in markets most sensitive to Japan’s outflows. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Curve:
+  - In Japan, position for a modest bear‑steepening bias if term premia rebuild; use 5s10s or 10s20s steepeners with defined risk limits. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- FX:
+  - Tilt modestly long JPY versus low‑carry G10 where rate differentials may compress; hedge USDJPY upside via call spreads if positions are short JPY beta. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Equities/credit:
+  - Hedge Japan equity duration/valuation exposures vulnerable to higher discount rates; prefer quality balance sheets with pricing power given BoJ’s wage‑price commentary. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Liquidity and sizing:
+  - Expect higher intraday volatility around the effective date (Dec 22); widen execution bands, scale into trades, and cap single‑trade VaR; pre‑fund margin for rate‑sensitive positions. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+
+## Data and links
+- Official release (BoJ): “Change in the Guideline for Money Market Operations,” Dec 19, 2025 — operational rate around 0.75%, complementary deposit facility 0.75%, basic loan/discount rate 1.0%, effective Dec 22; unanimous decision; forward guidance on potential further hikes. [bls](https://www.bls.gov/bls/2025-lapse-revised-release-dates.htm)
+- Consensus/coverage: Multiple reputable outlets reported the BoJ raised short‑term rates to the highest in ~30 years and signaled willingness to tighten further, consistent with normalization pricing. [cnbc](https://www.cnbc.com/2025/12/19/bank-of-japan-boj-rate-cpi-inflation-takaichi-ueda.html)
+
+No other covered agencies posted within the past 24 hours a new CPI, PPI, PCE, GDP, unemployment, NFP, initial claims, retail sales, industrial production, trade, housing, HPI, or credit/money series that meet the timeframe. Recent items visible on BLS, ECB/Eurostat, and ONS pages are prior‑day or earlier publications or calendars, not fresh releases in the last 24 hours. [ec.europa](https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251219-4)
