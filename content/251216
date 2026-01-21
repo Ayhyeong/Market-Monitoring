@@ -1,0 +1,32 @@
+## What released
+- ECB: Joint EBA–ECB report on payment fraud was published on Dec 15 CET (Dec 16 KST), an official central‐bank publication, but it is not one of the targeted macro series. [ecb.europa](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.en.html)
+- ECB calendars show the Eurosystem consolidated financial statement and APP/PEPP weekly updates due Dec 16 CET (late evening KST), and HICP statistical publication due Dec 17 CET; these are scheduled, not yet released in the last 24h. [ecb.europa](https://www.ecb.europa.eu/press/calendars/weekly/html/index.cs.html)
+- United States: BLS Employment Situation (Nov) is scheduled for Dec 16, 8:30 ET (22:30 KST), not yet released in the last 24h. [bls](https://www.bls.gov/schedule/news_release/empsit.htm)
+- United Kingdom: ONS “UK Labour Market: December 2025” scheduled for Dec 16, 07:00 UK (16:00 KST), showing “not yet published” as of now. [ons.gov](https://www.ons.gov.uk/releases/uklabourmarketdecember2025)
+- US Census schedules: Monthly Retail Sales and MTIS (inventories/sales) were rescheduled to Dec 16, but the schedule indicates future releases today; no publication in the last 24h. [census](https://www.census.gov/mtis/release_schedule.html)
+- BEA schedule adjustments show many macro releases shifted; no new BEA macro release in the last 24h. [bea](https://www.bea.gov/news/blog/2025-11-24/economic-release-schedule-updates-0)
+
+## Trigger check
+- Trigger (a) “any official release in past 24h”: Yes, the ECB/EBA payment fraud report qualifies as an official central-bank release, but it is not among the requested macroeconomic series. No macro series from the specified list appears published in the past 24h. [ecb.europa](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.en.html)
+- Trigger (b) “material surprise ≥1σ vs consensus or policy‑relevant revision”: Not applicable—no targeted macro series was published in the past 24h, so there is no measurable surprise or revision to flag. [census](https://www.census.gov/retail/release_schedule.html)
+
+## What to watch in next hours (KST)
+- US Employment Situation (Nov): 22:30 KST today; watch nonfarm payrolls, unemployment rate, average hourly earnings; BLS confirms the schedule. [bls](https://www.bls.gov/news.release/empsit.htm)
+- US Census: Advance Monthly Retail Sales (Oct, rescheduled) at 22:30 KST; MTIS (Sept/Oct rescheduled) at 24:00 KST. [census](https://www.census.gov/mtis/release_schedule.html)
+- ECB: Eurosystem consolidated statement and APP/PEPP weekly updates at 23:00 KST; HICP statistics release tomorrow evening KST per ECB statistical calendar. [ecb.europa](https://www.ecb.europa.eu/press/calendars/statscal/html/index.en.html)
+- ONS: UK labour market 16:00 KST. [ons.gov](https://www.ons.gov.uk/releases/uklabourmarketdecember2025)
+
+## Immediate actions
+- No surprise alert today because no targeted macro release occurred in the last 24h and thus no ≥1σ deviation or policy‑relevant revision can be assessed yet. Maintain pre‑event posture:  
+  - Keep position sizes modest ahead of tonight’s US data; consider tighter stops and slightly elevated cash to manage event risk. [bls](https://www.bls.gov/schedule/news_release/empsit.htm)
+  - For rates, keep neutral‑to‑slight long duration bias only if positioned for a potential softer US data print; otherwise remain close to benchmark into 22:30 KST. [bls](https://www.bls.gov/news.release/empsit.htm)
+  - For FX, avoid adding USD or GBP exposure until releases hit; consider options (short‑dated straddles) if implied vol is attractive versus realized. [ons.gov](https://www.ons.gov.uk/releases/uklabourmarketdecember2025)
+  - Liquidity: Ensure execution windows around 22:25–22:45 and 23:55–00:05 KST are staffed; widen limits to account for slippage around prints. [census](https://www.census.gov/retail/release_schedule.html)
+
+## Source links
+- ECB/EBA payment fraud report (official): https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.en.html [ecb.europa](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.en.html)
+- ECB weekly/statistical calendars (official): https://www.ecb.europa.eu/press/calendars/weekly/html/index.cs.html; https://www.ecb.europa.eu/press/calendars/statscal/html/index.en.html [ecb.europa](https://www.ecb.europa.eu/press/calendars/weekly/html/index.cs.html)
+- BLS Employment Situation page and schedule (official): https://www.bls.gov/news.release/empsit.htm; https://www.bls.gov/schedule/news_release/empsit.htm [bls](https://www.bls.gov/schedule/news_release/empsit.htm)
+- ONS UK Labour Market scheduled page (official): https://www.ons.gov.uk/releases/uklabourmarketdecember2025 [ons.gov](https://www.ons.gov.uk/releases/uklabourmarketdecember2025)
+- US Census retail and MTIS schedules (official): https://www.census.gov/retail/release_schedule.html; https://www.census.gov/mtis/release_schedule.html [census](https://www.census.gov/mtis/release_schedule.html)
+- BEA schedule update note (official): https://www.bea.gov/news/blog/2025-11-24/economic-release-schedule-updates-0 [bea](https://www.bea.gov/news/blog/2025-11-24/economic-release-schedule-updates-0)
