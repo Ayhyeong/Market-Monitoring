@@ -1,0 +1,31 @@
+## What moved
+- United States CPI (November 2025): Headline CPI up 2.7% year over year; core CPI up 2.6% year over year. Monthly detail was presented as a two‑month change (Sep–Nov: +0.2% SA) due to the October shutdown; shelter +0.2% over the two‑month span, energy +1.1%, food +0.1%. The release explicitly notes missing October survey collection and methodology notes. [bls](https://www.bls.gov/bls/newsrels.htm)
+- United States Initial Jobless Claims (week ended Dec 13): 224,000 SA, down 13,000 from prior week (revised to 237,000); 4‑week average 217,500; continuing claims 1.897 million for week ended Dec 6. Reuters coverage indicates consensus near 225,000. [ecb.europa](https://www.ecb.europa.eu/press/tvservices/podcast/html/ecb.pod251218_episode120.pt.html)
+
+## Why it matters
+- CPI: The y/y pace at 2.7% with core 2.6% keeps inflation close to the Fed’s 2% objective, but the atypical two‑month presentation complicates month‑over‑month inference; markets will treat this as broadly consistent with disinflation continuing but await a clean December print. Shelter’s modest two‑month increase and still‑elevated energy services y/y (+7.4%) offer a mixed composition signal relevant for services inflation persistence and the path of policy normalization. [bls](https://www.bls.gov/bls/newsrels.htm)
+- Jobless claims: Claims remain within a stable range and near consensus, signaling labor demand is cooling but not collapsing; this supports a soft‑landing narrative and reduces near‑term recession risk pricing, with implications for front‑end rates and USD. [reuters](https://www.reuters.com/markets/us/us-weekly-jobless-claims-fall-seasonal-volatility-persists-2025-12-18/)
+
+## Immediate actions
+- Rates/duration
+  - Maintain a mild duration long bias in the 2–5y sector given disinflation consistency and steady labor data; avoid aggressive longs until a clean monthly CPI sequence resumes. [ecb.europa](https://www.ecb.europa.eu/press/tvservices/podcast/html/ecb.pod251218_episode120.pt.html)
+  - Consider curve steepeners (2s10s or 5s30s) into early‑2026 if markets price higher odds of gradual easing with anchored long‑term inflation expectations. [ecb.europa](https://www.ecb.europa.eu/press/tvservices/podcast/html/ecb.pod251218_episode120.pt.html)
+- Inflation hedges
+  - Keep light TIPS exposure focused on 5y breakevens; composition shows energy services firmness but overall y/y is contained, arguing against heavy inflation‑protection adds. [bls](https://www.bls.gov/bls/newsrels.htm)
+- FX
+  - Slightly reduce tactical USD longs versus EUR/JPY on balanced U.S. data; ECB held rates yesterday and messaging suggests inflation near target in the medium term, limiting EUR downside near term. [ecb.europa](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/ecb.is251218~3a10402adb.en.html)
+- Liquidity/position sizing
+  - Keep gross risk moderate ahead of holiday‑period liquidity; widen stops and reduce position sizes by 10–20% for short‑term strategies given elevated seasonal volatility in claims. [ecb.europa](https://www.ecb.europa.eu/press/tvservices/podcast/html/ecb.pod251218_episode120.pt.html)
+
+## Key links
+- Official data
+  - BLS CPI November 2025 release: https://www.bls.gov/news.release/cpi.nr0.htm [bls](https://www.bls.gov/bls/newsrels.htm)
+  - DOL Weekly Unemployment Insurance Claims (PDF): https://www.dol.gov/ui/data.pdf [ecb.europa](https://www.ecb.europa.eu/press/tvservices/podcast/html/ecb.pod251218_episode120.pt.html)
+  - BLS Latest releases page (timestamp/context): https://www.bls.gov/bls/newsrels.htm [bls](https://www.bls.gov/bls/newsrels.htm)
+- Consensus/coverage
+  - Reuters on weekly jobless claims near 224k: https://www.reuters.com/markets/us/us-weekly-jobless-claims-fall-seasonal-volatility-persists-2025-12-18/ [reuters](https://www.reuters.com/markets/us/us-weekly-jobless-claims-fall-seasonal-volatility-persists-2025-12-18/)
+
+Notes on other regions in the 24h window
+- ECB monetary policy decision (Dec 18 CET) held rates unchanged; policy statement confirms inflation on track to 2% medium term. While not a data series in scope, it frames EUR rates/FX context. [ecb.europa](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251218~58b0e415a6.en.html)
+- UK CPI (Nov) was released Dec 17 UKT, outside the 24‑hour window; CPI y/y at 3.2% for context only. No new ONS releases in the last 24 hours matching the requested series. [ons.gov](https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/november2025)
+- No applicable last‑24‑hour official releases found for Eurostat, BEA, Census, Fed, Japan Statistics Bureau/BoJ, China NBS/PBoC, or Korea Statistics Korea/BoK for the specified series. Release calendars and sites show no fresh items in the timeframe. [pbc.gov](http://www.pbc.gov.cn/en/3688241/3688663/3688681/index.html)
